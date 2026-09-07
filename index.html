@@ -12,13 +12,14 @@
 <nav id="nav" class="hidden">
   <div class="nav-inner">
     <div class="brand" onclick="go('dashboard')">🇫🇷 GST 123 • French Portal</div>
+    <button class="icon-btn menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Open navigation" aria-expanded="false">☰</button>
     <div class="nav-links" id="navLinks">
-      <a data-v="dashboard" onclick="go('dashboard')">🏠 Home</a>
-      <a data-v="study" onclick="go('study')">📚 Study</a>
-      <a data-v="quizsetup" onclick="go('quizsetup')">📝 Quizzes</a>
-      <a data-v="examsetup" onclick="go('examsetup')">🎯 Practice Exam</a>
-      <a data-v="progress" onclick="go('progress')">📊 My Progress</a>
-      <a data-v="about" onclick="go('about')">ℹ About</a>
+      <a data-v="dashboard" onclick="go('dashboard');closeMenu()">🏠 Home</a>
+      <a data-v="study" onclick="go('study');closeMenu()">📚 Study</a>
+      <a data-v="quizsetup" onclick="go('quizsetup');closeMenu()">📝 Quizzes</a>
+      <a data-v="examsetup" onclick="go('examsetup');closeMenu()">🎯 Practice Exam</a>
+      <a data-v="progress" onclick="go('progress');closeMenu()">📊 My Progress</a>
+      <a data-v="about" onclick="go('about');closeMenu()">ℹ About</a>
     </div>
     <div class="nav-right">
       <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle dark / light mode">🌙</button>

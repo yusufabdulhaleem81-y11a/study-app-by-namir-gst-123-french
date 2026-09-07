@@ -540,7 +540,9 @@ function barOf(p){const n=Math.round(p/10);return "█".repeat(n)+"░".repeat(1
 /* ================= THEME / NAV ================= */
 function applyTheme(){document.documentElement.setAttribute("data-theme",S.theme);el("themeBtn").textContent=S.theme==="dark"?"☀️":"🌙";}
 function toggleTheme(){S.theme=S.theme==="dark"?"light":"dark";save();applyTheme();}
-function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));el("view-"+v).classList.add("active");document.querySelectorAll("#navLinks a").forEach(a=>a.classList.toggle("on",a.dataset.v===v));window.scrollTo({top:0,behavior:"smooth"});}
+function toggleMenu(){const links=el("navLinks"),button=el("menuBtn");if(!links||!button)return;const open=links.classList.toggle("open");button.textContent=open?"✕":"☰";button.setAttribute("aria-expanded",String(open));}
+function closeMenu(){const links=el("navLinks"),button=el("menuBtn");if(!links||!button)return;links.classList.remove("open");button.textContent="☰";button.setAttribute("aria-expanded","false");}
+function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));el("view-"+v).classList.add("active");document.querySelectorAll("#navLinks a").forEach(a=>a.classList.toggle("on",a.dataset.v===v));closeMenu();window.scrollTo({top:0,behavior:"smooth"});}
 function enterApp(){el("nav").classList.remove("hidden");el("userChip").textContent="👤 "+esc(S.name);renderDashboard();go("dashboard");}
 
 /* ================= WELCOME ================= */
@@ -592,7 +594,8 @@ function renderStudy(){
       <div class="cnum"><small>CHAP.</small>${c.id}</div>
       <div style="flex:1;min-width:220px"><h3>${c.title} <span style="font-weight:400;font-size:.85rem;color:var(--mut)">(${c.en})</span></h3>
       <p>${c.desc}</p>
-      <div class="chap-meta"><span class="tag">📖 ${c.secs.length} sections</span><span class="tag">❓ ${qn} quiz questions</span><span class="tag">⏱ ~${15+qn/8|0} min read</span>${done?'<span class="tag done-tag">✅ Completed</span>':""}</div></div>
+      <div class="chap-meta"><span class="tag">📖 ${c.secs.length} sections</span><span class="tag">❓ ${qn} quiz questions</span><span class="tag">⏱ ~${15+qn/8|0} min read</span>${done?'<span class="tag done-tag">✅ Completed</span>':""}</div>
+      <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();takeChapterQuiz(${c.id})">📝 Take Chapter Quiz</button></div>
     </div>`;}).join("");
 }
 function openChapter(ch,sec){
@@ -798,9 +801,14 @@ function renderQuestionBody(q){
 function selectOption(i){if(ses.checked)return;ses.ans[ses.cur]=i;renderAssess();}
 function selectFill(v){if(ses.checked)return;ses.ans[ses.cur]=v;renderAssess();}
 function prevQ(){if(ses.cur>0){ses.cur--;renderAssess();}}
-function nextQ(){if(ses.ans[ses.cur]==null && !ses.checked){toast("Please answer the current question first.");return;} if(ses.cur===ses.qs.length-1){finishAssessment();return;} ses.cur++;renderAssess();}
+function nextQ(){if(ses.cur===ses.qs.length-1){finishAssessment();return;} if(ses.ans[ses.cur]==null && !ses.checked){toast("Please answer the current question first.");return;} ses.cur++;renderAssess();}
 function jumpQ(i){if(ses.checked){ses.cur=i;renderAssess();return;} if(ses.ans[ses.cur]==null){toast("Please answer the current question first.");return;} ses.cur=i;renderAssess();}
+function askSubmit(){if(!ses)return;const unanswered=ses.ans.filter(a=>a===null||a===undefined||a==="").length;el("mTitle").textContent="Submit assessment?";el("mText").textContent=unanswered?`You have ${unanswered} unanswered question${unanswered===1?"":"s"}. They will be marked incorrect.`:"Your answers will be graded now.";el("modal").classList.remove("hidden");}
+function closeModal(){el("modal").classList.add("hidden");}
+function confirmSubmit(){closeModal();finishAssessment();}
 function finishAssessment(){
+  if(!ses||!ses.qs.length)return;
+  clearInterval(ses.timer);
   ses.checked=true;
   const total=ses.qs.length;
   const score=ses.qs.reduce((sum,q,i)=>sum+(ses.ans[i]===q.a || (q.ty==="fill" && strip(ses.ans[i]||"")===strip(q.o[0])) ? 1 : 0),0);
@@ -814,7 +822,7 @@ function finishAssessment(){
   save();
   renderResults(result);
   go("results");
-  clearInterval(ses.timer); ses.timer=null;
+  ses.timer=null;
 }
 function renderResults(r){
   const lv=levelOf(r.pct);
