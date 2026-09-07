@@ -497,7 +497,10 @@ const T2S = {
 
 /* ================= QUESTION BANK ================= */
 const QB=[];
-function addQ(ch,t,s,d,ty,q,o,a,e){QB.push({id:QB.length+1,ch:ch,t:t,s:s,d:d,ty:ty,q:q,o:o,a:a,e:e});}
+function addQ(ch,t,s,d,ty,q,o,a,e){
+  if(ty==="fill")QB.push({id:QB.length+1,ch:ch,t:t,s:s,d:d,ty:ty,q:q,o:a,a:0,e:e});
+  else QB.push({id:QB.length+1,ch:ch,t:t,s:s,d:d,ty:ty,q:q,o:o,a:a,e:e});
+}
 
 addQ(1,"Saluer (Greetings)","Core Greetings","easy","mcq","What does « Bonjour » mean in English?",["Good evening","Good day / good morning","Good night","Goodbye"],1,"Bonjour means good day / good morning. Since French has no separate word for 'good afternoon', bonjour is used for both morning and afternoon.");
 addQ(1,"Saluer (Greetings)","Core Greetings","easy","mcq","« Bonsoir » means:",["Good morning","Good afternoon","Good evening","Good night"],2,"Bonsoir = good evening. (Bonne nuit = good night.)");
@@ -736,18 +739,28 @@ function startExamNow(){
 
 /* ================= ASSESSMENT ENGINE ================= */
 let ses=null;
+const QUIZ_TIME_SECONDS=120;
+const EXAM_TIME_PER_QUESTION_SECONDS=45;
 function prepQ(q){return {...q,selected:null};}
+function assessmentTimeLimit(){
+  return ses.type==="quiz"?QUIZ_TIME_SECONDS:ses.qs.length*EXAM_TIME_PER_QUESTION_SECONDS;
+}
+function formatTime(seconds){
+  const minutes=Math.floor(seconds/60);
+  const secs=seconds%60;
+  return `${minutes}:${String(secs).padStart(2,"0")}`;
+}
 function renderAssess(){
   const q=ses.qs[ses.cur];
   const total=ses.qs.length;
   const elapsed=Math.max(0,Math.floor((Date.now()-ses.start)/1000));
-  const left=45 - elapsed; // placeholder; actual timer rules handled by timer loop below
+  const left=Math.max(0,assessmentTimeLimit()-elapsed);
   el("view-assess").innerHTML=`
   <div class="card assess-head">
     <div class="assess-meta">
       <span>${ses.type==="quiz"?"Chapter Quiz":"Practice Exam"}</span>
       <span>${ses.type==="quiz"?chTitle(ses.ch):"Full Course"}</span>
-      <span class="timer ${left<=10?"low":""}">⏱ ${left}s left</span>
+      <span class="timer ${left<=10?"low":""}">⏱ ${formatTime(left)} left</span>
     </div>
     <div class="pbar"><div class="pfill" style="width:${((ses.cur+1)/total)*100}%"></div></div>
     <div class="qcount">Question ${ses.cur+1} of ${total}</div>
@@ -763,20 +776,20 @@ function renderAssess(){
     <div class="qnav">
       <button class="btn btn-ghost" onclick="prevQ()" ${ses.cur===0?"disabled":""}>← Previous</button>
       <div class="qpal">${ses.qs.map((_,i)=>`<button class="pdot ${ses.cur===i?"cur":""} ${ses.ans[i]!=null?"ans":""}" onclick="jumpQ(${i})">${i+1}</button>`).join("")}</div>
-      <button class="btn btn-primary" onclick="nextQ()">${ses.cur===total-1?"Finish":"Next →"}</button>
+      <button class="btn ${ses.cur===total-1?"btn-gold":"btn-primary"}" onclick="${ses.cur===total-1?"askSubmit()":"nextQ()"}">${ses.cur===total-1?"✅ Submit":"Next →"}</button>
     </div>
   </div>`;
   if(!ses.timer){
     ses.timer=setInterval(()=>{
       const sec=Math.max(0,Math.floor((Date.now()-ses.start)/1000));
-      const remaining=45-sec;
+      const remaining=Math.max(0,assessmentTimeLimit()-sec);
       const timerNode=el("view-assess").querySelector(".timer");
       if(timerNode){
-        timerNode.textContent=`⏱ ${remaining}s left`;
+        timerNode.textContent=`⏱ ${formatTime(remaining)} left`;
         timerNode.classList.toggle("low",remaining<=10);
       }
       if(remaining<=0){
-        clearInterval(ses.timer); ses.timer=null; finishAssessment();
+        clearInterval(ses.timer); ses.timer=null; finishAssessment(true);
       }
     },1000);
   }
@@ -806,14 +819,16 @@ function jumpQ(i){if(ses.checked){ses.cur=i;renderAssess();return;} if(ses.ans[s
 function askSubmit(){if(!ses)return;const unanswered=ses.ans.filter(a=>a===null||a===undefined||a==="").length;el("mTitle").textContent="Submit assessment?";el("mText").textContent=unanswered?`You have ${unanswered} unanswered question${unanswered===1?"":"s"}. They will be marked incorrect.`:"Your answers will be graded now.";el("modal").classList.remove("hidden");}
 function closeModal(){el("modal").classList.add("hidden");}
 function confirmSubmit(){closeModal();finishAssessment();}
-function finishAssessment(){
-  if(!ses||!ses.qs.length)return;
+function resultAnswer(q){if(!q)return "Unavailable";return q.ty==="fill"?q.o[0]:q.o[q.a];}
+function finishAssessment(autoSubmitted=false){
+  if(!ses||!ses.qs.length||ses.finished)return;
+  ses.finished=true;
   clearInterval(ses.timer);
   ses.checked=true;
   const total=ses.qs.length;
   const score=ses.qs.reduce((sum,q,i)=>sum+(ses.ans[i]===q.a || (q.ty==="fill" && strip(ses.ans[i]||"")===strip(q.o[0])) ? 1 : 0),0);
   const pct=Math.round(score/total*100);
-  const result={type:ses.type,pct,score,total,ts:Date.now(),ch:ses.type==="quiz"?ses.ch:null,questions:ses.qs.map((q,i)=>({q:q.id,ans:ses.ans[i],correct:q.a,topic:q.t}))};
+  const result={type:ses.type,pct,score,total,ts:Date.now(),auto:autoSubmitted,ch:ses.type==="quiz"?ses.ch:null,questions:ses.qs.map((q,i)=>({q:q.id,ans:ses.ans[i],correct:q.a,topic:q.t}))};
   if(ses.type==="quiz"){
     S.quizzes.push({ch:ses.ch,pct,score,total,when:Date.now()});
   } else {
