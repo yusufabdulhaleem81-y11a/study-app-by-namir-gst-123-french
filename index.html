@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST 123 — Communication in French | Exam Study Portal</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#4f46e5;--p2:#8b5cf6;--sc:#06b6d4;--gold:#f59e0b;--ok:#10b981;--wr:#ef4444;--md:#f59e0b;--bg:#eef1f8;--card:rgba(255,255,255,.78);--solid:#fff;--tx:#0f172a;--mut:#5b6b83;--bd:rgba(15,23,42,.10);--sh:0 10px 30px rgba(2,6,23,.09)}
+html[data-theme=dark]{--bg:#0a1020;--card:rgba(21,30,54,.72);--solid:#141d34;--tx:#e8edf5;--mut:#93a3bd;--bd:rgba(255,255,255,.10);--sh:0 10px 30px rgba(0,0,0,.45)}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;transition:background .3s,color .3s;overflow-x:hidden;line-height:1.55}
+.bgfx{position:fixed;inset:0;z-index:-1;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.32;animation:float 18s ease-in-out infinite}
+.b1{width:480px;height:480px;background:#6366f1;top:-140px;left:-140px}
+.b2{width:430px;height:430px;background:#06b6d4;bottom:-120px;right:-110px;animation-delay:-6s}
+.b3{width:360px;height:360px;background:#a855f7;top:38%;left:56%;animation-delay:-12s}
+html[data-theme=dark] .blob{opacity:.15}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.view{display:none;max-width:1150px;margin:0 auto;padding:24px 18px 60px}
+.view.active{display:block;animation:fadeUp .45s ease}
+nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:var(--card);border-bottom:1px solid var(--bd)}
+.nav-inner{max-width:1150px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.02rem;cursor:pointer;background:linear-gradient(90deg,var(--p),var(--sc));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap;flex:1}
+.nav-links a{padding:7px 11px;border-radius:10px;cursor:pointer;font-size:.88rem;color:var(--mut);transition:.2s;white-space:nowrap;user-select:none}
+.nav-links a:hover{background:rgba(79,70,229,.12);color:var(--p)}
+.nav-links a.on{background:linear-gradient(90deg,var(--p),var(--p2));color:#fff}
+.nav-right{display:flex;align-items:center;gap:8px;margin-left:auto}
+.icon-btn{border:1px solid var(--bd);background:var(--solid);color:var(--tx);border-radius:12px;width:38px;height:38px;cursor:pointer;font-size:1rem;transition:.2s}
+.icon-btn:hover{transform:translateY(-2px)}
+.user-chip{background:linear-gradient(90deg,var(--p),var(--sc));color:#fff;padding:7px 14px;border-radius:12px;font-size:.85rem;font-weight:700;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--bd);border-radius:20px;box-shadow:var(--sh);padding:24px}
+.hcard{cursor:pointer;transition:transform .25s,box-shadow .25s}
+.hcard:hover{transform:translateY(-7px);box-shadow:0 18px 44px rgba(79,70,229,.22)}
+.btn{border:none;border-radius:14px;padding:12px 22px;font-size:.95rem;font-weight:700;cursor:pointer;transition:.22s;display:inline-flex;align-items:center;gap:8px;font-family:inherit}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-primary{background:linear-gradient(90deg,var(--p),var(--p2));color:#fff}
+.btn-teal{background:linear-gradient(90deg,#0d9488,var(--sc));color:#fff}
+.btn-gold{background:linear-gradient(90deg,#d97706,var(--gold));color:#fff}
+.btn-ghost{background:var(--solid);color:var(--tx);border:1px solid var(--bd)}
+.btn-danger{background:linear-gradient(90deg,#dc2626,var(--wr));color:#fff}
+.btn-sm{padding:8px 14px;font-size:.83rem;border-radius:10px}
+.hero{text-align:center;padding:44px 24px;margin-bottom:26px;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(1.5rem,4vw,2.4rem);margin-bottom:8px}
+.grad{background:linear-gradient(90deg,var(--p),var(--sc),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:640px;margin:0 auto}
+.hero-stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.mini{background:var(--solid);border:1px solid var(--bd);border-radius:14px;padding:10px 18px;font-size:.85rem}
+.mini b{display:block;font-size:1.25rem;color:var(--p)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.dcard{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.dcard .ic{font-size:2.4rem;background:linear-gradient(135deg,rgba(79,70,229,.15),rgba(6,182,212,.15));width:70px;height:70px;border-radius:20px;display:flex;align-items:center;justify-content:center}
+.dcard h3{font-size:1.15rem}
+.dcard p{color:var(--mut);font-size:.9rem;flex:1}
+.chap-ic{font-size:1.9rem}
+.chap{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.chap .cnum{min-width:66px;height:66px;border-radius:18px;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;line-height:1}
+.chap .cnum small{font-size:.6rem;font-weight:600}
+.chap h3{margin-bottom:4px}
+.chap p{color:var(--mut);font-size:.9rem}
+.chap-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{background:var(--solid);border:1px solid var(--bd);border-radius:99px;padding:4px 12px;font-size:.76rem;color:var(--mut)}
+.done-tag{background:rgba(16,185,129,.15);color:var(--ok);border-color:rgba(16,185,129,.3)}
+.welcome-wrap{min-height:calc(100vh - 40px);display:flex;align-items:center;justify-content:center;padding:20px}
+.welcome-card{max-width:620px;width:100%;text-align:center;padding:52px 30px}
+.w-badge{display:inline-block;background:linear-gradient(90deg,var(--p),var(--sc));color:#fff;padding:7px 18px;border-radius:99px;font-weight:700;font-size:.8rem;letter-spacing:1px;margin-bottom:18px}
+.welcome-card h1{font-size:clamp(1.6rem,4.5vw,2.5rem);margin-bottom:10px}
+.w-sub{color:var(--mut);font-size:.9rem;margin-bottom:16px}
+.w-msg{color:var(--mut);font-size:.95rem;margin-bottom:28px}
+.w-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.w-form input{flex:1;min-width:220px;padding:14px 18px;border-radius:14px;border:2px solid var(--bd);background:var(--solid);color:var(--tx);font-size:1rem;outline:none;transition:.2s;font-family:inherit}
+.w-form input:focus{border-color:var(--p);box-shadow:0 0 0 4px rgba(79,70,229,.15)}
+.pbar{height:11px;background:var(--solid);border:1px solid var(--bd);border-radius:99px;overflow:hidden}
+.pfill{height:100%;background:linear-gradient(90deg,var(--p),var(--sc));border-radius:99px;transition:width .4s}
+.assess-head{margin-bottom:18px;padding:18px 22px}
+.assess-meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;margin-bottom:12px;font-size:.84rem;color:var(--mut)}
+.assess-meta span{background:var(--solid);border:1px solid var(--bd);padding:5px 12px;border-radius:99px}
+.timer{font-weight:800;color:var(--p);font-variant-numeric:tabular-nums}
+.timer.low{color:var(--wr);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.4}}
+.qcount{margin-top:10px;font-size:.85rem;color:var(--mut);text-align:center}
+.qbadges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.badge{padding:4px 12px;border-radius:99px;font-size:.72rem;font-weight:700}
+.b-ch{background:rgba(79,70,229,.14);color:var(--p)}
+.b-tp{background:rgba(6,182,212,.14);color:#0e7490}
+html[data-theme=dark] .b-tp{color:#67e8f9}
+.b-easy{background:rgba(16,185,129,.15);color:var(--ok)}
+.b-medium{background:rgba(245,158,11,.16);color:#b45309}
+html[data-theme=dark] .b-medium{color:#fbbf24}
+.b-hard{background:rgba(239,68,68,.15);color:var(--wr)}
+.qtext{font-size:1.15rem;margin-bottom:20px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;padding:14px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--solid);color:var(--tx);cursor:pointer;font-size:.98rem;transition:.18s;font-family:inherit;width:100%}
+.opt:hover:not(:disabled){border-color:var(--p);transform:translateX(4px)}
+.opt .ol{min-width:32px;height:32px;border-radius:9px;background:var(--bg);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
+.opt.selected{border-color:var(--p);background:rgba(79,70,229,.08)}
+.opt.correct{border-color:var(--ok);background:rgba(16,185,129,.12)}
+.opt.wrong{border-color:var(--wr);background:rgba(239,68,68,.12)}
+.opt:disabled{cursor:default}
+.tfrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fillrow input{width:100%;padding:14px 18px;border-radius:14px;border:2px solid var(--bd);background:var(--solid);color:var(--tx);font-size:1rem;outline:none;font-family:inherit}
+.fillrow input:focus{border-color:var(--p)}
+.fb{margin-top:18px;padding:16px 18px;border-radius:14px;animation:fadeUp .3s}
+.fb.good{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35)}
+.fb.bad{background:rgba(239,68,68,.10);border:1px solid rgba(239,68,68,.35)}
+.fb-title{font-weight:800;font-size:1.05rem;margin-bottom:6px}
+.fb.good .fb-title{color:var(--ok)}
+.fb.bad .fb-title{color:var(--wr)}
+.fb-correct{margin-bottom:6px}
+.fb-exp{font-size:.92rem;color:var(--mut)}
+.qnav{display:flex;gap:10px;justify-content:space-between;margin-top:20px;flex-wrap:wrap}
+.qpal{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.pdot{min-width:34px;height:34px;border-radius:10px;border:1px solid var(--bd);background:var(--solid);color:var(--mut);cursor:pointer;font-weight:700;font-size:.78rem}
+.pdot.ans{background:rgba(79,70,229,.16);color:var(--p);border-color:rgba(79,70,229,.4)}
+.pdot.cur{background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;border-color:transparent}
+table.tbl{width:100%;border-collapse:collapse;margin:14px 0;font-size:.9rem}
+.tbl th{background:linear-gradient(90deg,rgba(79,70,229,.14),rgba(6,182,212,.14));text-align:left;padding:9px 12px;border:1px solid var(--bd)}
+.tbl td{padding:8px 12px;border:1px solid var(--bd);background:var(--solid)}
+.tbl tr:nth-child(even) td{background:rgba(79,70,229,.04)}
+.sec{margin:30px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--bd);font-size:1.3rem;color:var(--p)}
+html[data-theme=dark] .sec{color:#a5b4fc}
+.callout{border-radius:14px;padding:14px 16px;margin:14px 0;font-size:.9rem;border:1px solid}
+.c-tip{background:rgba(245,158,11,.10);border-color:rgba(245,158,11,.35)}
+.c-note{background:rgba(6,182,212,.10);border-color:rgba(6,182,212,.35)}
+.c-key{background:rgba(16,185,129,.10);border-color:rgba(16,185,129,.35)}
+.dialogue{background:var(--solid);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin:12px 0;display:flex;flex-direction:column;gap:8px}
+.dialogue span{font-size:.92rem}
+.dialogue b{color:var(--p)}
+.summary-box{background:linear-gradient(135deg,rgba(79,70,229,.10),rgba(6,182,212,.10));border:2px dashed rgba(79,70,229,.35);border-radius:18px;padding:22px;margin:28px 0}
+.summary-box h3{color:var(--p);margin-bottom:12px}
+.summary-box ul{padding-left:22px;display:flex;flex-direction:column;gap:7px;font-size:.92rem}
+.chap-nav{display:flex;gap:10px;justify-content:space-between;flex-wrap:wrap;margin-top:24px}
+.mode-grid,.cnt-grid{display:grid;gap:12px;margin:12px 0 22px}
+.mode-grid{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.cnt-grid{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))}
+.pick{border:2px solid var(--bd);border-radius:16px;background:var(--solid);padding:16px 10px;text-align:center;cursor:pointer;transition:.2s;font-family:inherit;color:var(--tx)}
+.pick:hover{transform:translateY(-4px);border-color:var(--p)}
+.pick.sel{border-color:var(--p);background:rgba(79,70,229,.10);box-shadow:0 6px 20px rgba(79,70,229,.2)}
+.pick b{display:block;font-size:1.15rem;margin-bottom:3px}
+.pick small{color:var(--mut);font-size:.74rem}
+.score-ring{width:150px;height:150px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;background:conic-gradient(var(--rc,#10b981) calc(var(--pct)*1%),var(--bd) 0)}
+.score-ring span{width:112px;height:112px;border-radius:50%;background:var(--solid);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800}
+.score-ring span b{font-size:1.7rem}
+.score-ring span i{font-style:normal;font-size:.7rem;color:var(--mut)}
+.res-hero{text-align:center;padding:36px 24px}
+.res-hero h2{font-size:1.7rem;margin:6px 0}
+.res-sub{color:var(--mut);font-size:.9rem;margin-bottom:18px}
+.res-stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.stat{background:var(--solid);border:1px solid var(--bd);border-radius:14px;padding:12px 22px}
+.stat b{font-size:1.4rem;display:block}
+.stat.ok b{color:var(--ok)}.stat.bad b{color:var(--wr)}.stat.pct b{color:var(--p)}
+.level-chip{display:inline-block;background:linear-gradient(90deg,var(--p),var(--sc));color:#fff;padding:10px 26px;border-radius:99px;font-weight:800;font-size:1.05rem}
+.bar-row{display:flex;align-items:center;gap:12px;margin:10px 0;flex-wrap:wrap}
+.bar-label{min-width:220px;font-size:.88rem;font-weight:600}
+.bar-track{flex:1;min-width:160px}
+.bar-pct{min-width:52px;text-align:right;font-weight:800;font-size:.9rem}
+.zone{border-radius:16px;padding:18px;margin:14px 0;border:1px solid}
+.zone h4{margin-bottom:10px}
+.zone ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.zone li{background:var(--solid);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;font-size:.88rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.z-good{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.35)}
+.z-good h4{color:var(--ok)}
+.z-mid{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.35)}
+.z-mid h4{color:#b45309}
+html[data-theme=dark] .z-mid h4{color:#fbbf24}
+.z-bad{background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.35)}
+.z-bad h4{color:var(--wr)}
+.filter-chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.fchip{border:2px solid var(--bd);background:var(--solid);color:var(--tx);padding:8px 16px;border-radius:99px;cursor:pointer;font-weight:700;font-size:.8rem;font-family:inherit;transition:.2s}
+.fchip.on{border-color:var(--p);background:var(--p);color:#fff}
+.rev-item{margin:14px 0;padding:20px;border-left:6px solid var(--ok)}
+.rev-item.bad{border-left-color:var(--wr)}
+.rev-status{font-size:1.3rem;margin-bottom:8px}
+.rev-q{font-weight:700;font-size:1rem;margin-bottom:10px}
+.rev-line{font-size:.9rem;margin:5px 0}
+.rev-line b{color:var(--p)}
+.rev-item.bad .rev-line.you b{color:var(--wr)}
+.rev-exp{font-size:.88rem;color:var(--mut);background:var(--solid);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin:10px 0}
+.rev-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.fb-card textarea{width:100%;min-height:90px;padding:13px 16px;border-radius:14px;border:2px solid var(--bd);background:var(--solid);color:var(--tx);font-family:inherit;font-size:.92rem;resize:vertical;outline:none}
+.fb-card textarea:focus{border-color:var(--p)}
+.fb-card input{width:100%;padding:12px 16px;border-radius:12px;border:2px solid var(--bd);background:var(--solid);color:var(--tx);font-family:inherit;outline:none;margin-bottom:10px}
+.fb-card input:focus{border-color:var(--sc)}
+.mistake-sum{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.stat2{flex:1;min-width:150px;background:var(--solid);border:1px solid var(--bd);border-radius:14px;padding:14px;text-align:center}
+.stat2 b{font-size:1.5rem;display:block}
+.stat2.ok b{color:var(--ok)}.stat2.bad b{color:var(--wr)}
+.modal{position:fixed;inset:0;background:rgba(2,6,23,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+.modal-box{background:var(--solid);border:1px solid var(--bd);border-radius:20px;padding:30px;max-width:420px;width:100%;text-align:center;box-shadow:var(--sh);animation:fadeUp .3s}
+.modal-box h3{margin-bottom:10px}
+.modal-box p{color:var(--mut);margin-bottom:20px;font-size:.92rem}
+.modal-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:linear-gradient(90deg,var(--p),var(--p2));color:#fff;padding:13px 26px;border-radius:99px;font-weight:700;font-size:.9rem;z-index:200;transition:.35s;box-shadow:0 10px 30px rgba(0,0,0,.3);max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.big-title{font-size:1.7rem;margin:14px 0 6px}
+.sub{color:var(--mut);margin-bottom:20px}
+footer{text-align:center;padding:26px;color:var(--mut);font-size:.8rem;border-top:1px solid var(--bd)}
+.pg-bar-row{margin:14px 0}
+.pg-big{font-size:2.2rem;font-weight:800;color:var(--p)}
+.hist{max-height:300px;overflow:auto}
+.hidden{display:none!important}
+@media(max-width:640px){.tfrow{grid-template-columns:1fr}.bar-label{min-width:100%}.card{padding:18px}.res-hero{padding:26px 14px}}
+</style>
+</head>
+<body>
+<div class="bgfx"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<nav id="nav" class="hidden">
+  <div class="nav-inner">
+    <div class="brand" onclick="go('dashboard')">🇫🇷 GST 123 • French Portal</div>
+    <div class="nav-links" id="navLinks">
+      <a data-v="dashboard" onclick="go('dashboard')">🏠 Home</a>
+      <a data-v="study" onclick="go('study')">📚 Study</a>
+      <a data-v="quizsetup" onclick="go('quizsetup')">📝 Quizzes</a>
+      <a data-v="examsetup" onclick="go('examsetup')">🎯 Practice Exam</a>
+      <a data-v="progress" onclick="go('progress')">📊 My Progress</a>
+      <a data-v="about" onclick="go('about')">ℹ About</a>
+    </div>
+    <div class="nav-right">
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle dark / light mode">🌙</button>
+      <div class="user-chip" id="userChip">👤</div>
+    </div>
+  </div>
+</nav>
+
+<main id="app">
+  <section id="view-welcome" class="view active">
+    <div class="welcome-wrap">
+      <div class="card welcome-card">
+        <div class="w-badge">🇫🇷 GST 123 • FEDERAL UNIVERSITY DUTSE</div>
+        <h1>Welcome to the<br><span class="grad">Communication in French</span><br>Exam Study Portal</h1>
+        <p class="w-sub">Faculty of General Studies • Level 100 • By Osita Nicholas, PhD</p>
+        <p class="w-msg">Your complete learning &amp; examination platform — study chapter by chapter, take quizzes, sit full practice exams, and get a smart analysis of your strengths and weaknesses.</p>
+        <div class="w-form">
+          <input id="nameInput" placeholder="Enter Your Name" maxlength="30" onkeydown="if(event.key==='Enter')startLearning()">
+          <button class="btn btn-primary" onclick="startLearning()">🚀 Start Learning</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="view-dashboard" class="view"></section>
+  <section id="view-study" class="view"></section>
+  <section id="view-chapter" class="view"></section>
+  <section id="view-quizsetup" class="view"></section>
+  <section id="view-assess" class="view"></section>
+  <section id="view-examsetup" class="view"></section>
+  <section id="view-results" class="view"></section>
+  <section id="view-progress" class="view"></section>
+  <section id="view-about" class="view"></section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <h3 id="mTitle">Submit your exam?</h3>
+    <p id="mText">Are you sure you want to submit your exam?</p>
+    <div class="modal-btns">
+      <button class="btn btn-danger" id="mYes" onclick="confirmSubmit()">✓ Yes, Submit</button>
+      <button class="btn btn-ghost" onclick="closeModal()">← Keep Going</button>
+    </div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<footer>Made with ❤️ for GST 123 students • Federal University Dutse • Jigawa State</footer>
+
+<script>
+/* ================= COURSE INFO ================= */
+const COURSE = { name: "Communication in French (GST 123)", short: "GST 123 • Communication in French", uni: "Federal University Dutse — Faculty of General Studies", level: "Level 100", author: "Osita Nicholas, PhD" };
+
+/* ================= CHAPTER CONTENT ================= */
+const CHAPTERS = [
+{
+ id:1, title:"Entrer en contact", en:"Making Contact",
+ desc:"Greetings and farewells, essential verbs (avoir, être, aller), nouns, articles, numbers 1–100, introducing yourself, ER verbs, nationalities, professions, the French alphabet, places in town, family and directions.",
+ secs:[
+ {id:"saluer", title:"Section A — Saluer (Greetings)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> greet people • say goodbye • count from 1 to 50.</div>
+   <h4>Dialogue</h4>
+   <div class="dialogue">
+     <span><b>Mme Dupont:</b> Bonjour Monsieur Dulac.</span>
+     <span><b>M. Dulac:</b> Bonjour Madame.</span>
+     <span><b>Mme Dupont:</b> Comment allez-vous ?</span>
+     <span><b>M. Dulac:</b> Ça va bien, merci. Et vous ?</span>
+   </div>
+   <table class="tbl"><tr><th>Les salutations</th><th>English</th></tr>
+   <tr><td>Bonjour</td><td>good day / good morning</td></tr>
+   <tr><td>Bonjour Monsieur / Madame</td><td>good day sir / good morning madam</td></tr>
+   <tr><td>Bonsoir</td><td>good evening</td></tr></table>
+   <div class="callout c-note"><b>📌 Important:</b> The French do <b>NOT</b> have an equivalent of “good afternoon” like English. <b>Bonjour</b> therefore means both <i>good morning</i> and <i>good afternoon</i>.</div>
+   <div class="callout c-note"><b>📌 Greeting mates:</b> When greeting friends/classmates, titles (Monsieur, Madame, Mademoiselle) are removed — simply say <i>Bonjour Zainab</i>, <i>Bonsoir Musa</i>, <i>Salut Doris</i>.</div>
+   <h4>Vocabulaire supplémentaire (Extra vocabulary)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>Bonne soirée</td><td>have a nice (social) evening</td><td>Bonne nuit</td><td>good night</td></tr>
+   <tr><td>Bon voyage</td><td>safe journey</td><td>Bonne guérison</td><td>get well soon</td></tr>
+   <tr><td>Joyeux anniversaire</td><td>happy birthday</td><td>Bonne chance</td><td>good luck</td></tr>
+   <tr><td>Bon appétit</td><td>enjoy your meal</td><td>Merci beaucoup</td><td>thanks a lot</td></tr>
+   <tr><td>Salut !</td><td>hi / hello</td><td>Bravo</td><td>well done</td></tr>
+   <tr><td>Au revoir</td><td>bye bye</td><td>Pas de quoi</td><td>don’t mention it</td></tr>
+   <tr><td>Bienvenu(e)</td><td>welcome</td><td>C’est dommage</td><td>it is a pity</td></tr>
+   <tr><td>Quel dommage</td><td>what a pity</td><td>Du courage</td><td>well done (to someone at work)</td></tr>
+   <tr><td>À bientôt</td><td>see you soon</td><td>À tout à l’heure</td><td>see you later</td></tr>
+   <tr><td>À lundi / À mardi</td><td>see you Monday / Tuesday</td><td>Félicitations</td><td>congratulations</td></tr>
+   <tr><td>Oh là là !</td><td>exclamation: surprise, excitement, shock or anger</td><td>De rien / Ce n’est rien / Je vous en prie</td><td>you are welcome</td></tr></table>
+   <h4>Ma carte d’identité (Identity card vocabulary)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>Nom</td><td>surname</td><td>Prénom</td><td>first name</td></tr>
+   <tr><td>Nationalité</td><td>nationality</td><td>Situation familiale</td><td>marital status</td></tr>
+   <tr><td>Célibataire</td><td>single</td><td>Marié(e)</td><td>married</td></tr>
+   <tr><td>Domicile</td><td>residence</td><td>Date de naissance</td><td>date of birth</td></tr>
+   <tr><td>Couleur des yeux</td><td>colour of the eyes</td><td>Couleur des cheveux</td><td>colour of hair</td></tr>
+   <tr><td>Poids</td><td>weight</td><td>Taille</td><td>height</td></tr></table>
+   <h4>Les verbes : avoir, être, aller (present tense)</h4>
+   <table class="tbl"><tr><th>Avoir (to have)</th><th>Être (to be)</th><th>Aller (to go)</th></tr>
+   <tr><td>J’ai — I have</td><td>Je suis — I am</td><td>Je vais — I go</td></tr>
+   <tr><td>Tu as — you have</td><td>Tu es — you are</td><td>Tu vas — you go</td></tr>
+   <tr><td>Il/elle a — he/she has</td><td>Il/elle est — he/she is</td><td>Il/elle va — he/she goes</td></tr>
+   <tr><td>Nous avons — we have</td><td>Nous sommes — we are</td><td>Nous allons — we go</td></tr>
+   <tr><td>Vous avez — you have</td><td>Vous êtes — you are</td><td>Vous allez — you go</td></tr>
+   <tr><td>Ils/elles ont — they have</td><td>Ils/elles sont — they are</td><td>Ils/elles vont — they go</td></tr></table>
+   <p><i>Examples: J’ai une voiture (I have a car) • Nous avons des livres • Je suis nigérian • Vous êtes professeur • Je vais à Kano • Nous allons au cinéma.</i></p>
+   <h4>Other special uses of AVOIR (very common exam area!)</h4>
+   <table class="tbl"><tr><th>Expression</th><th>Meaning</th><th>Example</th></tr>
+   <tr><td>Avoir + âge</td><td>to be … years old</td><td>J’ai 20 ans ✔ (NOT ✗ Je suis 20 ans)</td></tr>
+   <tr><td>Avoir peur</td><td>to be afraid</td><td>J’ai peur — I am afraid</td></tr>
+   <tr><td>Avoir faim</td><td>to be hungry</td><td>J’ai faim — I am hungry</td></tr>
+   <tr><td>Avoir soif</td><td>to be thirsty</td><td>Il a soif — he is thirsty</td></tr>
+   <tr><td>Avoir froid</td><td>to be / feel cold</td><td>Elle a froid — she is cold</td></tr>
+   <tr><td>Avoir chaud</td><td>to be / feel hot</td><td>J’ai chaud — I am warm</td></tr>
+   <tr><td>Avoir mal à + body part</td><td>to have an ache</td><td>J’ai mal à la tête — I have a headache</td></tr>
+   <tr><td>Avoir raison / tort</td><td>to be right / wrong</td><td>J’ai raison — I am right • Il a tort — he is wrong</td></tr></table>
+   <div class="callout c-tip"><b>💡 Exam tip:</b> Age in French uses <b>avoir</b>, never être: «Ma mère a cinquante ans» (my mother is fifty). This is a classic exam trap!</div>
+   <h4>Preposition contractions with “à”</h4>
+   <table class="tbl"><tr><th>à + le = <b>au</b></th><th>à + les = <b>aux</b></th><th>à + la = à la</th><th>à + l’ = à l’</th></tr>
+   <tr><td>au marché</td><td>aux dents</td><td>à la banque</td><td>à l’école</td></tr></table>
+   <h4>Aller + infinitive = the immediate future</h4>
+   <p>Aller is conjugated in the present; the action verb stays in the infinitive (raw form): <b>Je vais manger</b> (I am going to eat) • <b>Tu vas dormir</b> • <b>Ils vont nager</b> • <b>Vous allez écrire</b>.</p>
+   <h4>Les noms (Nouns) — gender</h4>
+   <p>In French <b>ALL nouns are either masculine or feminine</b>: <i>un cinéma, un éléphant</i> (masculine) • <i>une table, une fille</i> (feminine). Always learn the article with the noun: don’t learn «voyage», learn <b>«un voyage»</b>.</p>
+   <h4>Plural rules</h4>
+   <table class="tbl"><tr><th>Rule</th><th>Examples</th></tr>
+   <tr><td>Most nouns add <b>-s</b> (usually not pronounced)</td><td>le garçon → les garçons • la fille → les filles</td></tr>
+   <tr><td>Nouns in <b>-al → -aux</b></td><td>un animal → des animaux • un cheval → des chevaux</td></tr>
+   <tr><td>Already ending in -s, -x, -z → <b>no change</b></td><td>le bras → les bras • le prix → les prix</td></tr>
+   <tr><td>Nouns in <b>-eau / -eu add -x</b></td><td>un gâteau → des gâteaux • un jeu → des jeux</td></tr>
+   <tr><td>Completely irregular</td><td>un œil → des yeux</td></tr></table>
+   <h4>Les articles (Articles)</h4>
+   <p>Articles must <b>agree in gender and number</b> with their noun.</p>
+   <table class="tbl"><tr><th colspan="2">Definite (the)</th><th colspan="2">Indefinite (a/an/some)</th></tr>
+   <tr><th>Article</th><th>Use</th><th>Article</th><th>Use</th></tr>
+   <tr><td>Le</td><td>masculine singular (le garçon, le livre)</td><td>Un</td><td>masculine singular (un stylo, un tableau)</td></tr>
+   <tr><td>La</td><td>feminine singular (la fille, la voiture)</td><td>Une</td><td>feminine singular (une maison, une porte)</td></tr>
+   <tr><td>Les</td><td>plural, both genders (les étudiants)</td><td>Des</td><td>plural, both genders (des enfants, des villes)</td></tr>
+   <tr><td>L’</td><td>singular noun starting with a vowel (a,e,i,o,u) or silent h (l’homme, l’école, l’université)</td><td>—</td><td>—</td></tr></table>
+   <h4>Les nombres 1–50</h4>
+   <table class="tbl"><tr><th>No.</th><th>French</th><th>No.</th><th>French</th><th>No.</th><th>French</th></tr>
+   <tr><td>1</td><td>un</td><td>11</td><td>onze</td><td>21</td><td>vingt et un</td></tr>
+   <tr><td>2</td><td>deux</td><td>12</td><td>douze</td><td>30</td><td>trente</td></tr>
+   <tr><td>3</td><td>trois</td><td>13</td><td>treize</td><td>31</td><td>trente et un</td></tr>
+   <tr><td>4</td><td>quatre</td><td>14</td><td>quatorze</td><td>40</td><td>quarante</td></tr>
+   <tr><td>5</td><td>cinq</td><td>15</td><td>quinze</td><td>41</td><td>quarante et un</td></tr>
+   <tr><td>6</td><td>six</td><td>16</td><td>seize</td><td>50</td><td>cinquante</td></tr>
+   <tr><td>7</td><td>sept</td><td>17</td><td>dix-sept</td><td>38</td><td>trente-huit</td></tr>
+   <tr><td>8</td><td>huit</td><td>18</td><td>dix-huit</td><td>45</td><td>quarante-cinq</td></tr>
+   <tr><td>9</td><td>neuf</td><td>19</td><td>dix-neuf</td><td>49</td><td>quarante-neuf</td></tr>
+   <tr><td>10</td><td>dix</td><td>20</td><td>vingt</td><td>—</td><td>—</td></tr></table>
+   <div class="callout c-tip"><b>💡 Exam tip:</b> Compound numbers 21, 31, 41 use <b>“et un”</b> (vingt <b>et</b> un); others use a hyphen (trente-huit).</div>`},
+ {id:"presenter", title:"Section B — Se Présenter (Introducing oneself)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> introduce yourself • conjugate ER verbs • state nationalities • mention professions • recite the alphabet &amp; numbers 51–100 • identify French sounds.</div>
+   <h4>Casual dialogue</h4>
+   <div class="dialogue">
+     <span><b>Abdul:</b> Salut ! Comment ça va ?</span>
+     <span><b>Shehu:</b> Ça va bien, merci. Je m’appelle Shehu. Et toi, comment t’appelles-tu ?</span>
+     <span><b>Abdul:</b> Je m’appelle Abdul. Moi, j’ai vingt ans. Tu as quel âge ?</span>
+     <span><b>Shehu:</b> Moi aussi j’ai vingt ans. Je suis nigérian. D’où viens-tu ?</span>
+     <span><b>Abdul:</b> Je viens du Bénin. Je suis béninois. Je suis étudiant de français. J’habite Dutse. Où habites-tu ?</span>
+     <span><b>Shehu:</b> Moi aussi j’habite Dutse. Je suis ravi de te connaître.</span>
+   </div>
+   <h4>Key introduction phrases</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th></tr>
+   <tr><td>Je m’appelle…</td><td>My name is…</td></tr>
+   <tr><td>Comment t’appelles-tu ? (casual)</td><td>What is your name?</td></tr>
+   <tr><td>Comment vous appelez-vous ? (formal)</td><td>What is your name?</td></tr>
+   <tr><td>D’où viens-tu ? / D’où venez-vous ?</td><td>Where do you come from?</td></tr>
+   <tr><td>J’habite à Dutse</td><td>I live in Dutse</td></tr>
+   <tr><td>Je suis ravi de te connaître</td><td>Nice to meet you (casual)</td></tr>
+   <tr><td>Je suis content de faire votre connaissance</td><td>Nice to meet you (formal)</td></tr>
+   <tr><td>Enchantée / Enchanté</td><td>Nice to meet you</td></tr></table>
+   <h4>Les verbes en ER (first group verbs)</h4>
+   <p>French has <b>3 groups of verbs</b>: 1st = <b>-ER</b> (parler, travailler), 2nd = <b>-IR</b> (finir, choisir), 3rd = all others (recevoir, comprendre). A verb = <b>root/radical + ending</b>: in <i>parler</i>, “parl” is the root and “er” is the ending. When conjugating, <b>the root stays the same, only the ending changes</b>.</p>
+   <table class="tbl"><tr><th>Parler (to speak)</th><th>Aider (to help)</th><th>Commencer (to start)</th><th>Manger (to eat)</th></tr>
+   <tr><td>Je parle</td><td>J’aide</td><td>Je commence</td><td>Je mange</td></tr>
+   <tr><td>Tu parles</td><td>Tu aides</td><td>Tu commences</td><td>Tu manges</td></tr>
+   <tr><td>Il/elle parle</td><td>Il/elle aide</td><td>Il/elle commence</td><td>Il/elle mange</td></tr>
+   <tr><td>Nous parlons</td><td>Nous aidons</td><td>Nous <b>commençons</b></td><td>Nous <b>mangeons</b></td></tr>
+   <tr><td>Vous parlez</td><td>Vous aidez</td><td>Vous commencez</td><td>Vous mangez</td></tr>
+   <tr><td>Ils/elles parlent</td><td>Ils/elles aident</td><td>Ils/elles commencent</td><td>Ils/elles mangent</td></tr></table>
+   <div class="callout c-note"><b>📌 Note:</b> -CER and -GER verbs change spelling in the <b>nous</b> form (commençons, mangeons) to keep the soft sound. <b>Lever</b> takes accents: je lève, tu lèves, il/elle lève, nous levons, vous levez, ils/elles lèvent.</div>
+   <p><b>More -ER verbs to master:</b> donner, arriver, compter, couper, laver, trouver, téléphoner, fermer, entrer, garder, acheter, travailler, voler, regarder, sauter, jouer, écouter, monter, pleurer, préparer, expliquer, étudier, penser, nager, voyager.</p>
+   <h4>Les nationalités (Nationalities)</h4>
+   <table class="tbl"><tr><th>Pays</th><th>Nationalité</th><th>Pays</th><th>Nationalité</th></tr>
+   <tr><td>L’Algérie</td><td>Algérien/ne</td><td>Le Ghana</td><td>Ghanéen/ne</td></tr>
+   <tr><td>L’Égypte</td><td>Égyptien/ne</td><td>Le Mali</td><td>Malien/ne</td></tr>
+   <tr><td>Le Maroc</td><td>Marocain/e</td><td>Le Nigéria</td><td><b>Nigérian/e</b></td></tr>
+   <tr><td>La Tunisie</td><td>Tunisien/ne</td><td>Le Sénégal</td><td>Sénégalais/e</td></tr>
+   <tr><td>Le Bénin</td><td>Béninois/e</td><td>Le Togo</td><td>Togolais/e</td></tr>
+   <tr><td>La Côte d’Ivoire</td><td>Ivoirien/ne</td><td>Le Cameroun</td><td>Camerounais/e</td></tr>
+   <tr><td>La Chine</td><td>Chinois/e</td><td>Le Canada</td><td>Canadien/ne</td></tr>
+   <tr><td>Le Japon</td><td>Japonais/e</td><td>Les États-Unis</td><td>Américain/e</td></tr>
+   <tr><td>La Russie</td><td>Russe</td><td>La Belgique</td><td>Belge</td></tr>
+   <tr><td>La Grande Bretagne</td><td>Britannique</td><td>L’Espagne</td><td>Espagnol/e</td></tr>
+   <tr><td>La Grèce</td><td>Grec/Grecque</td><td>L’Italie</td><td>Italien/ne</td></tr>
+   <tr><td>La France</td><td><b>Français/e</b></td><td>Le Qatar</td><td>Qatari/e</td></tr></table>
+   <p><b>Expressing nationality:</b> <i>Je suis nigérian</i> • <i>Je viens du Nigéria</i> • <i>Je suis de la nationalité nigériane</i>. For a friend: <i>Il est béninois</i> or <i>C’est un Béninois</i>.</p>
+   <div class="callout c-key"><b>⭐ Key:</b> Adjectives of nationality are written with a <b>lowercase</b> letter: <i>Kofi est ghanéen</i>, <i>C’est un tissu ghanéen</i>, <i>Ces chaussures italiennes me plaisent</i>.</div>
+   <h4>Les métiers / Les professions</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>Informaticien/ne</td><td>computer scientist</td><td>Coiffeur/coiffeuse</td><td>barber / hair-dresser</td></tr>
+   <tr><td>Avocat/Avocate</td><td>lawyer</td><td>Banquier</td><td>banker</td></tr>
+   <tr><td>Infirmier/Infirmière</td><td>nurse</td><td>Menuisier</td><td>carpenter</td></tr>
+   <tr><td>Maçon</td><td>bricklayer</td><td>Boucher</td><td>butcher</td></tr>
+   <tr><td>Boulanger</td><td>baker</td><td>Ingénieur</td><td>engineer</td></tr>
+   <tr><td>Professeur</td><td>secondary school teacher</td><td>Forgeron</td><td>blacksmith</td></tr>
+   <tr><td>Soudeur</td><td>welder</td><td>Peintre</td><td>painter</td></tr>
+   <tr><td>Écrivain</td><td>writer</td><td>Étudiant(e)</td><td>student</td></tr></table>
+   <div class="callout c-key"><b>⭐ Key rule:</b> Unlike English, French uses <b>NO article</b> with professions: <i>Elle est avocate</i>. BUT with <i>c’est / ce sont</i> the article IS present: <i>C’est un forgeron</i> • <i>Ce sont des étudiants</i>.</div>
+   <h4>L’alphabet français</h4>
+   <p>26 letters = <b>6 vowels</b> (a, e, i, o, u, y) + <b>20 consonants</b>. Letter names: A(a), B(be), C(se), D(de), E(ə), F(ef), G(ʒe), H(ash), I(i), J(ʒi), K(ka), L(el), M(em), N(en), O(o), P(pe), Q(ky), R(ɛr), S(es), T(te), U(y), V(ve), W(double-vé), X(iks), <b>Y(igrek)</b>, Z(zède).</p>
+   <p>From these letters are formed <b>16 vowel sounds, 18 consonant sounds and 3 semi-vowel sounds</b>.</p>
+   <h4>Les nombres 51–100</h4>
+   <table class="tbl"><tr><th>No.</th><th>French</th><th>No.</th><th>French</th></tr>
+   <tr><td>51</td><td>cinquante et un</td><td>60</td><td>soixante</td></tr>
+   <tr><td>55</td><td>cinquante-cinq</td><td>61</td><td>soixante et un</td></tr>
+   <tr><td>69</td><td>soixante-neuf</td><td>70</td><td><b>soixante-dix</b></td></tr>
+   <tr><td>71</td><td><b>soixante et onze</b></td><td>75</td><td><b>soixante-quinze</b></td></tr>
+   <tr><td>79</td><td>soixante-dix-neuf</td><td>80</td><td><b>quatre-vingts</b></td></tr>
+   <tr><td>81</td><td>quatre-vingt-un</td><td>89</td><td>quatre-vingt-neuf</td></tr>
+   <tr><td>90</td><td><b>quatre-vingt-dix</b></td><td>91</td><td>quatre-vingt-onze</td></tr>
+   <tr><td>99</td><td>quatre-vingt-dix-neuf</td><td>100</td><td><b>cent</b></td></tr></table>
+   <div class="callout c-note"><b>📌 Note:</b> Alternatives used in some regions: 70 = <i>septante</i>, 80 = <i>octante</i>, 90 = <i>nonante</i>. France itself uses soixante-dix, quatre-vingts, quatre-vingt-dix (literally “60+10”, “4×20”, “4×20+10”).</div>`},
+ {id:"ville", title:"Section C — En ville (Places in town)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> ask for and give directions • talk about your family • count from 100 to 1,000,000.</div>
+   <h4>Dialogue — asking for directions</h4>
+   <div class="dialogue">
+     <span><b>Abdullahi:</b> Excusez-moi, monsieur. Où est la poste s’il vous plaît ?</span>
+     <span><b>Passer-by:</b> Allez tout droit. Puis prenez la deuxième rue à droite. C’est la rue Zola. La poste se trouve à gauche.</span>
+     <span><b>Abdullahi:</b> Merci, monsieur. — <b>Passer-by:</b> Je vous en prie.</span>
+   </div>
+   <table class="tbl"><tr><th>French</th><th>English</th></tr>
+   <tr><td>Demander/expliquer le chemin</td><td>Ask for / give directions</td></tr>
+   <tr><td>Où est la poste s’il vous plaît ?</td><td>Where is the post office please?</td></tr>
+   <tr><td>Allez tout droit</td><td>Go straight ahead</td></tr>
+   <tr><td>Prenez la deuxième rue à droite</td><td>Take the second street on the right</td></tr>
+   <tr><td>Prenez la troisième rue à gauche</td><td>Take the third street on the left</td></tr></table>
+   <h4>En ville (In town)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>un marché</td><td>a market</td><td>un musée</td><td>a museum</td></tr>
+   <tr><td>un supermarché</td><td>a supermarket</td><td>un zoo</td><td>a zoo</td></tr>
+   <tr><td>une banque</td><td>a bank</td><td>une boulangerie</td><td>a bakery</td></tr>
+   <tr><td>une église</td><td>a church</td><td>une mosquée</td><td>a mosque</td></tr>
+   <tr><td>une pharmacie</td><td>a chemist</td><td>une poste</td><td>a post office</td></tr>
+   <tr><td>un hôpital</td><td>a hospital</td><td>un cinéma</td><td>a cinema</td></tr>
+   <tr><td>un restaurant</td><td>a restaurant</td><td>un hôtel</td><td>a hotel</td></tr>
+   <tr><td>un café</td><td>a coffee shop</td><td>un magasin</td><td>a shop</td></tr>
+   <tr><td>un centre commercial</td><td>a shopping centre</td><td>une bibliothèque</td><td>a library</td></tr>
+   <tr><td>un stade</td><td>a stadium</td><td>—</td><td>—</td></tr></table>
+   <h4>Les nombres ordinaux (Ordinal numbers)</h4>
+   <p><b>Premier</b> (1st) • <b>deuxième</b> (2nd) • <b>troisième</b> (3rd) • <b>quatrième</b> (4th) • <b>cinquième</b> (5th) • quarante-huitième (48th).</p>
+   <h4>La famille (Family) — from Musa’s passage</h4>
+   <div class="dialogue"><span><i>«Je m’appelle Musa. Je suis nigérian et j’habite à Dutse. J’ai vingt ans. Je suis étudiant. J’ai deux frères et une sœur. Je suis le troisième enfant de mes parents. Mon père est médecin et ma mère est comptable.»</i></span></div>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>Mon père</td><td>my father</td><td>Ma mère</td><td>my mother</td></tr>
+   <tr><td>Mes parents</td><td>my parents</td><td>Mon frère</td><td>my brother</td></tr>
+   <tr><td>Ma sœur</td><td>my sister</td><td>Mon cousin</td><td>my cousin (male)</td></tr>
+   <tr><td>Ma cousine</td><td>my cousin (female)</td><td>Mon oncle</td><td>my uncle</td></tr>
+   <tr><td>Ma tante</td><td>my aunt</td><td>—</td><td>—</td></tr></table>
+   <h4>Les nombres de 100 à 1 000 000</h4>
+   <table class="tbl"><tr><th>No.</th><th>French</th><th>No.</th><th>French</th></tr>
+   <tr><td>100</td><td>cent</td><td>200</td><td>deux cents</td></tr>
+   <tr><td>101</td><td>cent un</td><td>201</td><td>deux cent un</td></tr>
+   <tr><td>168</td><td>cent soixante-huit</td><td>275</td><td>deux cent soixante-quinze</td></tr>
+   <tr><td>600 / 800 / 900</td><td>six/huit/neuf cents</td><td>1000</td><td>mille</td></tr>
+   <tr><td>1001</td><td>mille un</td><td>1992</td><td>mille neuf cent quatre-vingt-douze</td></tr>
+   <tr><td>2000</td><td>deux mille</td><td>7000</td><td>sept mille</td></tr>
+   <tr><td>1 000 000</td><td>un million</td><td>1269</td><td>mille deux cent soixante-neuf</td></tr></table>
+   <div class="callout c-note"><b>📌 Note:</b> <b>cent</b> and <b>mille</b> take a final -s in round hundreds (deux cents) but not when followed by another number (deux cent un).</div>
+   <h4>Les verbes réguliers en -ir (second group)</h4>
+   <p>Most -ir verbs conjugate like <b>finir</b>:</p>
+   <table class="tbl"><tr><th>Finir (to finish)</th><th>Form</th></tr>
+   <tr><td>Je finis / Tu finis / Il,Elle finit</td><td>singular</td></tr>
+   <tr><td>Nous finissons / Vous finissez / Ils,Elles finissent</td><td>plural</td></tr></table>
+   <p>Other regular -ir verbs: <b>choisir</b> (to choose) — <i>Tu choisis quel livre ?</i> • <b>réussir</b> (to succeed) — <i>Nous réussissons toujours</i> • <b>grossir</b> (to get fat) — <i>Marc grossit parce qu’il mange beaucoup</i>.</p>`}
+ ],
+ summary:`<ul>
+ <li><b>Bonjour</b> = good morning AND good afternoon (no separate word exists).</li>
+ <li>Age, hunger, thirst, fear, hot/cold, aches and right/wrong all use <b>AVOIR</b>: J’ai 20 ans, J’ai faim, J’ai raison.</li>
+ <li><b>aller + infinitive</b> = immediate future (Je vais manger).</li>
+ <li>à + le = <b>au</b>; à + les = <b>aux</b>.</li>
+ <li>All nouns are masculine or feminine; learn nouns <b>with their article</b> (un voyage).</li>
+ <li>Plurals: +s (silent); -al → -aux; -eau/-eu → +x; -s/-x/-z unchanged; œil → yeux.</li>
+ <li>Articles: le/la/les/l’ and un/une/des — must agree with the noun.</li>
+ <li>ER verbs: root + e, es, e, ons, ez, ent; special nous forms: commençons, mangeons.</li>
+ <li>Nationality adjectives start with <b>lowercase</b>; no article with professions (Elle est avocate) except after c’est (C’est un forgeron).</li>
+ <li>Numbers: 70 = soixante-dix, 80 = quatre-vingts, 90 = quatre-vingt-dix, 100 = cent.</li>
+ <li>-ir verbs (finir): je finis, nous finissons, ils finissent.</li></ul>`},
+{
+ id:2, title:"A l’université", en:"At the University",
+ desc:"Talking about your studies, negative sentences, means of transport, -RE verbs, parts of the body, possessive adjectives, OIR verbs, telling the time, days and months, clothes, colours, money, adjectives and demonstrative adjectives.",
+ secs:[
+ {id:"universite", title:"Section A — Je suis étudiante (Studies, negation, transport)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> talk about what you study • construct negative sentences • means of transport.</div>
+   <h4>Dialogue</h4>
+   <div class="dialogue">
+     <span><b>Marie:</b> Bonjour, je m’appelle Marie. Je suis étudiante au département de microbiologie.</span>
+     <span><b>Jennifer:</b> Enchantée. Moi je m’appelle Jennifer. J’étudie les langues étrangères.</span>
+     <span><b>Marie:</b> Super ! Tu parles l’italien ?</span>
+     <span><b>Jennifer:</b> Non, je ne parle pas l’italien. Nous n’étudions pas l’italien. Je parle français, anglais et portugais.</span>
+     <span><b>Marie:</b> Tu vas toujours à l’université en bus ?</span>
+     <span><b>Jennifer:</b> Non, quelquefois j’y vais en taxi ou à moto.</span>
+   </div>
+   <h4>Vocabulary</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th></tr>
+   <tr><td>Enchantée</td><td>nice to meet you</td></tr>
+   <tr><td>J’étudie les langues étrangères</td><td>I am studying foreign languages</td></tr>
+   <tr><td>Super !</td><td>Great !</td></tr>
+   <tr><td>Tu vas toujours à l’université en bus ?</td><td>Do you always go to the university by bus?</td></tr></table>
+   <h4>A l’université (faculties &amp; departments)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th></tr>
+   <tr><td>Faculté des lettres et sciences sociales</td><td>Faculty of Arts and Social Sciences</td></tr>
+   <tr><td>Faculté des sciences</td><td>Faculty of Science</td></tr>
+   <tr><td>Faculté d’agriculture</td><td>Faculty of Agriculture</td></tr>
+   <tr><td>Département de microbiologie / biologie / botanique / zoologie</td><td>Department of Microbiology / Biology / Botany / Zoology</td></tr>
+   <tr><td>Département de criminologie / sciences politiques / sociologie</td><td>Department of Criminology / Political Science / Sociology</td></tr>
+   <tr><td>Département des forêts et faune</td><td>Department of Forestry and Wild Life</td></tr>
+   <tr><td>Département de pisciculture et aquaculture</td><td>Department of Fisheries and Aquaculture</td></tr></table>
+   <h4>La négation (The negative)</h4>
+   <p><b>Rule:</b> Subject + <b>ne</b> + Verb + <b>pas</b> → Il ne travaille pas (He doesn’t work).<br>Before a vowel, <b>ne becomes n’</b>: Je n’étudie pas l’italien.</p>
+   <table class="tbl"><tr><th>Affirmative</th><th>Negative</th></tr>
+   <tr><td>Je parle</td><td>Je ne parle pas</td></tr>
+   <tr><td>Tu parles</td><td>Tu ne parles pas</td></tr>
+   <tr><td>Il/Elle parle</td><td>Il/Elle ne parle pas</td></tr>
+   <tr><td>Nous parlons</td><td>Nous ne parlons pas</td></tr>
+   <tr><td>Vous parlez</td><td>Vous ne parlez pas</td></tr>
+   <tr><td>Ils/Elles parlent</td><td>Ils/Elles ne parlent pas</td></tr></table>
+   <h4>Les moyens de transport (Means of transport)</h4>
+   <table class="tbl"><tr><th>Use EN + transport</th><th>Use À + transport</th></tr>
+   <tr><td>en train (by train) • en bus (by bus) • en voiture (by car) • en avion (by plane) • en taxi</td><td>à pied (on foot) • à cheval (on horse) • à vélo (by bicycle) • à moto (by motorbike)</td></tr></table>
+   <div class="callout c-key"><b>⭐ Key:</b> Walking, two-wheeled vehicles and animals take <b>à</b>; everything else takes <b>en</b>. <i>Je vais à la mosquée à pied. Je vais en France en avion.</i></div>
+   <h4>Some verbs ending in -RE</h4>
+   <p>Most -RE verbs conjugate like <b>vendre</b> (to sell): je vends, tu vends, il/elle vend, nous vendons, vous vendez, ils/elles vendent. The final <b>d is silent in the singular</b> but pronounced in the plural.</p>
+   <p>Similar verbs: <b>attendre</b> (to wait) • <b>entendre</b> (to hear) • <b>perdre</b> (to lose) • <b>répondre</b> (to answer).</p>
+   <p><b>Irregular -RE verbs:</b> prendre (to take — nous prenons le bus), apprendre (to learn — nous apprenons le français), comprendre (to understand — je comprends, tu comprends, il/elle comprend, nous comprenons, vous comprenez, ils/elles comprennent).</p>`},
+ {id:"corps", title:"Section B — Les parties du corps (Parts of the body)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> names of body parts • saying how you feel • possessive adjectives • OIR verbs.</div>
+   <h4>Dialogue at the doctor’s</h4>
+   <div class="dialogue">
+     <span><b>Martin:</b> Bonjour docteur.</span>
+     <span><b>Docteur:</b> Bonjour monsieur. Qu’est-ce qui ne va pas ?</span>
+     <span><b>Martin:</b> J’ai mal à la tête et au ventre.</span>
+     <span><b>Docteur:</b> D’accord. Je vais vous examiner.</span>
+   </div>
+   <h4>Le corps (the body)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>la bouche</td><td>mouth</td><td>le bras</td><td>arm</td></tr>
+   <tr><td>le cou</td><td>neck</td><td>la dent</td><td>tooth</td></tr>
+   <tr><td>le doigt</td><td>finger</td><td>le dos</td><td>back</td></tr>
+   <tr><td>une épaule</td><td>shoulder</td><td>le genou</td><td>knee</td></tr>
+   <tr><td>la gorge</td><td>throat</td><td>la jambe</td><td>leg</td></tr>
+   <tr><td>la main</td><td>hand</td><td>le nez</td><td>nose</td></tr>
+   <tr><td>un œil (les yeux)</td><td>eye(s)</td><td>une oreille</td><td>ear</td></tr>
+   <tr><td>le pied</td><td>foot</td><td>la tête</td><td>head</td></tr>
+   <tr><td>le ventre</td><td>stomach</td><td>le menton</td><td>chin</td></tr>
+   <tr><td>la joue</td><td>cheek</td><td>la langue</td><td>tongue</td></tr>
+   <tr><td>l’ongle</td><td>nail</td><td>le front</td><td>forehead</td></tr></table>
+   <p><b>Saying how you feel:</b> J’ai mal à la tête (I have a headache) • J’ai mal au dos (my back hurts) • Il a mal aux dents (toothache) • Mon frère a mal au ventre (stomach ache).</p>
+   <h4>Possessive adjectives</h4>
+   <p>A possessive adjective (my, your, his, their…) shows that something belongs to someone. In French it <b>agrees in gender and number with the noun POSSESSED (not the owner)</b>.</p>
+   <table class="tbl"><tr><th>Owner</th><th>Masc. singular</th><th>Fem. singular</th><th>Plural</th></tr>
+   <tr><td>my</td><td>mon (mon père)</td><td>ma (ma mère)</td><td>mes (mes livres)</td></tr>
+   <tr><td>your</td><td>ton (ton sac)</td><td>ta (ta maison)</td><td>tes (tes amis)</td></tr>
+   <tr><td>his/her</td><td>son (son stylo)</td><td>sa (sa voiture)</td><td>ses (ses enfants)</td></tr>
+   <tr><td>our</td><td>notre (notre classe)</td><td>notre (notre mère)</td><td>nos (nos parents)</td></tr>
+   <tr><td>your</td><td>votre (votre ami)</td><td>votre (votre femme)</td><td>vos (vos sacs)</td></tr>
+   <tr><td>their</td><td>leur (leur pays)</td><td>leur (leur classe)</td><td>leurs (leurs noms)</td></tr></table>
+   <div class="callout c-key"><b>⭐ Key:</b> Before a feminine noun starting with a vowel or h, use the masculine form: <b>mon école</b>, <b>mon histoire</b>, <b>son église</b>. «Son» means both <b>his and her</b>.</div>
+   <h4>OIR verbs</h4>
+   <table class="tbl"><tr><th>Pouvoir (to be able)</th><th>Savoir (to know)</th><th>Voir (to see)</th><th>Vouloir (to wish)</th></tr>
+   <tr><td>Je peux</td><td>Je sais</td><td>Je vois</td><td>Je veux</td></tr>
+   <tr><td>Tu peux</td><td>Tu sais</td><td>Tu vois</td><td>Tu veux</td></tr>
+   <tr><td>Il/elle peut</td><td>Il/elle sait</td><td>Il/elle voit</td><td>Il/elle veut</td></tr>
+   <tr><td>Nous pouvons</td><td>Nous savons</td><td>Nous voyons</td><td>Nous voulons</td></tr>
+   <tr><td>Vous pouvez</td><td>Vous savez</td><td>Vous voyez</td><td>Vous voulez</td></tr>
+   <tr><td>Ils/elles peuvent</td><td>Ils/elles savent</td><td>Ils/elles voient</td><td>Ils/elles veulent</td></tr></table>
+   <p>Others: <b>valoir</b> (to be worth — je vaux, il vaut, nous valons) • <b>recevoir</b> (to receive — je reçois, il reçoit, nous recevons, ils reçoivent) • <b>mouvoir</b> (to move) • <b>prévoir</b> (to foresee — je prévois, nous prévoyons, ils prévoient).</p>`},
+ {id:"heure", title:"Section C — L’heure (The time, days and months)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> tell the time • give the date and the day of the week.</div>
+   <h4>Dialogue</h4>
+   <div class="dialogue">
+     <span><b>Mélanie:</b> Quelle heure est-il ?</span>
+     <span><b>Jean-Paul:</b> Il est dix heures.</span>
+     <span><b>Mélanie:</b> Oh là là ! J’ai un rendez-vous avec David dans trente minutes. À dix heures et demie.</span>
+   </div>
+   <h4>How to talk about the time</h4>
+   <table class="tbl"><tr><th>Clock</th><th>French</th></tr>
+   <tr><td>Quelle heure est-il ?</td><td>What time is it?</td></tr>
+   <tr><td>08:00</td><td>il est huit heures</td></tr>
+   <tr><td>08:05</td><td>il est huit heures cinq (minutes)</td></tr>
+   <tr><td>08:15</td><td>huit heures quinze / huit heures <b>et quart</b></td></tr>
+   <tr><td>08:30</td><td>huit heures trente / huit heures <b>et demie</b></td></tr>
+   <tr><td>08:40</td><td>huit heures quarante / <b>neuf heures moins vingt</b></td></tr>
+   <tr><td>08:45</td><td>huit heures quarante-cinq / <b>neuf heures moins le quart</b></td></tr>
+   <tr><td>12:00</td><td>douze heures (<b>midi</b>)</td></tr></table>
+   <div class="callout c-key"><b>⭐ Key:</b> «heures» can never be dropped (unlike “o’clock”): Il est dix <b>heures</b>.</div>
+   <h4>Distinguishing A.M. and P.M.</h4>
+   <p><b>du matin</b> (in the morning — dix heures du matin) • <b>de l’après-midi</b> (in the afternoon — deux heures de l’après-midi) • <b>du soir</b> (in the evening — huit heures du soir).</p>
+   <h4>The 24-hour clock</h4>
+   <p>For official purposes (administration, radio, TV) the French count after 12: 13h = treize heures • 13h15 = treize heures quinze • 14h = quatorze heures • 16h = seize heures.</p>
+   <h4>Days &amp; months</h4>
+   <table class="tbl"><tr><th>Les jours</th><th>English</th></tr>
+   <tr><td>lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche</td><td>Monday → Sunday</td></tr>
+   <tr><td>aujourd’hui / demain</td><td>today / tomorrow</td></tr></table>
+   <p><b>Les mois:</b> janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre.</p>
+   <p><i>C’est quel jour aujourd’hui ? (What day is it?) • Aujourd’hui c’est mardi. • Demain c’est mercredi. • À samedi ! À demain !</i></p>`},
+ {id:"vetements", title:"Section D — Les vêtements (Clothes, colours & adjectives)", html:`
+   <div class="callout c-tip"><b>🎯 Objectives:</b> name clothes &amp; colours • shop for clothes • talk about money • use adjectives and demonstrative adjectives.</div>
+   <h4>Dialogue — shopping</h4>
+   <div class="dialogue">
+     <span><b>La vendeuse:</b> Bonjour mademoiselle. Je peux vous aider ?</span>
+     <span><b>Fatima:</b> Je cherche une belle jupe et une robe.</span>
+     <span><b>La vendeuse:</b> Qu’est-ce que vous pensez de cette robe rose ? — Elle coûte 7000 F. La jupe coûte 5000 F.</span>
+     <span><b>Ali:</b> Combien coûte ce pantalon gris ? — Il coûte 6000 F. Oh là là, c’est cher !</span>
+   </div>
+   <h4>Les vêtements (Clothes)</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th><th>French</th><th>English</th></tr>
+   <tr><td>un blouson</td><td>a bomber jacket</td><td>un jean</td><td>(a pair of) jeans</td></tr>
+   <tr><td>un pantalon</td><td>trousers</td><td>un pull</td><td>a pullover</td></tr>
+   <tr><td>un short</td><td>shorts</td><td>un sweat</td><td>a sweatshirt</td></tr>
+   <tr><td>un tee-shirt</td><td>a T-shirt</td><td>une casquette</td><td>a (baseball) cap</td></tr>
+   <tr><td>une chemise</td><td>a shirt</td><td>une cravate</td><td>a tie</td></tr>
+   <tr><td>une jupe</td><td>a skirt</td><td>une robe</td><td>a dress</td></tr>
+   <tr><td>une veste</td><td>a jacket</td><td>des chaussures</td><td>shoes</td></tr>
+   <tr><td>des chaussettes</td><td>socks</td><td>des sandales</td><td>sandals</td></tr></table>
+   <h4>Les couleurs (Colours)</h4>
+   <p>blanc/blanche (white) • noir/noire (black) • gris/grise (grey) • bleu/bleue (blue) • vert/verte (green) • violet/violette (purple) • rouge (red) • jaune (yellow) • orange (orange) • rose (pink) • beige (beige) • marron (brown).</p>
+   <h4>L’argent (Money)</h4>
+   <p>Since <b>2002</b>, twelve European countries (France, Germany, Ireland, Austria, Italy, Spain, Portugal, Greece, Finland, Belgium, Luxembourg…) use <b>l’euro</b>, which has the same value in all of them. Many African French-speaking countries (Bénin, Burkina Faso, Cameroun, Côte d’Ivoire, Mali, Niger, Sénégal, Tchad, Togo…) use the <b>CFA franc</b>.</p>
+   <p><i>Combien coûte cette jupe ? — Elle coûte cinquante euros. / Le pantalon coûte six mille francs.</i></p>
+   <h4>Les adjectifs (Adjectives)</h4>
+   <p>Adjectives describe nouns and <b>must agree in gender and number</b> with the noun they describe (unlike English).</p>
+   <table class="tbl"><tr><th></th><th>Singular</th><th>Plural</th></tr>
+   <tr><td><b>Masculine</b></td><td>add nothing (patient)</td><td>add -s (patients)</td></tr>
+   <tr><td><b>Feminine</b></td><td>add -e (patiente)</td><td>add -es (patientes)</td></tr></table>
+   <p><i>Mon frère est patient → Mes frères sont patients • Ma sœur est patiente → Mes sœurs sont patientes.</i></p>
+   <div class="callout c-note"><b>📌 Irregular patterns:</b> adjectives ending in -s add nothing in the masculine plural (des pantalons gris); adjectives ending in -e add nothing in the feminine (une sœur calme); -eur/-eux → <b>-euse</b> (travailleur → travailleuse, courageux → courageuse); <i>timide</i> never changes.</div>
+   <table class="tbl"><tr><th>Masculine</th><th>Feminine</th><th>Masculine pl.</th><th>Feminine pl.</th></tr>
+   <tr><td>blanc</td><td>blanche</td><td>blancs</td><td>blanches</td></tr>
+   <tr><td>bon</td><td>bonne</td><td>bons</td><td>bonnes</td></tr>
+   <tr><td>gros</td><td>grosse</td><td>gros</td><td>grosses</td></tr>
+   <tr><td>violet</td><td>violette</td><td>violets</td><td>violettes</td></tr>
+   <tr><td>beau</td><td>belle</td><td>beaux</td><td>belles</td></tr>
+   <tr><td>nouveau</td><td>nouvelle</td><td>nouveaux</td><td>nouvelles</td></tr>
+   <tr><td>vieux</td><td>vieille</td><td>vieux</td><td>vieilles</td></tr></table>
+   <h4>Position of adjectives</h4>
+   <div class="callout c-key"><b>⭐ Key:</b> French adjectives usually come <b>AFTER</b> the noun (une chemise rouge, une cuisine moderne). BUT these come <b>BEFORE</b>: <b>grand, petit, gros, nouveau, jeune, vieux, beau, bon, mauvais</b> (un nouveau professeur, une jeune fille, un bon café).</div>
+   <h4>L’adjectif démonstratif (Demonstrative adjectives)</h4>
+   <p>Used to point out specific people or things (this, that, these, those); they agree with the noun they introduce.</p>
+   <table class="tbl"><tr><th></th><th>Singular (this/that)</th><th>Plural (these/those)</th><th>Examples</th></tr>
+   <tr><td>Masculine</td><td><b>ce</b> / <b>cet</b> (+ vowel)</td><td><b>ces</b></td><td>ce blouson • cet étudiant • ces étudiants</td></tr>
+   <tr><td>Feminine</td><td><b>cette</b></td><td><b>ces</b></td><td>cette veste • ces vestes</td></tr></table>`}
+ ],
+ summary:`<ul>
+ <li>Negation: Subject + <b>ne</b> + verb + <b>pas</b>; ne → <b>n’</b> before a vowel (Je n’étudie pas).</li>
+ <li>Transport: <b>en</b> train/bus/voiture/avion/taxi BUT <b>à</b> pied/cheval/vélo/moto.</li>
+ <li>-RE verbs (vendre): je vends… nous vendons; irregular: prendre, apprendre, comprendre.</li>
+ <li>Possessives agree with the <b>thing possessed</b>: mon école (fem. + vowel), son = his AND her.</li>
+ <li>OIR verbs: je peux (pouvoir), je sais (savoir), je vois (voir), je veux (vouloir), je reçois (recevoir).</li>
+ <li>Time: et quart (¼ past), et demie (½ past), moins le quart (¼ to); midi = 12:00; 24-hour clock officially.</li>
+ <li>Adjectives agree in gender &amp; number; usually AFTER the noun; beau/bon/nouveau/vieux etc. go BEFORE.</li>
+ <li>-eur/-eux → -euse feminine (travailleuse, courageuse).</li>
+ <li>Demonstratives: ce, cet (+vowel), cette, ces.</li>
+ <li>Euro since 2002 in 12 European countries; CFA franc in francophone Africa.</li></ul>`},
+{
+ id:3, title:"Rédaction et civilisation", en:"Composition and Civilization",
+ desc:"Four model compositions (myself/family, my country, my school, my friend) packed with examinable facts, plus French idiomatic expressions and their English equivalents.",
+ secs:[
+ {id:"redaction", title:"Section A — Rédaction (Model compositions)", html:`
+   <div class="callout c-tip"><b>How to study this chapter:</b> read the compositions aloud, check pronunciation, recite them off-hand, and use a good French–English dictionary for difficult words.</div>
+   <h4>1. Moi-même / Ma famille (Myself / My family) — Asma’u</h4>
+   <div class="callout c-note"><b>📌 Key facts:</b> Asma’u is a girl, born <b>6 June 1995</b>, <b>19 years old</b>, from <b>Kaduna State</b>, student at <b>Federal University Dutse</b>, studies <b>French and Arabic</b>, speaks haoussa, English, French and a little Swahili. She is the <b>4th child</b>, single and Muslim. Favourite dessert: <b>strawberry ice-cream (la glace à la fraise)</b>. In future she wants to be a <b>secrétaire bilingue (bilingual secretary)</b>.</div>
+   <p><b>Her family (lives in Kano):</b> father <b>M. Abdoulahi — homme d’affaires (businessman)</b>; mother <b>Hadjia Memunat — infirmière (nurse)</b>; sisters: <b>Habibat (25, married)</b> and <b>Zainab (22, works in a bank, marrying next year)</b>; brothers: <b>Mohammed (17, lycéen, wants to be a chirurgien/surgeon)</b>, <b>Shehu (15, wants to be an informaticien)</b>, and twins <b>Musa &amp; Bello (12, in primary six, both want to be avocats/lawyers)</b>.</p>
+   <h4>2. Mon pays (My country) — Nigeria</h4>
+   <div class="callout c-key"><b>⭐ Exam facts:</b> Nigeria is an <b>anglophone</b> country in <b>West Africa</b>; independence <b>1 October 1960</b> (colonial master: <b>Great Britain</b>); surrounded by francophone countries <b>Bénin, Niger, Tchad, Cameroun</b>; divided into <b>36 parts: 35 states + FCT (Abuja)</b>; area <b>923,000 km²</b>; population <b>over 170 million</b>; two great rivers <b>le fleuve Niger and le fleuve Benue</b>; most spoken languages <b>Yorouba, Haoussa, Ibo</b>; biggest cities include Lagos, Kano, Onitsha, Ibadan, Port-Harcourt; flag colours <b>green and white</b>; parliament = <b>le Sénat + l’Assemblée Nationale</b>; two seasons <b>saison des pluies &amp; saison sèche</b>; education system <b>9-3-4</b>; main religions <b>Islam and Christianity</b>; rich in pétrole, cacao, bois; member of <b>CEDEAO, UA, ONU</b>.</div>
+   <h4>3. Mon école (My school) — FUD</h4>
+   <div class="callout c-note"><b>📌 Key facts:</b> Federal University Dutse, in <b>Dutse, Jigawa State</b>, established <b>4 October 2011</b>; President/Vice-Chancellor: <b>Professeur J.D Amin</b>; head of academics (Scolarité): <b>Yusuf Adamu</b>; located at the centre of town — NNPC station to the east, central market to the west, central mosque to the north, a big hostel to the south; classes run <b>8 a.m. – 5 p.m.</b>; facilities include faculties, laboratories, dormitories, a central library, gymnasium, medical centre, computer centre and bookshop.</div>
+   <h4>4. Mon ami (My friend) — Alli</h4>
+   <div class="callout c-note"><b>📌 Key facts:</b> Alli, born <b>4 January 1993</b>, <b>21 years old</b>, from <b>Katsina State</b>, studies <b>chemistry</b> at FUD Dutse; single, Muslim; tall, big and dark; loves beans and vegetables; plays football and tennis, swims well; in future wants to be a <b>pharmacien (pharmacist)</b>; lives in Katsina with father <b>M. Imam (enseignant/teacher)</b>, mother Hadjia Turai, brothers Braimoh &amp; Jimoh, sisters Miriam, Bilikis, Amina and Rakiat.</div>`},
+ {id:"idiomes", title:"Section B — Quelques expressions idiomatiques (Idiomatic expressions)", html:`
+   <h4>French idioms → English</h4>
+   <table class="tbl"><tr><th>French</th><th>English</th></tr>
+   <tr><td>Appeler un chat un chat</td><td>to call a spade a spade</td></tr>
+   <tr><td>Tel père tel fils</td><td>like father like son</td></tr>
+   <tr><td>Qui aime bien châtie bien</td><td>to spare the rod and spoil the child</td></tr>
+   <tr><td>Être un/une touche-à-tout</td><td>to be a jack of all trades</td></tr>
+   <tr><td>Charité bien ordonnée commence par soi-même</td><td>charity begins at home</td></tr>
+   <tr><td>À bon entendeur, salut</td><td>a word is enough for the wise</td></tr>
+   <tr><td>À bout portant</td><td>point blank</td></tr>
+   <tr><td>À cœur vaillant, rien d’impossible</td><td>nothing is impossible for a willing heart</td></tr>
+   <tr><td>Acheter quelque chose à prix d’or</td><td>to pay through the nose</td></tr>
+   <tr><td>Aide-toi, le ciel t’aidera</td><td>heaven helps those who help themselves</td></tr>
+   <tr><td>Aller au fond des choses</td><td>to get to the bottom of something</td></tr>
+   <tr><td>Après la pluie, le beau temps</td><td>every cloud has a silver lining</td></tr>
+   <tr><td>Au royaume des aveugles, les borgnes sont rois</td><td>in the kingdom of the blind, the one-eyed man is king</td></tr>
+   <tr><td>Rester bouche-bée</td><td>to be speechless</td></tr>
+   <tr><td>Avoir un poil dans la main</td><td>to be lazy</td></tr>
+   <tr><td>C’est la goutte d’eau qui fait déborder le vase</td><td>the last straw that broke the camel’s back</td></tr>
+   <tr><td>Casser du sucre sur son dos</td><td>to gossip about someone behind their back</td></tr>
+   <tr><td>Être dans le pétrin</td><td>to be in a mess / a jam</td></tr>
+   <tr><td>Devenir chèvre</td><td>to become angry</td></tr>
+   <tr><td>Tomber dans les pommes</td><td>to faint / pass out</td></tr>
+   <tr><td>Boire comme un trou</td><td>to drink heavily / become drunk</td></tr>
+   <tr><td>Bourrer le crâne</td><td>to brainwash</td></tr>
+   <tr><td>Qui sème le vent récolte la tempête</td><td>what a man sows he will reap</td></tr>
+   <tr><td>Avoir son petit cadavre</td><td>to have a skeleton in his cupboard</td></tr></table>
+   <h4>English expressions → French</h4>
+   <table class="tbl"><tr><th>English</th><th>French</th></tr>
+   <tr><td>At all cost</td><td>à tout prix</td></tr>
+   <tr><td>To live from hand to mouth</td><td>vivre au jour le jour</td></tr>
+   <tr><td>Better late than never</td><td>mieux vaut tard que jamais</td></tr>
+   <tr><td>As simple as ABC</td><td>simple comme bonjour</td></tr>
+   <tr><td>To poke one’s nose into someone’s affairs</td><td>se fourrer le nez dans les affaires de quelqu’un</td></tr>
+   <tr><td>To turn a deaf ear to…</td><td>faire la sourde oreille / rester sourd à…</td></tr>
+   <tr><td>To pull someone’s legs</td><td>monter un bateau à quelqu’un</td></tr>
+   <tr><td>As blind as a bat</td><td>être myope comme une taupe</td></tr>
+   <tr><td>As deaf as a post</td><td>être sourd comme un pot</td></tr>
+   <tr><td>To let the cat out of the bag</td><td>vendre la mèche</td></tr>
+   <tr><td>To kill two birds with one stone</td><td>faire d’une pierre deux coups</td></tr>
+   <tr><td>To kill something in the bud</td><td>tuer quelque chose dans l’œuf</td></tr>
+   <tr><td>All that glitters is not gold</td><td>tout ce qui brille n’est pas or</td></tr>
+   <tr><td>Rome was not built in a day</td><td>petit à petit l’oiseau fait son nid</td></tr>
+   <tr><td>To be forewarned is to be forearmed</td><td>un homme averti en vaut deux</td></tr>
+   <tr><td>To beat about the bush</td><td>tourner autour du pot</td></tr>
+   <tr><td>To face the music</td><td>faire face à l’orage</td></tr>
+   <tr><td>Make haste while the sun shines</td><td>il faut battre le fer (pendant qu’il est chaud)</td></tr></table>`}
+ ],
+ summary:`<ul>
+ <li>Asma’u: born 6 June 1995, 19, Kaduna, studies French &amp; Arabic at FUD, 4th child, future bilingual secretary.</li>
+ <li>Nigeria: independence 1 Oct 1960 (Britain), 36 parts (35 states + Abuja FCT), 923,000 km², 170m+ people, rivers Niger &amp; Benue, green-white flag, 9-3-4 system, CEDEAO/UA/ONU.</li>
+ <li>FUD: established 4 October 2011, Dutse, Jigawa; VC Prof. J.D Amin.</li>
+ <li>Alli: born 4 Jan 1993, Katsina, chemistry, future pharmacist.</li>
+ <li>Idioms: Tomber dans les pommes = faint; Avoir un poil dans la main = lazy; Devenir chèvre = angry; Vendre la mèche = let the cat out of the bag; Faire d’une pierre deux coups = kill two birds with one stone.</li></ul>`}
+];
+
+/* ================= TOPIC → SECTION MAP ================= */
+const T2S = {
+ "Saluer (Greetings)":{ch:1,sec:"saluer"},"Identity Card Vocabulary":{ch:1,sec:"saluer"},"Verbs: Avoir, Être, Aller":{ch:1,sec:"saluer"},"Nouns: Gender & Plural":{ch:1,sec:"saluer"},"Articles":{ch:1,sec:"saluer"},"Numbers 1–50":{ch:1,sec:"saluer"},
+ "Se Présenter (Introductions)":{ch:1,sec:"presenter"},"ER Verbs (1st Group)":{ch:1,sec:"presenter"},"Nationalities":{ch:1,sec:"presenter"},"Professions":{ch:1,sec:"presenter"},"Alphabet & Sounds":{ch:1,sec:"presenter"},"Numbers 51–100":{ch:1,sec:"presenter"},
+ "En Ville: Directions & Places":{ch:1,sec:"ville"},"Ordinal Numbers":{ch:1,sec:"ville"},"Family Vocabulary":{ch:1,sec:"ville"},"Numbers 100–1,000,000":{ch:1,sec:"ville"},"Regular -IR Verbs":{ch:1,sec:"ville"},
+ "At the University":{ch:2,sec:"universite"},"La Négation (Negation)":{ch:2,sec:"universite"},"Means of Transport":{ch:2,sec:"universite"},"-RE Verbs":{ch:2,sec:"universite"},
+ "Parts of the Body":{ch:2,sec:"corps"},"Possessive Adjectives":{ch:2,sec:"corps"},"OIR Verbs":{ch:2,sec:"corps"},
+ "Telling the Time":{ch:2,sec:"heure"},"Days, Months & Dates":{ch:2,sec:"heure"},
+ "Les Vêtements (Clothes)":{ch:2,sec:"vetements"},"Colours":{ch:2,sec:"vetements"},"L'Argent (Money)":{ch:2,sec:"vetements"},"Adjectives":{ch:2,sec:"vetements"},"Demonstrative Adjectives":{ch:2,sec:"vetements"},
+ "Model Compositions":{ch:3,sec:"redaction"},"Idiomatic Expressions":{ch:3,sec:"idiomes"}
+};
+
+/* ================= QUESTION BANK ================= */
+const QB=[];
+function addQ(ch,t,s,d,ty,q,o,a,e){QB.push({id:QB.length+1,ch:ch,t:t,s:s,d:d,ty:ty,q:q,o:o,a:a,e:e});}
+
+/* ----- CHAPTER 1 : Saluer (Greetings) ----- */
+addQ(1,"Saluer (Greetings)","Core Greetings","easy","mcq","What does « Bonjour » mean in English?",["Good evening","Good day / good morning","Good night","Goodbye"],1,"Bonjour means good day / good morning. Since French has no separate word for 'good afternoon', bonjour is used for both morning and afternoon.");
+addQ(1,"Saluer (Greetings)","Core Greetings","easy","mcq","« Bonsoir » means:",["Good morning","Good afternoon","Good evening","Good night"],2,"Bonsoir = good evening. (Bonne nuit = good night.)");
+addQ(1,"Saluer (Greetings)","Core Greetings","medium","tf","French has a separate everyday word for “good afternoon” just like English does.",["True","False"],1,"False. The French do not have an equivalent of 'good afternoon' — bonjour means both good morning and good afternoon.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","easy","mcq","« Bon voyage » means:",["Happy journey party","Safe journey","Long journey","Expensive trip"],1,"Bon voyage = safe journey.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","medium","mcq","« Bonne guérison » means:",["Good weather","Get well soon","Good reading","Happy healing day"],1,"Bonne guérison = get well soon, said to a sick person.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","easy","mcq","How do you say “Happy birthday” in French?",["Bonne chance","Joyeux anniversaire","Bon appétit","Félicitations"],1,"Joyeux anniversaire / Bon anniversaire = happy birthday.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","easy","mcq","« Bon appétit » means:",["Good appetite loss","Enjoy your meal","Good food shop","Have fun"],1,"Bon appétit = enjoy your meal.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","easy","mcq","« Au revoir » means:",["See you never","Bye bye","Until revoir","Good redo"],1,"Au revoir = bye bye / goodbye.");
+addQ(1,"Saluer (Greetings)","Social Expressions","easy","mcq","« À bientôt » means:",["See you soon","Good night","See you on Monday","Farewell forever"],0,"À bientôt = see you soon. À lundi = see you on Monday; à tout à l'heure = see you later.");
+addQ(1,"Saluer (Greetings)","Social Expressions","medium","mcq","« À tout à l'heure » means:",["See you soon","See you later (the same day)","See you next year","Goodbye forever"],1,"À tout à l'heure = see you later, used when you will meet again the same day.");
+addQ(1,"Saluer (Greetings)","Social Expressions","easy","mcq","« Félicitations » means:",["Happy birthday","Congratulations","Good luck","Welcome"],1,"Félicitations = congratulations.");
+addQ(1,"Saluer (Greetings)","Social Expressions","medium","mcq","The exclamation « Oh là là ! » is used to express:",["Only anger","Only surprise","Surprise, excitement, shock or anger","Boredom"],2,"Oh la la! is an exclamation used for surprise, excitement, shock or anger.");
+addQ(1,"Saluer (Greetings)","Social Expressions","medium","mcq","Which of these means “You are welcome”?",["Merci beaucoup","De rien / Ce n'est rien / Je vous en prie","Pas de quoi merci","Bienvenu ici"],1,"De rien, Ce n'est rien and Je vous en prie all mean 'you are welcome'. (Pas de quoi = don't mention it.)");
+addQ(1,"Saluer (Greetings)","Forms of Address","medium","mcq","When greeting your classmates and mates in French, you should:",["Always use Monsieur / Madame","Drop the titles and say bonjour or salut + their name","Use Bonsoir only","Never greet them at all"],1,"With mates, titles like Monsieur/Madame/Mademoiselle are removed: Bonjour Zainab, Salut Doris, Bonsoir Musa.");
+addQ(1,"Saluer (Greetings)","Forms of Address","medium","tf","When greeting mates, titles such as Monsieur, Madame and Mademoiselle are usually removed.",["True","False"],0,"True. With friends/mates we simply say bonjour or salut plus their first name.");
+addQ(1,"Saluer (Greetings)","Social Expressions","medium","mcq","« Bonne soirée » is used for:",["A cold night","Wishing a nice (social) evening such as a party or dance","Saying good night before sleeping","A morning greeting"],1,"Bonne soirée = have a nice evening (a social evening, dance or party). Bonne nuit is used when going to bed.");
+addQ(1,"Saluer (Greetings)","Social Expressions","easy","mcq","« Merci beaucoup » means:",["You are welcome","Thanks a lot","Don't mention it","Excuse me"],1,"Merci beaucoup = thanks a lot.");
+addQ(1,"Saluer (Greetings)","Farewell & Wishes","medium","fill","Complete: « Quel ___ ! » = What a pity!",null,["dommage"],"Quel dommage = what a pity. (C'est dommage = it is a pity.)");
+
+/* ----- CHAPTER 1 : Identity card ----- */
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","medium","mcq","On a French identity card, « Nom » means:",["First name","Surname","Nick name","Title"],1,"Nom = surname; Prénom = first name.");
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","medium","mcq","« Prénom » means:",["Surname","First name","Family name","Pet name"],1,"Prénom = first name (Nom = surname).");
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","medium","mcq","« Situation familiale » means:",["Family size","Marital status","Family home","Situation at home"],1,"Situation familiale = marital status (célibataire = single, marié(e) = married).");
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","easy","mcq","« Célibataire » means:",["Married","Single","Divorced","Engaged"],1,"Célibataire = single. Marié(e) = married.");
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","medium","mcq","« Taille » on an identity card means:",["Size of clothes","Height","Weight","Shoe size"],1,"Taille = height; Poids = weight.");
+addQ(1,"Identity Card Vocabulary","Identity Card Fields","medium","mcq","« Domicile » means:",["Domicile tax","Residence","Country","Town of birth"],1,"Domicile = residence (e.g. No 20 Davids Street, Dutse).");
+
+/* ----- CHAPTER 1 : Verbs ----- */
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Conjugation","easy","fill","Complete: « J'___ une voiture. » (I have a car)",null,["ai"],"J'ai = I have. From avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont.");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Conjugation","easy","fill","Complete: « Nous ___ des livres. » (We have books)",null,["avons"],"Nous avons = we have.");
+addQ(1,"Verbs: Avoir, Être, Aller","Aller Conjugation","easy","mcq","« Ils ___ à l'école. »",["vais","vas","vont","va"],2,"Ils vont = they go. Aller: je vais, tu vas, il/elle va, nous allons, vous allez, ils/elles vont.");
+addQ(1,"Verbs: Avoir, Être, Aller","Être Conjugation","easy","mcq","« Vous ___ professeur. »",["sommes","êtes","sont","est"],1,"Vous êtes = you are. Être: je suis, tu es, il/elle est, nous sommes, vous êtes, ils/elles sont.");
+addQ(1,"Verbs: Avoir, Être, Aller","Être Conjugation","easy","mcq","« Je ___ nigérian. »",["ai","suis","va","a"],1,"Je suis = I am (être). With nationality we use être: Je suis nigérian.");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir + Age","easy","mcq","How do you correctly say “I am 20 years old” in French?",["Je suis 20 ans","J'ai 20 ans","Je va 20 ans","Je fais 20 ans"],1,"Age uses avoir: J'ai 20 ans. «Je suis 20 ans» is WRONG — a classic exam trap!");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir + Age","medium","tf","« Je suis 20 ans » is the correct French for “I am 20 years old”.",["True","False"],1,"False. French uses avoir for age: J'ai 20 ans. Je suis 20 ans is wrong.");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Expressions","easy","mcq","« J'ai faim » means:",["I am afraid","I am hungry","I am thirsty","I am cold"],1,"J'ai faim = I am hungry (avoir + faim).");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Expressions","easy","mcq","« J'ai soif » means:",["I am hungry","I am thirsty","I am hot","I am sleepy"],1,"J'ai soif = I am thirsty (avoir + soif).");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Expressions","easy","mcq","« J'ai peur » means:",["I am angry","I am afraid","I am right","I am tired"],1,"J'ai peur = I am afraid (avoir + peur).");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Expressions","easy","mcq","« Elle a froid » means:",["She is afraid","She is cold / feels cold","She is angry","She is hungry"],1,"Elle a froid = she is cold / feeling cold (avoir + froid).");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir + Mal","medium","mcq","« J'ai mal à la tête » means:",["My eyes hurt","I have a headache","My tooth hurts","My back hurts"],1,"Avoir mal à + body part = to have an ache: J'ai mal à la tête = I have a headache.");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Raison/Tort","medium","mcq","« Il a tort » means:",["He is right","He is wrong","He is strong","He is tired"],1,"Il a tort = he is wrong. Avoir raison = to be right, avoir tort = to be wrong.");
+addQ(1,"Verbs: Avoir, Être, Aller","Avoir Raison/Tort","medium","mcq","« Nous avons raison » means:",["We are wrong","We are right","We are ready","We are afraid"],1,"Avoir raison = to be right: Nous avons raison = we are right.");
+addQ(1,"Verbs: Avoir, Être, Aller","Immediate Future","medium","mcq","« Je vais manger » means:",["I eat now","I am going to eat","I ate already","I want to eat"],1,"Aller + infinitive = immediate future. Je vais manger = I am going to eat.");
+addQ(1,"Verbs: Avoir, Être, Aller","Immediate Future","medium","mcq","« Ils vont nager » means:",["They swim well","They are going to swim","They swam","They hate swimming"],1,"Ils vont nager = they are going to swim (aller conjugated + nager left in the infinitive).");
+addQ(1,"Verbs: Avoir, Être, Aller","Preposition Contractions","medium","mcq","à + le = ?",["à la","du","au","aux"],2,"à + le = au (e.g. au marché). à + les = aux; à + la stays à la; à + l' stays à l'.");
+addQ(1,"Verbs: Avoir, Être, Aller","Preposition Contractions","medium","mcq","à + les = ?",["des","au","aux","à le"],2,"à + les = aux, as in « Il a mal aux dents » (he has toothache).");
+
+/* ----- CHAPTER 1 : Nouns ----- */
+addQ(1,"Nouns: Gender & Plural","Gender","easy","mcq","In French, ALL nouns are:",["Either masculine or feminine","Always masculine","Always feminine","Neutral"],0,"Every French noun is either masculine (un cinéma) or feminine (une table) — even things!");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","mcq","What is the plural of « un animal »?",["des animals","des animaux","des animalus","les animales"],1,"Nouns ending in -al change to -aux in the plural: un animal → des animaux.");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","mcq","What is the plural of « un jeu » (a game)?",["des jeus","des jeux","des jeuxes","des jes"],1,"Nouns ending in -eau or -eu add -x: un jeu → des jeux; un gâteau → des gâteaux.");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","mcq","What is the plural of « un œil » (an eye)?",["des œils","des œilles","des yeux","des œillères"],2,"Œil is completely irregular: un œil → des yeux (eyes).");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","tf","The final -s of a plural French noun is usually pronounced.",["True","False"],1,"False — the -s at the end of plural words is usually NOT pronounced: les garçons sounds like 'les garçon'.");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","mcq","What is the plural of « le bras » (the arm)?",["les brases","les bras (no change)","les braux","les brasx"],1,"Nouns already ending in -s, -x or -z stay the same: le bras → les bras; le prix → les prix.");
+addQ(1,"Nouns: Gender & Plural","Plural Rules","medium","mcq","What is the plural of « un cheval » (a horse)?",["des chevals","des chevaux","des chevalaux","des chevales"],1,"-al → -aux: un cheval → des chevaux, just like un animal → des animaux.");
+addQ(1,"Nouns: Gender & Plural","Learning Strategy","medium","mcq","According to the course, the best way to learn a new French noun is:",["Learn the noun alone","Learn it with its article (un/une)","Learn only the plural","Learn the English word only"],1,"Always learn the article with the noun: don't learn «voyage», learn «un voyage» — so you know its gender.");
+
+/* ----- CHAPTER 1 : Articles ----- */
+addQ(1,"Articles","Definite Articles","easy","mcq","« Le » is used before:",["A feminine singular noun","A masculine singular noun","A plural noun","A verb"],1,"Le = the (masculine singular): le garçon, le livre, le professeur.");
+addQ(1,"Articles","Definite Articles","easy","mcq","« La » is used before:",["A masculine singular noun","A feminine singular noun","A plural noun","A vowel"],1,"La = the (feminine singular): la fille, la voiture, la table.");
+addQ(1,"Articles","Definite Articles","easy","mcq","« Les » is used before:",["Masculine singular nouns only","Feminine singular nouns only","Plural nouns (masculine or feminine)","Singular nouns starting with h"],2,"Les = the, used for ALL plural nouns: les étudiants, les animaux, les écoles.");
+addQ(1,"Articles","L' Article","medium","mcq","« L' » is used before:",["Any plural noun","A singular noun beginning with a vowel or silent h","Feminine nouns only","Masculine nouns only"],1,"L' replaces le/la before a vowel or silent h: l'oncle, l'école, l'orange, l'homme, l'université.");
+addQ(1,"Articles","Definite Articles","medium","mcq","Why do we say « l'homme » and not « le homme »?",["Homme is feminine","The h is silent, so l' is used","Homme is plural","Le cannot precede nouns"],1,"Before a silent h, the article becomes l': l'homme (the man).");
+addQ(1,"Articles","Indefinite Articles","easy","mcq","« Une » is used before:",["A masculine singular noun","A feminine singular noun","A plural noun","A vowel"],1,"Une = a (feminine singular): une fille, une maison, une ville, une porte.");
+addQ(1,"Articles","Indefinite Articles","easy","mcq","« Des » is used before:",["Masculine singular nouns","Feminine singular nouns","Plural nouns (both genders)","Singular vowels only"],2,"Des = some/a few, used before ALL plural nouns: des enfants, des hommes, des villes, des pays.");
+addQ(1,"Articles","Agreement","medium","mcq","Complete: « ___ table est grande. »",["Le","Un","La","Des"],2,"Table is feminine singular, so the correct article is La.");
+addQ(1,"Articles","Agreement","medium","mcq","Complete: « ___ garçon est ici. »",["La","Le","Une","Des"],1,"Garçon is masculine singular, so the correct article is Le.");
+
+/* ----- CHAPTER 1 : Numbers 1-50 ----- */
+addQ(1,"Numbers 1–50","Numbers 1–50","easy","mcq","« vingt » is which number?",["12","2","20","30"],2,"Vingt = 20.");
+addQ(1,"Numbers 1–50","Numbers 1–50","easy","mcq","What is 50 in French?",["cinq","quinze","cinquante","cinquème"],2,"50 = cinquante.");
+addQ(1,"Numbers 1–50","Numbers 1–50","medium","mcq","What is 21 in French?",["vingt-un","vingt et un","vingt et une","deux-vingt"],1,"21 = vingt ET un. Compound numbers with 1 use 'et': vingt et un, trente et un, quarante et un.");
+addQ(1,"Numbers 1–50","Numbers 1–50","easy","mcq","« trente » is which number?",["13","30","33","3"],1,"Trente = 30.");
+addQ(1,"Numbers 1–50","Numbers 1–50","medium","mcq","« trente-huit » is which number?",["28","38","48","39"],1,"Trente-huit = 38 (30 + 8).");
+addQ(1,"Numbers 1–50","Numbers 1–50","easy","mcq","What is 11 in French?",["onze","douze","treize","six"],0,"11 = onze. 12 = douze, 13 = treize.");
+addQ(1,"Numbers 1–50","Numbers 1–50","medium","mcq","What is 45 in French?",["quarante-cinq","cinquante-quatre","quarante-quatre","cinquante-cinq"],0,"45 = quarante-cinq (40 + 5).");
+
+/* ----- CHAPTER 1 : Introductions ----- */
+addQ(1,"Se Présenter (Introductions)","Key Phrases","easy","mcq","« Je m'appelle Shehu » means:",["I call Shehu","My name is Shehu","Shehu is calling","I am called by Shehu"],1,"Je m'appelle = my name is / I am called.");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","easy","mcq","How do you casually ask a mate “What is your name?”",["Comment vous appelez-vous ?","Comment t'appelles-tu ?","Quel est ton nom de famille ?","Qui es-tu ?"],1,"Comment t'appelles-tu ? is the casual (informal) form; Comment vous appelez-vous ? is formal.");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","medium","mcq","How do you FORMALLY ask “What is your name?”",["Comment t'appelles-tu ?","Comment vous appelez-vous ?","Tu t'appelles comment ?","Comment ça va ?"],1,"In a formal meeting (e.g. Mallam Bala & Mme Benson) you use: Comment vous appelez-vous ?");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","easy","mcq","« D'où viens-tu ? » means:",["Where are you going?","Where do you come from?","Who are you?","What do you do?"],1,"D'où viens-tu ? = where do you come from? Answer: Je viens du Bénin.");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","easy","mcq","« J'habite à Dutse » means:",["I work in Dutse","I live in Dutse","I study in Dutse","I was born in Dutse"],1,"J'habite à + city = I live in… (habiter).");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","medium","mcq","« Je suis ravi de te connaître » means:",["I am angry with you","Nice to meet you","I know you well","I am happy today"],1,"Je suis ravi de te connaître = pleased to meet you (casual). Formal: Je suis content de faire votre connaissance.");
+addQ(1,"Se Présenter (Introductions)","Key Phrases","medium","mcq","« Enchantée » means:",["Angry","Nice to meet you","Tired","Sorry"],1,"Enchanté(e) = nice to meet you — used when introduced to someone.");
+
+/* ----- CHAPTER 1 : ER verbs ----- */
+addQ(1,"ER Verbs (1st Group)","Verb Groups","medium","mcq","How many groups of verbs are there in French?",["2","3","4","1"],1,"Three groups: 1st = -ER (parler), 2nd = -IR (finir, choisir), 3rd = all others (recevoir, comprendre).");
+addQ(1,"ER Verbs (1st Group)","Verb Groups","easy","mcq","First group French verbs end in:",["-IR","-RE","-ER","-OIR"],2,"First group verbs end in -ER (parler, travailler, donner…).");
+addQ(1,"ER Verbs (1st Group)","Structure","medium","mcq","In the verb « parler », the root/radical is:",["er","parl","parle","parler"],1,"A verb = root + ending. In parler, 'parl' is the radical (root) and 'er' is the ending. When conjugating, the root stays the same.");
+addQ(1,"ER Verbs (1st Group)","Conjugation","easy","fill","Complete: « Nous ___ (parler) français. »",null,["parlons"],"Nous parlons = we speak. Endings: -e, -es, -e, -ons, -ez, -ent.");
+addQ(1,"ER Verbs (1st Group)","Conjugation","easy","fill","Complete: « Vous ___ (parler) anglais. »",null,["parlez"],"Vous parlez = you speak (vous form takes -ez).");
+addQ(1,"ER Verbs (1st Group)","Conjugation","medium","mcq","« Ils/Elles ___ (parler) »",["parle","parlent","parlez","parlons"],1,"Ils/elles parlent = they speak (ending -ent, written but not pronounced).");
+addQ(1,"ER Verbs (1st Group)","Special Verbs","medium","mcq","What is the « nous » form of manger (to eat)?",["nous mangons","nous mangeons","nous mangient","nous mangins"],1,"-GER verbs add -eons in the nous form: nous mangeons (to keep the soft g sound).");
+addQ(1,"ER Verbs (1st Group)","Special Verbs","medium","mcq","What is the « nous » form of commencer (to start)?",["nous commençons","nous commences","nous commencer","nous commencons"],0,"-CER verbs take ç in the nous form: nous commençons — to keep the soft 's' sound.");
+addQ(1,"ER Verbs (1st Group)","Conjugation","easy","tf","When conjugating -ER verbs, the root stays the same and only the ending changes.",["True","False"],0,"True. E.g. parler → parl + e/es/e/ons/ez/ent.");
+addQ(1,"ER Verbs (1st Group)","Conjugation","easy","fill","Complete: « Tu ___ (aider) ta mère. »",null,["aides"],"Tu aides = you help (tu form takes -es).");
+
+/* ----- CHAPTER 1 : Nationalities ----- */
+addQ(1,"Nationalities","African Countries","easy","mcq","What is the nationality of a person from le Nigéria?",["Nigérien","Nigérian","Nigeriais","Nigérin"],1,"Le Nigéria → Nigérian(e). (Le Niger → Nigérien(ne) — careful, they are different!)");
+addQ(1,"Nationalities","African Countries","medium","mcq","What is the nationality of a person from le Ghana?",["Ghanien","Ghanéen","Ghanais","Ghanan"],1,"Le Ghana → Ghanéen/ne. Kofi est ghanéen.");
+addQ(1,"Nationalities","African Countries","medium","mcq","What is the nationality of a person from le Bénin?",["Béninois","Béninien","Béninien","Béninais"],0,"Le Bénin → Béninois/e. Je suis béninois.");
+addQ(1,"Nationalities","World Countries","easy","mcq","What is the nationality of a person from la France?",["Francien","Français","Francique","Franc"],1,"La France → Français/e.");
+addQ(1,"Nationalities","World Countries","medium","mcq","What is the nationality of a person from la Grande Bretagne?",["Britannien","Britannique","Breton","Anglais"],1,"La Grande Bretagne → Britannique (both masculine and feminine!).");
+addQ(1,"Nationalities","World Countries","medium","mcq","What is the nationality of a person from le Sénégal?",["Sénégalais","Sénégalien","Sénégalin","Sénégalien"],0,"Le Sénégal → Sénégalais/e.");
+addQ(1,"Nationalities","Rules","medium","tf","Adjectives of nationality in French begin with a lowercase letter.",["True","False"],0,"True. Kofi est ghanéen; c'est un tissu ghanéen — nationality adjectives take lowercase, unlike English.");
+addQ(1,"Nationalities","Expressing Nationality","medium","mcq","« Je viens du Nigéria » means:",["I go to Nigeria","I come from Nigeria","I love Nigeria","I live in Nigeria"],1,"Je viens du Nigéria = I come from Nigeria. Other ways: Je suis nigérian; Je suis de la nationalité nigériane.");
+addQ(1,"Nationalities","Expressing Nationality","medium","mcq","Which TWO ways can you give a friend's nationality?",["Il est béninois / C'est un Béninois","Il béninois / C'est Béninois","Il est un béninois / C'est de Bénin","Il vient Béninois / C'est béninois"],0,"Both are correct: Il est béninois OR C'est un Béninois.");
+
+/* ----- CHAPTER 1 : Professions ----- */
+addQ(1,"Professions","Professions Vocabulary","medium","mcq","« Informaticien/ne » means:",["Electrician","Computer scientist","Mathematician","Information officer"],1,"Informaticien(ne) = computer scientist.");
+addQ(1,"Professions","Professions Vocabulary","medium","mcq","« Maçon » means:",["Mason in a lodge","Bricklayer","Machine operator","Butcher"],1,"Maçon = bricklayer.");
+addQ(1,"Professions","Professions Vocabulary","medium","mcq","« Forgeron » means:",["Forgiver","Blacksmith","Farmer","Goldsmith"],1,"Forgeron = blacksmith.");
+addQ(1,"Professions","Professions Vocabulary","medium","mcq","« Boulanger/Boulangère » means:",["Butcher","Baker","Bowler","Banker"],1,"Boulanger/boulangère = baker. (Boucher = butcher.)");
+addQ(1,"Professions","No-Article Rule","medium","tf","In French, professions normally take NO article: « Elle est avocate. »",["True","False"],0,"True. Unlike English ('she is A lawyer'), French drops the article: Elle est avocate. BUT with c'est/ce sont the article appears: C'est un forgeron; Ce sont des étudiants.");
+addQ(1,"Professions","No-Article Rule","medium","mcq","Which sentence is correct?",["Elle est une avocate","Elle est avocate","Elle est la avocate","Elle avocate"],1,"Professions take no article: Elle est avocate. With c'est, an article is used: C'est une avocate.");
+addQ(1,"Professions","Professions Vocabulary","medium","fill","Buba travaille avec l'ordinateur. Il est ___.",null,["informaticien"],"Someone who works with computers (l'ordinateur) is an informaticien (computer scientist).");
+addQ(1,"Professions","Professions Vocabulary","medium","fill","Mathilde travaille dans un hôpital. Elle est ___.",null,["infirmière","infirmiere"],"Someone who works in a hospital is une infirmière (nurse) — feminine form.");
+
+/* ----- CHAPTER 1 : Alphabet ----- */
+addQ(1,"Alphabet & Sounds","Alphabet","easy","mcq","How many letters are in the French alphabet?",["24","26","28","20"],1,"The French alphabet has 26 letters, just like English.");
+addQ(1,"Alphabet & Sounds","Alphabet","medium","mcq","How many vowels does the French alphabet have?",["5","6","7","20"],1,"6 vowels: a, e, i, o, u AND y (plus 20 consonants).");
+addQ(1,"Alphabet & Sounds","Sounds","hard","mcq","How many vowel sounds are formed from the French letters?",["12","16","18","3"],1,"French has 16 vowel sounds, 18 consonant sounds and 3 semi-vowel sounds.");
+addQ(1,"Alphabet & Sounds","Sounds","hard","mcq","How many semi-vowel (semi-consonant) sounds does French have?",["2","3","4","6"],1,"French has 3 semi-vowels: [j], [w] and [ɥ] (as in yeux, oui, huile).");
+addQ(1,"Alphabet & Sounds","Alphabet","medium","mcq","What is the French letter Y called?",["iy","igrek","wai","ygrek"],1,"The letter Y is called 'igrek' in French.");
+
+/* ----- CHAPTER 1 : Numbers 51-100 ----- */
+addQ(1,"Numbers 51–100","60s","easy","mcq","What is 60 in French?",["cinquante","soixante","septante","octante"],1,"60 = soixante.");
+addQ(1,"Numbers 51–100","70s","medium","mcq","What is 70 in French?",["septante","soixante-dix","sept dix","soixante-sept"],1,"70 = soixante-dix (literally 'sixty-ten').");
+addQ(1,"Numbers 51–100","70s","medium","mcq","What is 75 in French?",["soixante-quinze","soixante-cinq","septante-cinq","cinquante-sept"],0,"75 = soixante-quinze (60+15).");
+addQ(1,"Numbers 51–100","80s","medium","mcq","What is 80 in French?",["huitante","quatre-vingts","octante","vingt-quatre"],1,"80 = quatre-vingts (literally 'four-twenties').");
+addQ(1,"Numbers 51–100","90s","medium","mcq","What is 99 in French?",["neufante-neuf","quatre-vingt-dix-neuf","nonante-neuf","quatre-vingt-neuf"],1,"99 = quatre-vingt-dix-neuf (80+10+9).");
+addQ(1,"Numbers 51–100","90s","medium","mcq","What is 90 in French?",["neufante","quatre-vingt-dix","nonante","soixante-trente"],1,"90 = quatre-vingt-dix (4×20+10).");
+addQ(1,"Numbers 51–100","Alternatives","hard","mcq","Which word is an alternative (used in some regions) for 90?",["septante","octante","nonante","dixante"],2,"90 = quatre-vingt-dix, alternatively nonante. (70 = septante, 80 = octante are also regional alternatives.)");
+addQ(1,"Numbers 51–100","60s","medium","mcq","« soixante-neuf » is which number?",["69","79","96","66"],0,"Soixante-neuf = 69 (60+9).");
+addQ(1,"Numbers 51–100","90s","medium","mcq","What is 98 in French?",["quatre-vingt-huit","quatre-vingt-dix-huit","neuf-huit","nonante-huit"],1,"98 = quatre-vingt-dix-huit (80+10+8).");
+addQ(1,"Numbers 51–100","70s","medium","mcq","What is 72 in French?",["soixante-douze","soixante-deux","septante-deux","sept-deux"],0,"72 = soixante-douze (60+12).");
+addQ(1,"Numbers 51–100","100","easy","mcq","What is 100 in French?",["dix","mille","cent","cents"],2,"100 = cent. 1000 = mille.");
+
+/* ----- CHAPTER 1 : En ville ----- */
+addQ(1,"En Ville: Directions & Places","Directions","easy","mcq","« Allez tout droit » means:",["Turn right","Go straight ahead","Stop here","Turn left"],1,"Allez tout droit = go straight ahead.");
+addQ(1,"En Ville: Directions & Places","Directions","easy","mcq","« Où est la poste s'il vous plaît ? » means:",["Where is the post office please?","What is the post office?","When does the post office open?","Is there a post office?"],0,"Où est…? = where is…? (la poste = the post office).");
+addQ(1,"En Ville: Directions & Places","Directions","medium","mcq","« Prenez la deuxième rue à droite » means:",["Take the second street on the right","Take the second street on the left","Cross the second street","Turn right twice"],0,"Deuxième = second; à droite = on the right.");
+addQ(1,"En Ville: Directions & Places","Places","easy","mcq","« une boulangerie » means:",["A bakery","A bank","A library","A boutique"],0,"La boulangerie = the bakery (from boulanger = baker).");
+addQ(1,"En Ville: Directions & Places","Places","easy","mcq","« une pharmacie » means:",["A farm","A pharmacy / chemist","A factory","A pharmacy school"],1,"La pharmacie = the chemist/pharmacy.");
+addQ(1,"En Ville: Directions & Places","Places","easy","mcq","« une bibliothèque » means:",["A bookshop","A library","A bible shop","A bibliography"],1,"La bibliothèque = the library. (La librairie = the bookshop!)");
+addQ(1,"En Ville: Directions & Places","Places","easy","mcq","« un musée » means:",["A mosque","A museum","A market","A music shop"],1,"Le musée = the museum.");
+addQ(1,"En Ville: Directions & Places","Places","medium","mcq","« Je vous en prie » means:",["I beg you","You're welcome","Please help me","Excuse me"],1,"Je vous en prie = you're welcome (a polite reply to merci).");
+addQ(1,"En Ville: Directions & Places","Places","easy","mcq","« un stade » means:",["A stage","A stadium","A shop","A station"],1,"Le stade = the stadium.");
+
+/* ----- CHAPTER 1 : Ordinals ----- */
+addQ(1,"Ordinal Numbers","Ordinals","easy","mcq","« premier » means:",["First (1st)","Second","Prime number","President"],0,"Premier = first (1er).");
+addQ(1,"Ordinal Numbers","Ordinals","easy","mcq","« deuxième » means:",["Twice","Second (2nd)","Twenty","Two of them"],1,"Deuxième = second; troisième = third; quatrième = fourth; cinquième = fifth.");
+addQ(1,"Ordinal Numbers","Ordinals","medium","mcq","« Musa est le ___ enfant de ses parents. » (Musa is the 3rd child)",["premier","deuxième","troisième","trois"],2,"Troisième = third. In Musa's passage: «Je suis le troisième enfant de mes parents.»");
+
+/* ----- CHAPTER 1 : Family ----- */
+addQ(1,"Family Vocabulary","Family Members","easy","mcq","« ma sœur » means:",["my brother","my sister","my aunt","my cousin"],1,"Ma sœur = my sister; mon frère = my brother.");
+addQ(1,"Family Vocabulary","Family Members","easy","mcq","« mon oncle » means:",["my uncle","my aunt","my cousin","my nephew"],0,"Mon oncle = my uncle; ma tante = my aunt.");
+addQ(1,"Family Vocabulary","Family Members","easy","mcq","« ma tante » means:",["my aunt","my uncle","my grandmother","my nanny"],0,"Ma tante = my aunt.");
+addQ(1,"Family Vocabulary","Family Members","medium","mcq","« ma cousine » refers to:",["A male cousin","A female cousin","A close friend","A niece"],1,"La cousine = female cousin; le cousin = male cousin.");
+addQ(1,"Family Vocabulary","Family Members","easy","mcq","« mes parents » means:",["my relatives","my parents","my neighbours","my guardians"],1,"Mes parents = my parents (father and mother).");
+addQ(1,"Family Vocabulary","Musa's Family","medium","mcq","In Musa's passage, his father is a:",["Teacher","Doctor (médecin)","Accountant","Businessman"],1,"«Mon père est médecin et ma mère est comptable» — his father is a doctor, his mother an accountant.");
+
+/* ----- CHAPTER 1 : Numbers 100+ ----- */
+addQ(1,"Numbers 100–1,000,000","Hundreds","easy","mcq","What is 1000 in French?",["cent","mille","million","millier"],1,"1000 = mille. 100 = cent. 1,000,000 = un million.");
+addQ(1,"Numbers 100–1,000,000","Big Numbers","medium","mcq","What is 1,000,000 in French?",["cent mille","un million","un milliard","mille mille"],1,"1,000,000 = un million.");
+addQ(1,"Numbers 100–1,000,000","Hundreds","medium","mcq","« deux cents » is which number?",["202","200","210","120"],1,"200 = deux cents. But 201 = deux cent un (no s when followed by another number).");
+addQ(1,"Numbers 100–1,000,000","Big Numbers","hard","mcq","« mille neuf cent quatre-vingt-douze » is which number?",["1892","1992","1982","1999"],1,"1992 = mille neuf cent quatre-vingt-douze (1000+900+92).");
+addQ(1,"Numbers 100–1,000,000","Big Numbers","medium","mcq","« sept mille » is which number?",["700","7000","70","1700"],1,"7000 = sept mille.");
+
+/* ----- CHAPTER 1 : -IR verbs ----- */
+addQ(1,"Regular -IR Verbs","Conjugation","medium","mcq","Most regular -IR verbs are conjugated like which verb?",["parler","finir","vendre","pouvoir"],1,"Regular -ir verbs (2nd group) follow finir: je finis, nous finissons, ils finissent.");
+addQ(1,"Regular -IR Verbs","Conjugation","medium","fill","Complete: « Nous ___ (finir) le travail. »",null,["finissons"],"Nous finissons = we finish (-ir verbs take -issons in the nous form).");
+addQ(1,"Regular -IR Verbs","Conjugation","medium","mcq","« Ils/Elles ___ (finir) »",["finissent","finissons","finissez","finis"],0,"Ils/elles finissent = they finish.");
+addQ(1,"Regular -IR Verbs","Vocabulary","medium","mcq","« choisir » means:",["to choose","to finish","to succeed","to grow"],0,"Choisir = to choose. Finir = to finish; réussir = to succeed; grossir = to get fat.");
+addQ(1,"Regular -IR Verbs","Vocabulary","medium","mcq","« réussir » means:",["to fail","to succeed","to leave","to run"],1,"Réussir = to succeed. «Nous réussissons toujours» = we always succeed.");
+addQ(1,"Regular -IR Verbs","Vocabulary","hard","mcq","« Marc grossit parce qu'il mange beaucoup » — « grossir » means:",["to lose weight","to get fat","to grow tall","to get rich"],1,"Grossir = to get fat. Marc is getting fat because he eats a lot.");
+
+/* ----- CHAPTER 2 : University ----- */
+addQ(2,"At the University","Key Phrases","easy","mcq","« J'étudie les langues étrangères » means:",["I teach foreign languages","I am studying foreign languages","I speak foreign languages","I love foreign languages"],1,"Étudier = to study; les langues étrangères = foreign languages.");
+addQ(2,"At the University","Key Phrases","easy","mcq","« Super ! » means:",["Soup!","Great!","Supermarket!","Sorry!"],1,"Super! = Great! — an exclamation of enthusiasm.");
+addQ(2,"At the University","Faculties","medium","mcq","« Faculté des lettres et sciences sociales » means:",["Faculty of Letters only","Faculty of Arts and Social Sciences","Faculty of Social Studies","Faculty of Literature"],1,"La faculté des lettres et sciences sociales = Faculty of Arts and Social Sciences.");
+addQ(2,"At the University","Departments","medium","mcq","« Département de microbiologie » means:",["Department of Microbiology","Department of Biology","Department of Micro-economics","Department of Chemistry"],0,"La microbiologie = microbiology (Marie's department in the dialogue).");
+addQ(2,"At the University","Departments","medium","mcq","« Département des forêts et faune » means:",["Department of Forestry and Wild Life","Department of Forest Fires","Department of Farming","Department of Fisheries"],0,"Les forêts et faune = forestry and wild life.");
+addQ(2,"At the University","Departments","medium","mcq","« Département de pisciculture et aquaculture » means:",["Department of Fishes and Aquariums","Department of Fisheries and Aquaculture","Department of Physics and Culture","Department of Agriculture"],1,"Pisciculture et aquaculture = fisheries and aquaculture.");
+
+/* ----- CHAPTER 2 : Negation ----- */
+addQ(2,"La Négation (Negation)","Rule","easy","mcq","What is the pattern of the French negative sentence?",["Subject + pas + verb + ne","Subject + ne + verb + pas","Subject + verb + ne + pas","Subject + ne + pas + verb"],1,"The negative follows: Subject + ne + Verb + pas → Il ne travaille pas.");
+addQ(2,"La Négation (Negation)","Translation","easy","mcq","« Il ne travaille pas » means:",["He works a lot","He doesn't work","He never works","He works well"],1,"Ne…pas = not. Il ne travaille pas = he doesn't work / he is not working.");
+addQ(2,"La Négation (Negation)","Rule","medium","mcq","Why do we say « Je N'ÉTUDIE pas l'italien »?",["For emphasis","Because ne becomes n' before a vowel","Because étudier is irregular","It's a typing error"],1,"Before a vowel sound, ne contracts to n': Je n'étudie pas, Nous n'étudions pas.");
+addQ(2,"La Négation (Negation)","Rule","medium","fill","Complete: « Je ___ parle pas l'italien. »",null,["ne"],"The negative needs ne + verb + pas: Je NE parle PAS l'italien.");
+addQ(2,"La Négation (Negation)","Conjugation","medium","mcq","What is the negative of « Nous parlons »?",["Nous parlons ne pas","Nous ne parlons pas","Nous pas parlons","Ne nous parlons pas"],1,"Wrap the verb with ne…pas: Nous ne parlons pas.");
+addQ(2,"La Négation (Negation)","Rule","easy","tf","In negation, « ne » becomes « n' » before a verb starting with a vowel.",["True","False"],0,"True. E.g. Je n'étudie pas l'italien (from the dialogue between Marie and Jennifer).");
+
+/* ----- CHAPTER 2 : Transport ----- */
+addQ(2,"Means of Transport","EN Transport","easy","mcq","« en train » means:",["by train","in a train station","on foot","by car"],0,"En train = by train. Use EN + train/bus/voiture/avion/taxi.");
+addQ(2,"Means of Transport","À Transport","easy","mcq","« à pied » means:",["by bike","on foot","by car","on a pied"],1,"À pied = on foot.");
+addQ(2,"Means of Transport","À Transport","easy","mcq","« à vélo » means:",["by moped","by bicycle","by boat","by horse"],1,"À vélo = by bicycle.");
+addQ(2,"Means of Transport","À Transport","easy","mcq","« à moto » means:",["by motorbike","by metro","on foot","by car"],0,"À moto = by motorbike (Jennifer: «j'y vais en taxi ou à moto»).");
+addQ(2,"Means of Transport","Rule","medium","mcq","Which group of transport words takes « à » instead of « en »?",["Train, bus, car, plane","Walking, two-wheeled vehicles and animals","Only water transport","All transports"],1,"Walking (à pied), two-wheeled vehicles (à vélo, à moto) and animals (à cheval) take À; others take EN.");
+addQ(2,"Means of Transport","Rule","medium","mcq","« Je vais à la mosquée à pied » means:",["I go to the mosque by car","I go to the mosque on foot","I go to the mosque by motorbike","I walk to the market"],1,"À pied = on foot. Example from the course: Je vais au marché à moto; je vais à la mosquée à pied.");
+addQ(2,"Means of Transport","EN Transport","easy","mcq","« Je vais en France en avion » means:",["I go to France by train","I go to France by plane","I fly over France","I am in France by plane"],1,"En avion = by plane (EN + transport).");
+
+/* ----- CHAPTER 2 : -RE verbs ----- */
+addQ(2,"-RE Verbs","Conjugation","medium","mcq","Most verbs ending in -RE are conjugated like which verb?",["finir","vendre","parler","pouvoir"],1,"Most -re verbs follow vendre: je vends, tu vends, il/elle vend, nous vendons, vous vendez, ils/elles vendent.");
+addQ(2,"-RE Verbs","Conjugation","medium","fill","Complete: « Je ___ (vendre) des fruits. »",null,["vends"],"Je vends = I sell (same form for je and tu).");
+addQ(2,"-RE Verbs","Conjugation","medium","mcq","« Nous ___ (vendre) »",["vendons","vendions","vendez","vendus"],0,"Nous vendons = we sell.");
+addQ(2,"-RE Verbs","Vocabulary","easy","mcq","« attendre » means:",["to attend","to wait / wait for","to attend to","to avoid"],1,"Attendre = to wait (for). Attention — it does NOT mean 'to attend'!");
+addQ(2,"-RE Verbs","Vocabulary","easy","mcq","« entendre » means:",["to intend","to hear","to extend","to understand"],1,"Entendre = to hear. (Comprendre = to understand.)");
+addQ(2,"-RE Verbs","Vocabulary","easy","mcq","« perdre » means:",["to lose","to wait","to sell","to answer"],0,"Perdre = to lose. Répondre = to answer.");
+addQ(2,"-RE Verbs","Irregulars","medium","mcq","Which of these -RE verbs is IRREGULAR (not conjugated like vendre)?",["attendre","comprendre","perdre","répondre"],1,"Prendre, apprendre and comprendre are irregular -re verbs: nous prenons, nous apprenons, nous comprenons.");
+addQ(2,"-RE Verbs","Vocabulary","easy","mcq","« Nous apprenons le français » means:",["We understand French","We are learning French","We teach French","We buy French"],1,"Apprendre = to learn. Nous apprenons le français = we are learning French.");
+addQ(2,"-RE Verbs","Pronunciation","hard","tf","In vendre, the final 'd' of the stem is silent in the singular forms (je, tu, il/elle) but pronounced in the plural forms.",["True","False"],0,"True! Je vends [vã] — silent d; nous vendons — pronounced d. A favourite exam detail.");
+
+/* ----- CHAPTER 2 : Body ----- */
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« la bouche » means:",["the arm","the mouth","the cheek","the chin"],1,"La bouche = the mouth.");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« le bras » means:",["the leg","the arm","the back","the hand"],1,"Le bras = the arm.");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« la main » means:",["the hand","the arm","the finger","the foot"],0,"La main = the hand; le doigt = the finger.");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« le pied » means:",["the knee","the foot","the leg","the toe"],1,"Le pied = the foot; la jambe = the leg.");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« les yeux » means:",["the ears","the eyes","the eyebrows","the cheeks"],1,"Les yeux = the eyes (singular: un œil).");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« le genou » means:",["the elbow","the knee","the shoulder","the ankle"],1,"Le genou = the knee.");
+addQ(2,"Parts of the Body","Body Vocabulary","easy","mcq","« le ventre » means:",["the back","the stomach","the chest","the waist"],1,"Le ventre = the stomach. Martin told the doctor: «J'ai mal à la tête et au ventre».");
+addQ(2,"Parts of the Body","Body Vocabulary","medium","mcq","« l'oreille » means:",["the mouth","the ear","the eye","the nose"],1,"L'oreille = the ear; le nez = the nose.");
+addQ(2,"Parts of the Body","Aches","medium","mcq","« J'ai mal au dos » means:",["I have a headache","My back hurts / I've got back ache","My tooth hurts","My stomach hurts"],1,"Avoir mal au dos = to have back ache (à + le = au).");
+addQ(2,"Parts of the Body","Aches","medium","mcq","« Il a mal aux dents » means:",["He has a headache","He has toothache","He has earache","He has a stomach ache"],1,"Avoir mal aux dents = to have toothache (à + les = aux).");
+addQ(2,"Parts of the Body","Body Vocabulary","medium","mcq","« le front » means:",["the mouth","the forehead","the chin","the tongue"],1,"Le front = the forehead. Le menton = chin, la joue = cheek.");
+addQ(2,"Parts of the Body","Body Vocabulary","medium","mcq","« la gorge » means:",["the throat","the neck","the chin","the mouth"],0,"La gorge = the throat; le cou = the neck.");
+
+/* ----- CHAPTER 2 : Possessives ----- */
+addQ(2,"Possessive Adjectives","Mon/Ma/Mes","easy","mcq","« mon » is used before:",["A feminine singular noun","A masculine singular noun","A plural noun","Any noun"],1,"Mon + masculine singular (mon père, mon sac).");
+addQ(2,"Possessive Adjectives","Mon/Ma/Mes","easy","mcq","« ma » is used before:",["A masculine singular noun","A feminine singular noun","A plural noun","A verb"],1,"Ma + feminine singular (ma mère, ma voiture).");
+addQ(2,"Possessive Adjectives","Mon/Ma/Mes","easy","mcq","« mes » is used before:",["Masculine singular nouns","Feminine singular nouns","Plural nouns (both genders)","Singular vowels"],2,"Mes + all plural nouns: mes livres, mes professeurs, mes pommes.");
+addQ(2,"Possessive Adjectives","Vowel Rule","medium","mcq","Why do we say « mon école » and not « ma école »?",["École is masculine","École is feminine but starts with a vowel","Ma is never correct","École is plural"],1,"Before a feminine noun starting with a vowel or h, use mon: mon école, mon orange, mon histoire.");
+addQ(2,"Possessive Adjectives","Votre/Vos","easy","mcq","« votre » means:",["our (singular)","your (singular noun)","their (singular)","my"],1,"Votre = your (for one thing); vos = your (plural things): vos sacs, vos oncles.");
+addQ(2,"Possessive Adjectives","Leur/Leurs","easy","mcq","« leurs » means:",["their (plural noun)","their (singular noun)","his things","your things"],0,"Leur + singular noun (leur pays); leurs + plural noun (leurs ordinateurs).");
+addQ(2,"Possessive Adjectives","Son/Sa/Ses","medium","tf","« son » can mean BOTH his and her in French.",["True","False"],0,"True. Son agrees with the THING possessed, not the owner: son stylo can be his pen or her pen!");
+addQ(2,"Possessive Adjectives","Agreement","hard","mcq","French possessive adjectives agree in gender and number with:",["The owner","The noun possessed (the thing owned)","The verb","The sentence"],1,"They agree with what is possessed: sa voiture (voiture is feminine) — whether the owner is male or female.");
+addQ(2,"Possessive Adjectives","Usage","medium","mcq","« tes amis » means:",["your friends","his friends","my friends","their friends"],0,"Tes = your (plural noun, informal): tes amis, tes étudiants, tes vêtements.");
+
+/* ----- CHAPTER 2 : OIR verbs ----- */
+addQ(2,"OIR Verbs","Vocabulary","easy","mcq","« pouvoir » means:",["to wish","to be able / can","to see","to know"],1,"Pouvoir = to be able to / can: je peux, tu peux, il/elle peut.");
+addQ(2,"OIR Verbs","Vocabulary","easy","mcq","« savoir » means:",["to see","to know","to be worth","to receive"],1,"Savoir = to know: je sais, tu sais, il/elle sait.");
+addQ(2,"OIR Verbs","Vocabulary","easy","mcq","« voir » means:",["to see","to know","to go","to wish"],0,"Voir = to see: je vois, tu vois, il/elle voit, nous voyons, vous voyez, ils/elles voient.");
+addQ(2,"OIR Verbs","Vocabulary","easy","mcq","« vouloir » means:",["to be able","to wish / want","to receive","to move"],1,"Vouloir = to wish: je veux, tu veux, il/elle veut, nous voulons, vous voulez, ils/elles veulent.");
+addQ(2,"OIR Verbs","Conjugation","medium","fill","Complete: « Nous ___ (pouvoir) danser. »",null,["pouvons"],"Nous pouvons = we are able to.");
+addQ(2,"OIR Verbs","Conjugation","medium","mcq","« Je reçois » means:",["I receive","I wish","I foresee","I move"],0,"Recevoir = to receive: je reçois, tu reçois, il/elle reçoit, nous recevons, vous recevez, ils/elles reçoivent.");
+addQ(2,"OIR Verbs","Vocabulary","hard","mcq","« valoir » means:",["to value","to be worth","to travel","to vote"],1,"Valoir = to be worth: je vaux, tu vaux, il/elle vaut, nous valons.");
+addQ(2,"OIR Verbs","Vocabulary","hard","mcq","« prévoir » means:",["to see before","to foresee","to prevent","to preview a movie"],1,"Prévoir = to foresee: je prévois, nous prévoyons, ils/elles prévoient.");
+addQ(2,"OIR Verbs","Conjugation","medium","mcq","« Je peux » means:",["I know","I am able to","I wish","I see"],1,"Je peux = I am able to / I can (from pouvoir).");
+
+/* ----- CHAPTER 2 : Time ----- */
+addQ(2,"Telling the Time","Key Phrases","easy","mcq","« Quelle heure est-il ? » means:",["What day is it?","What time is it?","How are you?","Where is the hour?"],1,"Quelle heure est-il ? = what time is it? Answer: Il est dix heures.");
+addQ(2,"Telling the Time","Key Phrases","easy","mcq","« Il est dix heures » means:",["It's ten o'clock","It's two o'clock","Ten hours later","It's twelve o'clock"],0,"Il est dix heures = it's ten o'clock.");
+addQ(2,"Telling the Time","Quarter/Quarter-To","medium","mcq","How do you say 8:15 (quarter past eight)?",["huit heures et demie","huit heures et quart","neuf heures moins le quart","huit heures quart"],1,"8:15 = huit heures et quart (quarter past eight).");
+addQ(2,"Telling the Time","Half Past","medium","mcq","How do you say 8:30 (half past eight)?",["huit heures et quart","huit heures et demie","huit heures moins le quart","huit heures demain"],1,"8:30 = huit heures et demie (half past eight).");
+addQ(2,"Telling the Time","Quarter-To","hard","mcq","How do you say 8:45 (quarter to nine)?",["neuf heures et quart","huit heures et demie","neuf heures moins le quart","huit heures moins le quart"],2,"8:45 = neuf heures moins le quart (nine minus the quarter).");
+addQ(2,"Telling the Time","Quarter-To","hard","mcq","« neuf heures moins vingt » is what time?",["9:20","8:40","8:20","9:40"],1,"Neuf heures moins vingt = 8:40 (twenty minutes to nine).");
+addQ(2,"Telling the Time","Midi","easy","mcq","12:00 (noon) in French is:",["minuit","midi","douze nuit","demi"],1,"12:00 noon = midi (also called douze heures). Minuit = midnight.");
+addQ(2,"Telling the Time","AM/PM","medium","mcq","« du soir » is used for:",["Morning times","Afternoon times","Evening times (P.M.)","Night clocks"],2,"Du matin (A.M.), de l'après-midi (P.M. afternoon), du soir (P.M. evening): huit heures du soir.");
+addQ(2,"Telling the Time","24-Hour Clock","medium","tf","For official purposes (administration, radio, TV), the French use the 24-hour clock.",["True","False"],0,"True. 13h00 = treize heures, 14h00 = quatorze heures, 16h00 = seize heures.");
+addQ(2,"Telling the Time","24-Hour Clock","medium","mcq","« treize heures » is:",["3:00 A.M.","1:00 P.M.","13 minutes","3:00 P.M."],1,"The 24-hour clock: 13h = treize heures = 1 P.M.");
+addQ(2,"Telling the Time","Key Phrases","medium","tf","Like English 'o'clock', the word « heures » can be left out when telling time in French.",["True","False"],1,"False! Although 'o'clock' may be dropped in English, heure(s) MUST be used in French: Il est dix HEURES.");
+
+/* ----- CHAPTER 2 : Days/Months ----- */
+addQ(2,"Days, Months & Dates","Days","easy","mcq","« lundi » means:",["Tuesday","Monday","Sunday","Wednesday"],1,"Lundi = Monday. Mardi = Tuesday, mercredi = Wednesday.");
+addQ(2,"Days, Months & Dates","Days","easy","mcq","« vendredi » means:",["Thursday","Friday","Saturday","Monday"],1,"Vendredi = Friday. Jeudi = Thursday, samedi = Saturday.");
+addQ(2,"Days, Months & Dates","Days","easy","mcq","« dimanche » means:",["Saturday","Sunday","Monday","Friday"],1,"Dimanche = Sunday.");
+addQ(2,"Days, Months & Dates","Time Words","easy","mcq","« demain » means:",["yesterday","today","tomorrow","morning"],2,"Demain = tomorrow; aujourd'hui = today.");
+addQ(2,"Days, Months & Dates","Time Words","easy","mcq","« aujourd'hui » means:",["tomorrow","today","tonight","this week"],1,"Aujourd'hui = today. «Aujourd'hui c'est mardi» = today is Tuesday.");
+addQ(2,"Days, Months & Dates","Months","easy","mcq","« janvier » means:",["January","February","June","July"],0,"Janvier = January. Février = February.");
+addQ(2,"Days, Months & Dates","Months","medium","mcq","« septembre » means:",["September","October","November","July"],0,"Septembre = September. Octobre = October, novembre = November, décembre = December.");
+addQ(2,"Days, Months & Dates","Phrases","medium","mcq","« C'est quel jour aujourd'hui ? » means:",["What time is it?","What day is it today?","What month is it?","What is the date?"],1,"C'est quel jour aujourd'hui ? = what day is it today? Answer: C'est vendredi.");
+addQ(2,"Days, Months & Dates","Phrases","medium","mcq","« À demain ! » means:",["Goodbye forever","See you tomorrow!","See you Monday!","Good night"],1,"À demain ! = see you tomorrow! À samedi ! = see you on Saturday!");
+addQ(2,"Days, Months & Dates","Months","medium","mcq","« août » means:",["April","August","October","March"],1,"Août = August — note it's the only month without a pronounced final 't' written form ending in t.");
+
+/* ----- CHAPTER 2 : Clothes ----- */
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","easy","mcq","« une jupe » means:",["a dress","a skirt","a jacket","a shirt"],1,"La jupe = the skirt; la robe = the dress.");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","easy","mcq","« une robe » means:",["a skirt","a dress","a robe","a scarf"],1,"La robe = the dress.");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","easy","mcq","« un pantalon » means:",["a pullover","(a pair of) trousers","a cape","a jacket"],1,"Le pantalon = trousers. Le pull = pullover, la veste = jacket.");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","easy","mcq","« une chemise » means:",["a T-shirt","a shirt","a sheet","a jacket"],1,"La chemise = the shirt (le tee-shirt = T-shirt, la casquette = cap).");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","easy","mcq","« une cravate » means:",["a tie","a scarf","a hat","a cape"],1,"La cravate = the tie.");
+addQ(2,"Les Vêtements (Clothes)","Shopping Phrases","easy","mcq","« Combien coûte ce pantalon ? » means:",["How much does this trouser cost?","Where is this trouser?","Is this trouser beautiful?","Can I try this trouser?"],0,"Combien coûte…? = how much does… cost? Il coûte 6000 F.");
+addQ(2,"Les Vêtements (Clothes)","Shopping Phrases","easy","mcq","« Je cherche une belle jupe » means:",["I am looking for a beautiful skirt","I bought a beautiful skirt","I sell beautiful skirts","I found a beautiful skirt"],0,"Chercher = to look for: Je cherche = I am looking for.");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","medium","mcq","« un blouson » means:",["a blouse","a bomber jacket","a blazer","a sweater"],1,"Le blouson = the bomber jacket (le sweat = sweatshirt).");
+addQ(2,"Les Vêtements (Clothes)","Clothes Vocabulary","medium","mcq","« des chaussures » means:",["socks","shoes","sandals","boots"],1,"Les chaussures = shoes; les chaussettes = socks; les sandales = sandals.");
+
+/* ----- CHAPTER 2 : Colours ----- */
+addQ(2,"Colours","Colours","easy","mcq","« blanc/blanche » means:",["black","white","blue","grey"],1,"Blanc (masc) / blanche (fem) = white.");
+addQ(2,"Colours","Colours","easy","mcq","« noir/noire » means:",["white","black","brown","blue"],1,"Noir/noire = black.");
+addQ(2,"Colours","Colours","easy","mcq","« rose » means:",["red","pink","purple","orange"],1,"Rose = pink. Rouge = red, violet/violette = purple.");
+addQ(2,"Colours","Feminine Forms","medium","mcq","What is the feminine of « violet »?",["viole","violette","violeta","violetes"],1,"Violet → violette (it adds -tte in the feminine).");
+addQ(2,"Colours","Colours","medium","mcq","« marron » means:",["brown","maroon red","chestnut only","magenta"],0,"Marron = brown (invariable: une robe marron).");
+addQ(2,"Colours","Colours","medium","mcq","« ce pantalon gris » means:",["this grey trouser","that green trouser","these grey trousers","this great trouser"],0,"Gris = grey. «Combien coûte ce pantalon gris ?» — from the shopping dialogue.");
+addQ(2,"Colours","Feminine Forms","medium","mcq","What is the feminine of « vert »?",["verta","verte","vertine","verteuse"],1,"Vert → verte (regular: add -e).");
+addQ(2,"Colours","Colours","medium","mcq","« beige » means:",["beige","brown","cream","beehive"],0,"Beige = beige (a colour that doesn't change in the feminine).");
+
+/* ----- CHAPTER 2 : Money ----- */
+addQ(2,"L'Argent (Money)","Euro","medium","mcq","Since which year have European countries been using the euro?",["1999","2002","2005","2011"],1,"Since 2002, twelve European countries use the euro (l'euro).");
+addQ(2,"L'Argent (Money)","Currencies","medium","mcq","Which currency is used by many French-speaking African countries (Benin, Mali, Niger, Togo, Senegal…)?",["The euro","The CFA franc","The naira","The dinar"],1,"The CFA franc: «Le pantalon coûte six mille francs».");
+addQ(2,"L'Argent (Money)","Euro","medium","tf","The euro has the same value in all the countries that use it.",["True","False"],0,"True — the euro has the same value in all twelve countries using it (France, Germany, Italy, Spain, Belgium etc.).");
+addQ(2,"L'Argent (Money)","Shopping","medium","mcq","« Elle coûte cinquante euros » means:",["She counts fifty euros","It costs fifty euros","It costs fifteen euros","They cost fifty euros"],1,"Coûter = to cost: elle coûte = it costs (feminine item, e.g. la jupe).");
+
+/* ----- CHAPTER 2 : Adjectives ----- */
+addQ(2,"Adjectives","Agreement","easy","mcq","French adjectives must agree with the noun they describe in:",["Tense only","Gender and number","Case","Nothing"],1,"Unlike English, French adjectives change for gender (masc/fem) and number (singular/plural).");
+addQ(2,"Adjectives","Agreement","easy","mcq","To make an adjective FEMININE SINGULAR, you normally add:",["-s","-e","-es","-x"],1,"Feminine singular adds -e: patient → patiente. Feminine plural adds -es.");
+addQ(2,"Adjectives","Agreement","medium","mcq","To make an adjective FEMININE PLURAL, you add:",["-e","-s","-es","-ent"],2,"Feminine plural adds -es: Ma sœur est patiente → Mes sœurs sont patientES.");
+addQ(2,"Adjectives","Agreement","medium","mcq","« Ma sœur est patiente » — why does patiente end in -e?",["Because sœur is feminine","Because it is plural","Because of the verb","For no reason"],0,"The adjective agrees with sœur (feminine singular) → patient + e.");
+addQ(2,"Adjectives","Special Endings","medium","mcq","What is the feminine of « travailleur »?",["travailleure","travailleuse","travailleuseuse","travailante"],1,"Adjectives in -eur/-eux change to -euse in the feminine: travailleur → travailleuse.");
+addQ(2,"Adjectives","Special Endings","medium","mcq","What is the feminine of « courageux »?",["courageuxe","courageuse","courageeuse","courageante"],1,"-eux → -euse: courageux → courageuse.");
+addQ(2,"Adjectives","Special Endings","medium","mcq","Which adjective stays the SAME whether masculine or feminine?",["patient","beau","timide","vieux"],2,"Timide never changes: mon frère est timide, ma sœur est timide.");
+addQ(2,"Adjectives","Special Endings","easy","mcq","What is the feminine of « beau »?",["beale","belle","beaue","beause"],1,"Beau → belle (beaux → belles in the plural).");
+addQ(2,"Adjectives","Special Endings","medium","mcq","What is the feminine of « vieux »?",["vieuxe","vieille","vieuxe","vieuse"],1,"Vieux → vieille: un vieux livre, une vieille école.");
+addQ(2,"Adjectives","Special Endings","medium","mcq","What is the feminine of « nouveau »?",["nouvaux","nouvelle","nouvelleuse","neuve"],1,"Nouveau → nouvelle (nouveaux → nouvelles).");
+addQ(2,"Adjectives","Position","medium","mcq","In French, adjectives usually come:",["Before the noun","After the noun","Anywhere","Only at the end of the sentence"],1,"Une chemise ROUGE, une cuisine MODERNE, des amis SYMPATHIQUES — the adjective normally follows the noun.");
+addQ(2,"Adjectives","Position","medium","mcq","Which of these adjectives comes BEFORE the noun?",["rouge","moderne","nouveau","sympathique"],2,"grand, petit, gros, nouveau, jeune, vieux, beau, bon, mauvais come before the noun: un NOUVEAU professeur, une JEUNE fille.");
+addQ(2,"Adjectives","Agreement","medium","mcq","« Mes frères sont ___ » (patient)",["patiente","patients","patientes","patient"],1,"Frères is masculine plural → patients (add -s).");
+addQ(2,"Adjectives","Special Endings","medium","mcq","The plural of « un pantalon gris » is:",["des pantalons grises","des pantalons gris","des pantalons grises","des pantalons grisx"],1,"Adjectives already ending in -s add nothing in the masculine plural (but add -es in the feminine: des chemises grises).");
+
+/* ----- CHAPTER 2 : Demonstratives ----- */
+addQ(2,"Demonstrative Adjectives","Forms","easy","mcq","« ce » is used before:",["A feminine singular noun","A masculine singular noun","A plural noun","A verb"],1,"Ce + masculine singular noun: ce blouson.");
+addQ(2,"Demonstrative Adjectives","Forms","easy","mcq","« cette » is used before:",["A masculine singular noun","A feminine singular noun","A plural noun","Any vowel"],1,"Cette + feminine singular: cette veste, cette étudiante.");
+addQ(2,"Demonstrative Adjectives","Forms","medium","mcq","« cet » is used before:",["A feminine noun","A masculine singular noun beginning with a vowel sound","A plural noun","Any singular noun"],1,"Cet + masculine singular noun starting with a vowel: cet étudiant, cet homme.");
+addQ(2,"Demonstrative Adjectives","Forms","easy","mcq","« ces » is used for:",["Masculine singular only","Feminine singular only","PLURAL nouns (both genders)","Vowels only"],2,"Ces = these/those for ALL plural nouns: ces blousons, ces vestes, ces étudiants.");
+addQ(2,"Demonstrative Adjectives","Usage","medium","mcq","Why do we say « cet étudiant » and not « ce étudiant »?",["Étudiant is feminine","Étudiant is masculine singular starting with a vowel","Ce is wrong here","Étudiant is plural"],1,"Before a vowel sound, ce becomes cet: cet étudiant, cet homme.");
+addQ(2,"Demonstrative Adjectives","Usage","easy","mcq","« cette veste » means:",["this jacket (feminine)","that cap","these jackets","this student"],0,"Cette = this/that (feminine singular); la veste = the jacket.");
+
+/* ----- CHAPTER 3 : Compositions ----- */
+addQ(3,"Model Compositions","Moi-même","medium","mcq","In the model composition, Asma'u studies which two subjects at FUD?",["English and Arabic","French and Arabic","French and English","Biology and French"],1,"«J'étudie le français et l'arabe» — Asma'u studies French and Arabic.");
+addQ(3,"Model Compositions","Moi-même","medium","mcq","Asma'u is the ___ child of her family.",["first","second","third","fourth"],3,"«Je suis la quatrième enfant dans ma famille» — she is the fourth child.");
+addQ(3,"Model Compositions","Ma famille","medium","mcq","In the composition, Asma'u's mother (Hadjia Memunat) works as a:",["teacher","nurse","banker","accountant"],1,"Her mother is infirmière (nurse); her father M. Abdoulahi is an homme d'affaires (businessman).");
+addQ(3,"Model Compositions","Ma famille","medium","mcq","Asma'u's father is a(n):",["engineer","businessman (homme d'affaires)","doctor","teacher"],1,"«Mon père M. Abdoulahi qui est homme d'affaires» — a businessman.");
+addQ(3,"Model Compositions","Moi-même","medium","mcq","In the future, Asma'u wants to become a:",["doctor","bilingual secretary","lawyer","pharmacist"],1,"«Plus tard dans l'avenir, je veux être secrétaire bilingue» — a bilingual secretary.");
+addQ(3,"Model Compositions","Ma famille","medium","mcq","In Asma'u's family, Musa and Bello are:",["cousins","twins (jumeaux)","neighbours","classmates"],1,"«Musa et Bello sont jumeaux. Ils ont douze ans» — they are 12-year-old twins who both want to become lawyers.");
+addQ(3,"Model Compositions","Ma famille","medium","mcq","Asma'u's elder sister Habibat (25 years old) is:",["single","married","divorced","a nurse"],1,"«Ma sœur aînée Habibat a 25 ans. Elle est mariée» — she is married.");
+addQ(3,"Model Compositions","Ma famille","hard","mcq","What does Mohammed (17, Asma'u's brother) want to become?",["Informaticien","Chirurgien (surgeon)","Pharmacist","Lawyer"],1,"Mohammed is a lycéen who wants to be a chirurgien; Shehu (15) wants to be an informaticien.");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to « Mon pays », Nigeria gained independence on:",["1 October 1960","4 October 2011","1 October 1963","4 October 1960"],0,"«Il a accédé à l'indépendance le 1er octobre 1960».");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to the composition, Nigeria is divided into:",["30 states","36 parts: 35 states + the FCT (Abuja)","36 states only","35 states and 2 territories"],1,"«Mon pays est divisé en 36 parties: 35 états et le territoire de la capitale fédérale qui se trouve à Abuja».");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","Nigeria's colonial master, according to the composition, was:",["France","Great Britain","Portugal","Spain"],1,"«la Grande Bretagne étant son maître colonial» — Great Britain.");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","The two great rivers of Nigeria, according to the composition, are:",["Le fleuve Niger and le fleuve Benue","Le Congo and le Nil","Le Niger and le Congo","Le Benue and le Chari"],0,"«Les deux grands fleuves sont le fleuve Niger et le fleuve Benue».");
+addQ(3,"Model Compositions","Mon pays","easy","mcq","The colours of the Nigerian flag, according to the composition, are:",["Green and white","Green white green only","White and blue","Red white and green"],0,"«Les couleurs du drapeau nigérian sont le vert et le blanc».");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to the composition, Nigeria's education system is:",["6-3-3-4","9-3-4","6-5-4","8-4-4"],1,"«Le système pédagogique est 9-3-4».");
+addQ(3,"Model Compositions","Mon pays","easy","mcq","According to the composition, Nigeria has how many seasons?",["Four","One","Two","Three"],2,"«Il y a deux saisons: la saison des pluies et la saison sèche» — rainy and dry seasons.");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","The three most spoken languages of Nigeria, according to the composition, are:",["French, English, Haoussa","Yorouba, Haoussa and Ibo","English, Ibo, Tiv","Haoussa, Kanuri, Yorouba"],1,"«Le yorouba, le haoussa et l'ibo sont les langues les plus parlées».");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to the composition, the Nigerian parliament is divided into:",["Senate and House only","Senate and National Assembly","Congress and Senate","Council and Assembly"],1,"«Le parlement se divise en deux: le Sénat et l'Assemblée Nationale».");
+addQ(3,"Model Compositions","Mon pays","hard","mcq","According to the composition, Nigeria's area and population are:",["923,000 km² and over 170 million","900,000 km² and 150 million","923,000 km² and 100 million","950,000 km² and 170 million"],0,"«Il a une superficie de 923 000km2 et sa population est plus de 170 millions».");
+addQ(3,"Model Compositions","Mon pays","hard","mcq","Which international organisations does Nigeria belong to, according to the composition?",["ECOWAS, AU, UN (CEDEAO, UA, ONU)","NATO, EU, UN","AU, EU, ECOWAS","UN, NATO, AU"],0,"«Le Nigéria fait partie des organisations internationales comme la CEDEAO, l'UA, l'ONU etc.»");
+addQ(3,"Model Compositions","Mon école","medium","mcq","According to « Mon école », Federal University Dutse was established on:",["1 October 1960","4 October 2011","4 October 2010","3 March 1996"],1,"«Elle est établie le 4 octobre 2011».");
+addQ(3,"Model Compositions","Mon école","hard","mcq","According to the composition, the President of Federal University Dutse is:",["Yusuf Adamu","Professeur J.D Amin","Goodluck Jonathan","Osita Nicholas"],1,"«Le président de mon université est le Professeur J.D Amin» (Yusuf Adamu heads the Scolarité office).");
+addQ(3,"Model Compositions","Mon école","medium","mcq","According to « Mon école », classes begin and end at:",["8 a.m. and 5 p.m.","7 a.m. and 6 p.m.","8 a.m. and 4 p.m.","9 a.m. and 5 p.m."],0,"«Les cours commencent à huit heures du matin et se terminent à cinq heures du soir».");
+addQ(3,"Model Compositions","Mon ami","medium","mcq","In « Mon ami », Alli studies which subject at FUD?",["French","Chemistry","Biology","Microbiology"],1,"«Il est étudiant à FUD, Dutse où il étudie la chimie» — he studies chemistry.");
+addQ(3,"Model Compositions","Mon ami","medium","mcq","In the future, Alli wants to become a:",["doctor","pharmacist","engineer","teacher"],1,"«Plus tard, il veut être pharmacien» — a pharmacist.");
+addQ(3,"Model Compositions","Mon ami","medium","mcq","Alli comes from which state?",["Kaduna","Katsina","Kano","Jigawa"],1,"«Il vient de l'état de Katsina» — but he studies at FUD, Dutse.");
+addQ(3,"Model Compositions","Mon ami","hard","mcq","Alli's father, M. Imam, works as a:",["businessman","teacher (enseignant)","doctor","imam"],1,"«son père M. Imam qui est enseignant» — a teacher.");
+addQ(3,"Model Compositions","Moi-même","medium","mcq","Asma'u's favourite dessert, according to the composition, is:",["Chocolate cake","Strawberry ice-cream (la glace à la fraise)","Rice and chicken","Fried fish"],1,"«Comme dessert, je préfère la glace à la fraise» — strawberry ice-cream.");
+addQ(3,"Model Compositions","Moi-même","medium","mcq","Where does Asma'u's family live?",["Dutse","Kano","Kaduna","Azare"],1,"«J'habite à Kano avec ma famille» — they live in Kano.");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to the composition, Nigeria is surrounded by francophone countries EXCEPT:",["Le Cameroun","Le Tchad","Le Ghana","Le Bénin"],2,"The composition lists Bénin, Niger, Tchad and Cameroun as francophone neighbours — Ghana is not listed.");
+addQ(3,"Model Compositions","Mon pays","medium","mcq","According to the composition, the two main and official religions of Nigeria are:",["Islam and Christianity","Islam and Judaism","Christianity and Buddhism","Islam and Traditional"],0,"«Les deux religions principales et officielles sont l'islam et le christianisme».");
+
+/* ----- CHAPTER 3 : Idioms ----- */
+addQ(3,"Idiomatic Expressions","French → English","easy","mcq","« Appeler un chat un chat » means:",["To call a cat","To call a spade a spade","To name a pet","To call someone a cat"],1,"Appeler un chat un chat = to call a spade a spade.");
+addQ(3,"Idiomatic Expressions","French → English","easy","mcq","« Tel père tel fils » means:",["The father pays","Like father like son","A tall father","Tell the son"],1,"Tel père tel fils = like father like son.");
+addQ(3,"Idiomatic Expressions","French → English","easy","mcq","« Tomber dans les pommes » means:",["To fall into apples","To faint / pass out","To buy apples","To harvest"],1,"Tomber dans les pommes = to faint/pass out — literally 'to fall into the apples'!");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Qui sème le vent récolte la tempête » means:",["The wind is strong","What a man sows he will reap","Storms bring harvest","To plant in the wind"],1,"Qui sème le vent récolte la tempête = what a man sows he will reap.");
+addQ(3,"Idiomatic Expressions","French → English","hard","mcq","« Avoir un poil dans la main » means:",["To be hairy","To be lazy","To hold something","To be hardworking"],1,"Avoir un poil dans la main (to have a hair in the hand) = to be lazy.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Être dans le pétrin » means:",["To be in the kitchen","To be in a mess / a jam","To be in the garden","To be in trouble-free"],1,"Être dans le pétrin = to be in a mess/a jam.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Devenir chèvre » means:",["To become a goat","To become angry","To become stubborn","To become a farmer"],1,"Devenir chèvre = to become angry.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Charité bien ordonnée commence par soi-même » means:",["Charity is ordered","Charity begins at home","Order begins with charity","Be kind to yourself"],1,"Charité bien ordonnée commence par soi-même = charity begins at home.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Après la pluie, le beau temps » means:",["Rain brings sunshine","Every cloud has a silver lining","After rain comes flood","The weather is fine"],1,"Après la pluie, le beau temps = every cloud has a silver lining.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« C'est la goutte d'eau qui fait déborder le vase » means:",["Water overflows the vase","The last straw that broke the camel's back","A drop in the ocean","Fill the vase slowly"],1,"The last drop that makes the vase overflow = the last straw that broke the camel's back.");
+addQ(3,"Idiomatic Expressions","French → English","hard","mcq","« Avoir son petit cadavre » means:",["To have a little body","To have a skeleton in his cupboard","To be very thin","To hide a friend"],1,"Avoir son petit cadavre = to have a skeleton in one's cupboard.");
+addQ(3,"Idiomatic Expressions","French → English","hard","mcq","« À bon entendeur, salut » means:",["Hello to listeners","A word is enough to the wise","Goodbye friends","Salute the wise"],1,"À bon entendeur, salut = a word is enough to the wise.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Qui aime bien châtie bien » means:",["Love punishes","To spare the rod and spoil the child","Good lovers fight","Chastise your loved ones"],1,"Qui aime bien châtie bien = to spare the rod and spoil the child.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Être un touche-à-tout » means:",["To touch everything","To be a jack of all trades","To be tidy","To be a handyman only"],1,"Être un/une touche-à-tout = to be a jack of all trades.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Rester bouche-bée » means:",["To keep the mouth shut","To be speechless","To stay open-mouthed happy","To yawn"],1,"Rester bouche-bée = to be speechless.");
+addQ(3,"Idiomatic Expressions","French → English","medium","mcq","« Boire comme un trou » means:",["To drink from a hole","To drink heavily / become drunk","To fall in a hole","To be thirsty"],1,"Boire comme un trou = to drink heavily / become drunk.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “To kill two birds with one stone”?",["tuer deux oiseaux","faire d'une pierre deux coups","casser deux pierres","jeter deux pierres"],1,"To kill two birds with one stone = faire d'une pierre deux coups.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “To let the cat out of the bag”?",["laisser sortir le chat","vendre la mèche","perdre le chat","ouvrir le sac"],1,"To let the cat out of the bag = vendre la mèche.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “Better late than never”?",["mieux vaut tard que jamais","tard mieux jamais","trop tard","jamais trop tard"],0,"Better late than never = mieux vaut tard que jamais.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “All that glitters is not gold”?",["tout est or","tout ce qui brille n'est pas or","l'or brille","pas tout or"],1,"All that glitters is not gold = tout ce qui brille n'est pas or.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “Rome was not built in a day”?",["Rome en un jour","petit à petit l'oiseau fait son nid","l'oiseau à Rome","un jour à Rome"],1,"Rome was not built in a day = petit à petit l'oiseau fait son nid (little by little the bird builds its nest).");
+addQ(3,"Idiomatic Expressions","English → French","hard","mcq","What is the French equivalent of “To be forewarned is to be forearmed”?",["un homme averti en vaut deux","un homme armé","avertir avant","prévenir c'est guérir"],0,"To be forewarned is to be forearmed = un homme averti en vaut deux.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “To beat about the bush”?",["battre le buisson","tourner autour du pot","courir autour","frapper le pot"],1,"To beat about the bush = tourner autour du pot.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “To turn a deaf ear”?",["tourner l'oreille","faire la sourde oreille","casser l'oreille","l'oreille sourde"],1,"To turn a deaf ear = faire la sourde oreille / rester sourd à…");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “To live from hand to mouth”?",["vivre de la main","vivre au jour le jour","manger la main","vivre la bouche"],1,"To live from hand to mouth = vivre au jour le jour.");
+addQ(3,"Idiomatic Expressions","English → French","hard","mcq","What is the French equivalent of “To pull someone's legs”?",["tirer la jambe","monter un bateau à quelqu'un","casser les jambes","faire la jambe"],1,"To pull someone's legs = monter un bateau à quelqu'un.");
+addQ(3,"Idiomatic Expressions","English → French","hard","mcq","What is the French equivalent of “As deaf as a post”?",["sourd comme un pot","sourd comme un poteau","myope comme un pot","muet comme un pot"],0,"As deaf as a post = être sourd comme un pot.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “At all cost”?",["à tout moment","à tout prix","tout le coût","tout compte"],1,"At all cost = à tout prix.");
+addQ(3,"Idiomatic Expressions","English → French","medium","mcq","What is the French equivalent of “As simple as ABC”?",["simple comme bonjour","simple comme A B C","simple comme un alphabet","simple comme tout"],0,"As simple as ABC = simple comme bonjour (as simple as 'hello')!");
+addQ(3,"Idiomatic Expressions","English → French","hard","mcq","What is the French equivalent of “To face the music”?",["faire face à la musique","faire face à l'orage","jouer la musique","chanter l'orage"],1,"To face the music = faire face à l'orage (to face the storm).");
+addQ(3,"Idiomatic Expressions","English → French","hard","mcq","What is the French equivalent of “To kill something in the bud”?",["tuer dans le bourgeon","tuer quelque chose dans l'œuf","casser l'œuf","tuer la fleur"],1,"To kill something in the bud = tuer quelque chose dans l'œuf.");
+
+/* ================= STATE / STORAGE ================= */
+const KEY="gst123_french_portal";
+let S={name:null,theme:"light",read:[],quizzes:[],exams:[],ans:0,cor:0};
+try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved)S=Object.assign(S,saved);}catch(e){}
+function save(){localStorage.setItem(KEY,JSON.stringify(S));}
+
+/* ================= HELPERS ================= */
+function el(id){return document.getElementById(id);}
+function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function strip(s){return String(s).normalize?String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim().replace(/\s+/g," "):String(s).toLowerCase().trim();}
+function chTitle(id){const c=CHAPTERS.find(c=>c.id===id);return "Chapter "+id+" — "+c.title+" ("+c.en+")";}
+let toastT;
+function toast(m){const t=el("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove("show"),2600);}
+function levelOf(p){if(p>=90)return{t:"Outstanding",e:"🏆",c:"#10b981"};if(p>=80)return{t:"Excellent",e:"🌟",c:"#10b981"};if(p>=70)return{t:"Very Good",e:"👏",c:"#06b6d4"};if(p>=60)return{t:"Good",e:"👍",c:"#f59e0b"};if(p>=50)return{t:"Needs More Practice",e:"📚",c:"#f59e0b"};return{t:"Keep Studying",e:"💪",c:"#ef4444"};}
+function colorOf(p){return p>=80?"var(--ok)":p>=50?"var(--md)":"var(--wr)";}
+function emojiOf(p){return p>=80?"🟢":p>=50?"🟡":"🔴";}
+function barOf(p){const n=Math.round(p/10);return "█".repeat(n)+"░".repeat(10-n);}
+
+/* ================= THEME / NAV ================= */
+function applyTheme(){document.documentElement.setAttribute("data-theme",S.theme);el("themeBtn").textContent=S.theme==="dark"?"☀️":"🌙";}
+function toggleTheme(){S.theme=S.theme==="dark"?"light":"dark";save();applyTheme();}
+function go(v){document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));el("view-"+v).classList.add("active");document.querySelectorAll("#navLinks a").forEach(a=>a.classList.toggle("on",a.dataset.v===v));window.scrollTo({top:0,behavior:"smooth"});}
+function enterApp(){el("nav").classList.remove("hidden");el("userChip").textContent="👤 "+esc(S.name);renderDashboard();go("dashboard");}
+
+/* ================= WELCOME ================= */
+function startLearning(){const n=el("nameInput").value.trim();if(!n){toast("Please enter your name first 🙂");return;}S.name=n;save();enterApp();toast("Welcome, "+n+"! 👋");}
+function switchUser(){S.name=null;save();el("nav").classList.add("hidden");go("welcome");toast("You can enter a new name.");}
+
+/* ================= DASHBOARD ================= */
+function bestPct(arr){return arr.length?Math.max(...arr.map(x=>x.pct)):0;}
+function renderDashboard(){
+  const readPct=Math.round(S.read.length/CHAPTERS.length*100);
+  el("view-dashboard").innerHTML=`
+  <div class="card hero">
+    <h1>Welcome back, <span class="grad">${esc(S.name)}</span>! 👋</h1>
+    <p>Ready to conquer your <b>${esc(COURSE.short)}</b> exam today?<br>Choose how you want to prepare.</p>
+    <div class="hero-stats">
+      <div class="mini"><b>${readPct}%</b>study progress</div>
+      <div class="mini"><b>${bestPct(S.quizzes)}%</b>best quiz</div>
+      <div class="mini"><b>${bestPct(S.exams)}%</b>best exam</div>
+      <div class="mini"><b>${QB.length}</b>questions in bank</div>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card hcard dcard" onclick="go('study')"><div class="ic">📚</div><h3>STUDY CHAPTER BY CHAPTER</h3><p>Read clear notes, definitions, tables, examples and revision summaries for all ${CHAPTERS.length} chapters of the course.</p><button class="btn btn-primary btn-sm">Open Study Area →</button></div>
+    <div class="card hcard dcard" onclick="go('quizsetup')"><div class="ic">📝</div><h3>CHAPTER QUIZZES</h3><p>Test yourself on any chapter with instant feedback and detailed explanations for every answer.</p><button class="btn btn-teal btn-sm">Take a Quiz →</button></div>
+    <div class="card hcard dcard" onclick="go('examsetup')"><div class="ic">🎯</div><h3>FULL PRACTICE EXAM</h3><p>Timed exam across the whole course. Choose difficulty, number of questions, and get a smart performance analysis.</p><button class="btn btn-gold btn-sm">Start Exam →</button></div>
+  </div>
+  <h2 class="big-title">💬 Feedback &amp; Suggestions</h2>
+  <div class="card fb-card">
+    <p class="sub">Have feedback, suggestions, or found an issue with the portal? I would love to hear from you! 😊</p>
+    <input id="fb-name" placeholder="Name (optional)" value="${esc(S.name||"")}" maxlength="40">
+    <textarea id="fb-msg" placeholder="Write your feedback here..."></textarea>
+    <div style="margin-top:12px"><button class="btn btn-teal" onclick="sendFeedback()">📩 Send Feedback on WhatsApp</button></div>
+  </div>`;
+}
+function sendFeedback(){
+  const msg=el("fb-msg").value.trim();
+  if(!msg){toast("Please write your feedback first 🙂");return;}
+  const nm=(el("fb-name").value.trim()||S.name||"Anonymous");
+  const text="Hello, I have feedback about the Exam Study Portal.\n\nName: "+nm+"\n\nFeedback:\n"+msg+"\n\nThank you.";
+  window.open("https://wa.me/2349013583494?text="+encodeURIComponent(text),"_blank");
+}
+
+/* ================= STUDY ================= */
+function renderStudy(){
+  el("view-study").innerHTML=`<h1 class="big-title">📚 Study Chapter by Chapter</h1><p class="sub">Master every chapter of ${esc(COURSE.name)} before your exam.</p>`+
+  CHAPTERS.map(c=>{
+    const qn=QB.filter(q=>q.ch===c.id).length, done=S.read.includes(c.id);
+    return `<div class="card hcard chap" style="margin-bottom:18px" onclick="openChapter(${c.id})">
+      <div class="cnum"><small>CHAP.</small>${c.id}</div>
+      <div style="flex:1;min-width:220px"><h3>${c.title} <span style="font-weight:400;font-size:.85rem;color:var(--mut)">(${c.en})</span></h3>
+      <p>${c.desc}</p>
+      <div class="chap-meta"><span class="tag">📖 ${c.secs.length} sections</span><span class="tag">❓ ${qn} quiz questions</span><span class="tag">⏱ ~${15+qn/8|0} min read</span>${done?'<span class="tag done-tag">✅ Completed</span>':""}</div></div>
+    </div>`;}).join("");
+}
+function openChapter(ch,sec){
+  const c=CHAPTERS.find(x=>x.id===ch);
+  el("view-chapter").innerHTML=`
+  <div class="card" style="margin-bottom:18px">
+    <div class="chap"><div class="cnum"><small>CHAP.</small>${c.id}</div>
+    <div style="flex:1;min-width:220px"><h2>${c.title} <span style="font-weight:400;font-size:1rem;color:var(--mut)">(${c.en})</span></h2><p style="color:var(--mut)">${c.desc}</p>
+    <div class="chap-meta"><span class="tag">📖 ${c.secs.length} sections</span><span class="tag">❓ ${QB.filter(q=>q.ch===c.id).length} quiz questions</span></div></div></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+      <button class="btn btn-primary btn-sm" onclick="takeChapterQuiz(${c.id})">📝 Take Chapter Quiz</button>
+      ${c.id>1?`<button class="btn btn-ghost btn-sm" onclick="openChapter(${c.id-1})">← Chapter ${c.id-1}</button>`:""}
+      ${c.id<CHAPTERS.length?`<button class="btn btn-ghost btn-sm" onclick="openChapter(${c.id+1})">Chapter ${c.id+1} →</button>`:""}
+    </div>
+  </div>
+  ${c.secs.map(s=>`<div id="sec-${s.id}"><h2 class="sec">${s.title}</h2>${s.html}</div>`).join("")}
+  <div class="summary-box"><h3>⚡ Quick Revision Summary — What you MUST remember</h3>${c.summary}</div>
+  <div style="text-align:center;margin:22px 0">
+    <button class="btn ${S.read.includes(c.id)?"btn-ghost":"btn-teal"}" onclick="markRead(${c.id})">${S.read.includes(c.id)?"✅ Chapter Completed — well done!":"✅ Mark This Chapter as Completed"}</button>
+  </div>
+  <div class="chap-nav">
+    ${c.id>1?`<button class="btn btn-ghost" onclick="openChapter(${c.id-1})">← Previous Chapter</button>`:"<span></span>"}
+    ${c.id<CHAPTERS.length?`<button class="btn btn-primary" onclick="openChapter(${c.id+1})">Next Chapter →</button>`:`<button class="btn btn-primary" onclick="go('examsetup')">🎯 Go to Practice Exam</button>`}
+  </div>`;
+  go("chapter");
+  if(sec){setTimeout(()=>{const t=el("sec-"+sec);if(t)t.scrollIntoView({behavior:"smooth",block:"start"});},120);}
+}
+function markRead(ch){if(!S.read.includes(ch)){S.read.push(ch);save();toast("🎉 Chapter "+ch+" marked as completed!");openChapter(ch);}else{toast("Already completed ✅");}}
+function studyTopic(idx){const q=lastRes[idx].q,m=T2S[q.t]||{ch:q.ch,sec:null};openChapter(m.ch,m.sec);}
+
+/* ================= QUIZ SETUP ================= */
+function renderQuizSetup(){
+  el("view-quizsetup").innerHTML=`<h1 class="big-title">📝 Chapter Quizzes</h1><p class="sub">Pick a chapter — every quiz gives instant feedback, explanations and a smart analysis at the end.</p>`+
+  CHAPTERS.map(c=>{
+    const qn=QB.filter(q=>q.ch===c.id).length;
+    const hist=S.quizzes.filter(q=>q.ch===c.id);
+    const best=hist.length?Math.max(...hist.map(h=>h.pct)):null;
+    return `<div class="card chap" style="margin-bottom:16px">
+      <div class="cnum"><small>CHAP.</small>${c.id}</div>
+      <div style="flex:1;min-width:220px"><h3>${c.title} <span style="font-weight:400;font-size:.85rem;color:var(--mut)">(${c.en})</span></h3>
+      <p style="color:var(--mut);font-size:.9rem">${c.desc}</p>
+      <div class="chap-meta"><span class="tag">❓ ${qn} questions</span><span class="tag">🔁 attempts: ${hist.length}</span>${best!==null?`<span class="tag done-tag">🏆 best: ${best}%</span>`:""}</div></div>
+      <div><button class="btn btn-teal" onclick="takeChapterQuiz(${c.id})">Start Quiz →</button></div>
+    </div>`;}).join("");
+}
+function takeChapterQuiz(ch){
+  const qs=shuffle(QB.filter(q=>q.ch===ch).slice()).map(prepQ);
+  ses={type:"quiz",ch:ch,qs:qs,ans:new Array(qs.length).fill(null),cur:0,checked:false,ok:false,start:Date.now(),timer:null};
+  renderAssess();go("assess");
+}
+
+/* ================= EXAM SETUP ================= */
+let exMode="mixed",exCount=20;
+function renderExamSetup(){
+  const fullN=Math.min(QB.length,100);
+  el("view-examsetup").innerHTML=`
+  <div class="card">
+    <h1 class="big-title" style="margin-top:0">🎯 Full Practice Exam</h1>
+    <p class="sub" style="margin-bottom:6px">Covers <b>the entire course</b> — questions are distributed across all ${CHAPTERS.length} chapters. A timer of 45 seconds per question runs automatically.</p>
+    <h3 style="margin:14px 0 4px">1️⃣ Choose your mode</h3>
+    <div class="mode-grid">
+      <button class="pick ${exMode==="easy"?"sel":""}" onclick="selMode('easy')"><b>🟢 Easy</b><small>basic recall</small></button>
+      <button class="pick ${exMode==="medium"?"sel":""}" onclick="selMode('medium')"><b>🟡 Medium</b><small>application</small></button>
+      <button class="pick ${exMode==="hard"?"sel":""}" onclick="selMode('hard')"><b>🔴 Hard</b><small>tough details</small></button>
+      <button class="pick ${exMode==="mixed"?"sel":""}" onclick="selMode('mixed')"><b>🎲 Mixed</b><small>all levels combined</small></button>
+    </div>
+    <h3 style="margin:14px 0 4px">2️⃣ Choose the number of questions</h3>
+    <div class="cnt-grid">
+      ${[10,20,30,50].map(n=>`<button class="pick ${exCount===n?"sel":""}" onclick="selCount(${n})"><b>${n}</b><small>questions</small></button>`).join("")}
+      <button class="pick ${exCount==="full"?"sel":""}" onclick="selCount('full')"><b>Full</b><small>${fullN} questions</small></button>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <button class="btn btn-gold" onclick="startExamNow()">🚀 Start Exam</button>
+      <span class="tag" style="padding:8px 14px">Best exam score so far: <b>&nbsp;${bestPct(S.exams)}%</b></span>
+    </div>
+  </div>`;
+}
+function selMode(m){exMode=m;renderExamSetup();}
+function selCount(c){exCount=c;renderExamSetup();}
+function pickExam(mode,count){
+  let pool=shuffle(QB.filter(q=>mode==="mixed"||q.d===mode).slice());
+  if(count==="full")return pool.slice(0,Math.min(pool.length,100));
+  const byCh={};pool.forEach(q=>{(byCh[q.ch]=byCh[q.ch]||[]).push(q);});
+  const out=[],chs=Object.keys(byCh);
+  chs.forEach(c=>{const n=Math.floor(count*(byCh[c].length/pool.length));out.push(...byCh[c].slice(0,n));});
+  const used=new Set(out.map(q=>q.id));const rest=pool.filter(q=>!used.has(q.id));
+  while(out.length<count&&rest.length)out.push(rest.pop());
+  return shuffle(out.slice(0,count));
+}
+function startExamNow(){
+  const qs=pickExam(exMode,exCount).map(prepQ);
+  if(!qs.length){toast("No questions available for this mode 😕");return;}
+  const dur=qs.length*45;
+  ses={type:"exam",mode:exMode,qs:qs,ans:new Array(qs.length).fill(null),cur:0,checked:false,ok:false,start:Date.now(),end:Date.now()+dur*1000,timer:null,auto:false};
+  renderAssess();go("assess");startTimer();
+}
+
+/* ================= ASSESSMENT ENGINE ================= */
+let ses=null,lastRes=null,lastInfo=null;
+function prepQ(q){
+  if(q.ty==="mcq"){const idx=q.o.map((t,i)=>i);shuffle(idx);return Object.assign({},q,{o:idx.map(i=>q.o[i]),a:idx.indexOf(q.a)});}
+  return Object.assign({},q);
+}
+function grade(q,a){
+  if(a===null||a===undefined||a==="")return false;
+  if(q.ty==="fill"){const g=strip(a).replace(/[’']/g,"'");return q.a.some(x=>{const t=strip(x).replace(/[’']/g,"'");return t===g||t.replace(/[^a-z]/g,"")===g.replace(/[^a-z]/g,"");});}
+  return a===q.a;
+}
+function correctText(q){return q.ty==="fill"?q.a[0]:(q.o?q.o[q.a]:"");}
+function ansText(q,a){if(a===null||a===undefined||a==="")return "(no answer)";if(q.ty==="fill")return a;return q.o[a];}
+function startTimer(){
+  clearInterval(ses.timer);
+  ses.timer=setInterval(()=>{
+    const t=el("timer");if(!t){return;}
+    const left=Math.max(0,Math.floor((ses.end-Date.now())/1000));
+    const m=Math.floor(left/60),s=left%60;
+    t.textContent="⏱ "+String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+    t.classList.toggle("low",left<=60);
+    if(left<=0){clearInterval(ses.timer);toast("⏰ Time's up! Your exam has been submitted automatically.");ses.auto=true;finishAssessment();}
+  },500);
+}
+function renderAssess(){
+  const v=el("view-assess"),q=ses.qs[ses.cur],isQuiz=ses.type==="quiz";
+  const answered=ses.ans.filter(a=>a!==null&&a!==""&&a!==undefined).length;
+  let h=`<div class="card assess-head">
+    <div class="assess-meta">
+      <span>👤 ${esc(S.name)}</span><span>📘 ${esc(COURSE.short)}</span>
+      ${isQuiz?`<span>📝 Chapter ${ses.ch} Quiz</span>`:`<span>🎯 ${ses.mode.toUpperCase()} Exam</span>`}
+      ${!isQuiz?`<span class="timer" id="timer">⏱ --:--</span>`:`<span>⚡ instant feedback</span>`}
+    </div>
+    <div class="pbar"><div class="pfill" style="width:${(ses.cur+1)/ses.qs.length*100}%"></div></div>
+    <div class="qcount">Question ${ses.cur+1} of ${ses.qs.length} ${!isQuiz?"• "+answered+" answered":""}</div>
+  </div>
+  <div class="card">
+    <div class="qbadges"><span class="badge b-ch">Chapter ${q.ch}</span><span class="badge b-tp">${q.t}</span><span class="badge b-${q.d}">${q.d.toUpperCase()}</span></div>
+    <h2 class="qtext">${q.q}</h2>`;
+  if(q.ty==="fill"){
+    h+=`<div class="fillrow"><input id="fillIn" type="text" placeholder="Type your answer here..." value="${esc(ses.ans[ses.cur]||"")}" oninput="saveFill(this.value)" ${ses.checked?"disabled":""}></div>`;
+  }else{
+    const letters=["A","B","C","D","E"];
+    h+=`<div class="opts ${q.ty==="tf"?"tfrow":""}">`+q.o.map((t,i)=>{
+      let cls="opt";
+      if(ses.checked){if(i===q.a)cls+=" correct";else if(i===ses.ans[ses.cur]&&!ses.ok)cls+=" wrong";}
+      else if(ses.ans[ses.cur]===i)cls+=" selected";
+      return `<button class="${cls}" onclick="selectOpt(${i})" ${ses.checked?"disabled":""}><span class="ol">${letters[i]}</span><span>${t}</span></button>`;}).join("")+`</div>`;
+  }
+  if(ses.checked){
+    h+=`<div class="fb ${ses.ok?"good":"bad"}"><div class="fb-title">${ses.ok?"✓ Correct!":"✗ Incorrect"}</div>
+    ${ses.ok?"":`<div class="fb-correct"><b>Correct answer:</b> ${correctText(q)}</div>`}
+    <div class="fb-exp"><b>Explanation:</b> ${q.e}</div></div>`;
+  }
+  h+=`<div class="qnav">`;
+  if(isQuiz){
+    if(!ses.checked)h+=`<span></span><button class="btn btn-primary" onclick="checkAns()">✓ Check Answer</button>`;
+    else h+=`<span></span><button class="btn btn-teal" onclick="nextQ()">${ses.cur===ses.qs.length-1?"🏁 See My Results":"Next Question →"}</button>`;
+  }else{
+    h+=`<button class="btn btn-ghost" onclick="prevQ()" ${ses.cur===0?"disabled":""}>← Previous</button>
+    ${ses.cur===ses.qs.length-1?`<button class="btn btn-gold" onclick="askSubmit()">✅ Submit Exam</button>`:`<button class="btn btn-primary" onclick="nextQ()">Next →</button>`}`;
+    if(ses.cur===ses.qs.length-1===false&&answered===ses.qs.length)h+=`<button class="btn btn-gold btn-sm" onclick="askSubmit()">✅ Submit</button>`;
+  }
+  h+=`</div>`;
+  if(!isQuiz){
+    h+=`<div class="qpal">`+ses.qs.map((qq,i)=>`<button class="pdot ${i===ses.cur?"cur":(ses.ans[i]!==null&&ses.ans[i]!==""&&ses.ans[i]!==undefined?"ans":"")}" onclick="jumpQ(${i})">${i+1}</button>`).join("")+`</div>
+    <div style="margin-top:16px;text-align:right"><button class="btn btn-danger btn-sm" onclick="askSubmit()">🔴 Submit Exam</button></div>`;
+  }
+  h+=`</div>`;
+  v.innerHTML=h;
+}
+function saveFill(val){ses.ans[ses.cur]=val;}
+function selectOpt(i){if(ses.checked)return;ses.ans[ses.cur]=i;renderAssess();}
+function checkAns(){
+  const q=ses.qs[ses.cur],a=ses.ans[ses.cur];
+  if(a===null||a===""||a===undefined){toast("Please select or type an answer first 🙂");return;}
+  ses.checked=true;ses.ok=grade(q,a);renderAssess();
+}
+function nextQ(){
+  if(ses.type==="quiz"){ses.checked=false;ses.ok=false;}
+  if(ses.cur<ses.qs.length-1){ses.cur++;renderAssess();}
+  else if(ses.type==="quiz"){finishAssessment();}
+  else{askSubmit();}
+}
+function prevQ(){if(ses.cur>0){ses.cur--;renderAssess();}}
+function jumpQ(i){ses.cur=i;if(ses.type==="quiz"){ses.checked=false;ses.ok=false;}renderAssess();}
+function askSubmit(){
+  const answered=ses.ans.filter(a=>a!==null&&a!==""&&a!==undefined).length;
+  el("mTitle").textContent="Submit your exam?";
+  el("mText").innerHTML=`Are you sure you want to submit your exam?<br>You answered <b>${answered} of ${ses.qs.length}</b> questions. Unanswered questions will be marked incorrect.`;
+  el("modal").classList.remove("hidden");
+}
+function closeModal(){el("modal").classList.add("hidden");}
+function confirmSubmit(){closeModal();finishAssessment();}
+function finishAssessment(){
+  if(!ses)return;
+  clearInterval(ses.timer);
+  const res=ses.qs.map((q,i)=>({q:q,given:ses.ans[i],ok:grade(q,ses.ans[i])}));
+  const score=res.filter(r=>r.ok).length,total=res.length,pct=Math.round(score/total*100);
+  const d=new Date().toLocaleDateString();
+  if(ses.type==="quiz")S.quizzes.push({ch:ses.ch,score:score,total:total,pct:pct,d:d});
+  else S.exams.push({mode:ses.mode,score:score,total:total,pct:pct,d:d});
+  S.ans+=total;S.cor+=score;save();
+  lastRes=res;
+  lastInfo={type:ses.type,ch:ses.ch||null,mode:ses.mode||null,score:score,total:total,pct:pct,auto:ses.auto||false,filter:"all"};
+  ses=null;
+  renderResults();go("results");window.scrollTo({top:0});
+}
+
+/* ================= ANALYSIS ================= */
+function analyze(res){
+  const ch={},tp={};
+  res.forEach(r=>{
+    if(!ch[r.q.ch])ch[r.q.ch]={c:0,t:0};ch[r.q.ch].t++;if(r.ok)ch[r.q.ch].c++;
+    const k=r.q.ch+"|"+r.q.t;
+    if(!tp[k])tp[k]={c:0,t:0,ch:r.q.ch};tp[k].t++;if(r.ok)tp[k].c++;
+  });
+  const strong=[],improve=[],weak=[];
+  for(const k in tp){const v=tp[k],p=Math.round(v.c/v.t*100);
+    const item={ch:v.ch,t:k.split("|")[1],c:v.c,total:v.t,p:p};
+    if(p>=80)strong.push(item);else if(p>=50)improve.push(item);else weak.push(item);}
+  strong.sort((a,b)=>b.p-a.p);improve.sort((a,b)=>a.p-b.p);weak.sort((a,b)=>a.p-b.p);
+  return{ch:ch,tp:tp,strong:strong,improve:improve,weak:weak};
+}
+function buildReco(an,name){
+  const cName=id=>CHAPTERS.find(c=>c.id===id).title;
+  let txt="";
+  const strongChs=[...new Set(an.strong.map(s=>s.ch))].filter(c=>{const v=an.ch[c];return v&&v.c/v.t>=0.7;});
+  const weakChs=[...new Set(an.weak.map(w=>w.ch))];
+  txt+=`<p>Great effort, <b>${esc(name)}</b>! 👏 `;
+  if(strongChs.length)txt+=`You have a strong understanding of <b>${strongChs.map(c=>"Chapter "+c+" ("+cName(c)+")").join(" and ")}</b>. `;
+  if(weakChs.length){
+    const wt=an.weak.slice(0,4).map(w=>w.t).join(", ");
+    txt+=`However, you should spend more time studying <b>Chapter ${weakChs[0]} (${cName(weakChs[0])})</b>, especially <b>${wt}</b>. We recommend the following:</p>
+    <p>1️⃣ Review Chapter${weakChs.length>1?"s "+weakChs.join(", "):" "+weakChs[0]} in the Study area.<br>
+    2️⃣ Read the important definitions and tables again.<br>
+    3️⃣ Study the specific topics you answered incorrectly (use the 📚 buttons below).<br>
+    4️⃣ Take the Chapter${weakChs.length>1?"":" "+weakChs[0]} quiz again.<br>
+    5️⃣ Retake the practice exam after revision.</p>`;
+  }else if(an.improve.length){
+    txt+=`You are close to mastery, but a little more practice in <b>${an.improve.slice(0,3).map(i=>i.t).join(", ")}</b> will push you over the line. Review those sections and retake this assessment.</p>`;
+  }else{
+    txt+=`You performed strongly across <b>every topic</b> tested — outstanding! Keep revising to maintain this level. 🏆</p>`;
+  }
+  return txt;
+}
+
+/* ================= RESULTS ================= */
+function renderResults(){
+  const info=lastInfo,res=lastRes,an=analyze(res),lv=levelOf(info.pct),v=el("view-results");
+  const wrong=res.filter(r=>!r.ok).length;
+  const inc=res.filter(r=>!r.ok).length, cor=info.score;
+  const title=info.type==="quiz"?"QUIZ COMPLETED":"EXAM COMPLETED";
+  let h=`
+  <div class="card res-hero">
+    <h2>🎉 ${title}${info.auto?" (auto-submitted — time up)":""}</h2>
+    <p class="res-sub">Student: <b>${esc(S.name)}</b> • Course: <b>${esc(COURSE.name)}</b>${info.ch?` • Chapter ${info.ch} Quiz`:""}${info.mode?` • ${info.mode.toUpperCase()} Mode`:""}</p>
+    <div class="score-ring" style="--pct:${info.pct};--rc:${lv.c}"><span><b>${info.score}/${info.total}</b><i>${info.pct}%</i></span></div>
+    <div class="res-stats">
+      <div class="stat ok"><b>${cor}</b>✓ Correct</div>
+      <div class="stat bad"><b>${inc}</b>✗ Incorrect</div>
+      <div class="stat pct"><b>${info.pct}%</b>Percentage</div>
+    </div>
+    <div class="level-chip">${lv.e} ${lv.t}</div>
+    <div class="res-stats" style="margin-top:22px">
+      <button class="btn ${info.type==="quiz"?"btn-primary":"btn-gold"}" onclick="${info.type==="quiz"?"takeChapterQuiz("+info.ch+")":"go('examsetup')"}">🔄 ${info.type==="quiz"?"Retake This Quiz":"Take Another Exam"}</button>
+      <button class="btn btn-teal" onclick="go('study')">📚 Go Back to Study</button>
+      <button class="btn btn-ghost" onclick="reviewScroll()">📊 Review My Answers</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-bottom:14px">🏆 Smart Performance Analysis for ${esc(S.name)}</h2>
+    <h3 style="margin-bottom:8px">📊 Chapter-by-chapter breakdown</h3>
+    ${Object.keys(an.ch).sort().map(c=>{const x=an.ch[c],p=Math.round(x.c/x.t*100);return `<div class="bar-row"><span class="bar-label">Chapter ${c}: ${CHAPTERS.find(z=>z.id==c).title}</span><div class="bar-track pbar"><div class="pfill" style="width:${p}%;background:${colorOf(p)}"></div></div><span class="bar-pct" style="color:${colorOf(p)}">${barOf(p)} ${p}% ${emojiOf(p)}</span></div>`;}).join("")}
+
+    <div class="zone z-good"><h4>🟢 YOUR STRONG AREAS (80%+)</h4>${an.strong.length?`<ul>${an.strong.map(s=>`<li>✓ ${s.t} <span><b>${s.p}%</b> (${s.c}/${s.total})</span></li>`).join("")}</ul><p style="font-size:.85rem;color:var(--mut)">These are your strongest areas. Keep revising them to maintain your understanding.</p>`:"<p style='font-size:.9rem'>No topic reached 80% yet — you're close! Review and try again. 💪</p>"}</div>
+
+    <div class="zone z-mid"><h4>🟡 AREAS TO IMPROVE (50–79%)</h4>${an.improve.length?`<ul>${an.improve.map(s=>`<li>• ${s.t} <span><b>${s.p}%</b> (${s.c}/${s.total})</span></li>`).join("")}</ul><p style="font-size:.85rem;color:var(--mut)"><b>Recommendation:</b> review the study materials for these topics again and take the quiz once more.</p>`:"<p style='font-size:.9rem'>None — great! 🎉</p>"}</div>
+
+    <div class="zone z-bad"><h4>🔴 WEAK AREAS THAT REQUIRE MORE EFFORT (below 50%)</h4>${an.weak.length?`<ul>${an.weak.map(s=>`<li>❌ ${s.t} <span><b>${s.p}%</b> (${s.c}/${s.total})</span></li>`).join("")}</ul><p style="font-size:.85rem;color:var(--mut)">You answered several questions incorrectly from these areas. We recommend that you go back and study these topics carefully before your examination.</p><button class="btn btn-danger btn-sm" onclick="reviseWeak()">📚 REVISE WEAK AREAS</button>`:"<p style='font-size:.9rem'>None — excellent work! 🏆</p>"}</div>
+
+    <h3 style="margin-top:18px">🎓 Personalized Study Recommendation</h3>
+    <div style="font-size:.93rem">${buildReco(an,S.name)}</div>
+  </div>
+
+  <div class="card" id="mistakes">
+    <h2>❌ YOUR MISTAKES AND CORRECTIONS</h2>
+    <p style="color:var(--mut);margin:8px 0">You answered <b>${wrong} question${wrong===1?"":"s"}</b> incorrectly. Don't worry! 💪 Reviewing your mistakes is one of the best ways to improve.</p>
+    <div class="mistake-sum">
+      <div class="stat2 ok"><b>${cor}</b>✓ Correct answers</div>
+      <div class="stat2 bad"><b>${inc}</b>✗ Incorrect answers</div>
+      ${an.weak.length?`<div class="stat2 bad"><b>${an.weak.length}</b>🔴 Topics with most mistakes</div>`:`<div class="stat2 ok"><b>0</b>🔴 Weak topics</div>`}
+      <div class="stat2 pct"><b>${info.pct}%</b>Overall score</div>
+    </div>
+  </div>
+
+  <div class="card" id="review">
+    <h2>📖 Answer Review — All Questions</h2>
+    <p class="sub" style="margin-bottom:4px">Every question with your answer, the correct answer and a clear explanation. Incorrect answers get special attention.</p>
+    <div class="filter-chips">
+      <button class="fchip ${info.filter==="all"?"on":""}" onclick="setFilter('all')">All Questions (${res.length})</button>
+      <button class="fchip ${info.filter==="ok"?"on":""}" onclick="setFilter('ok')">✓ Correct (${cor})</button>
+      <button class="fchip ${info.filter?"":""}" onclick="setFilter('bad')">✗ Incorrect (${inc})</button>
+      <button class="fchip" onclick="setFilter('weak')">🔴 Review Weak Areas</button>
+    </div>
+    <div id="reviewList"></div>
+  </div>`;
+  v.innerHTML=h;
+  setFilter("all");
+}
+function setFilter(f){
+  lastInfo.filter=f;
+  document.querySelectorAll(".fchip").forEach(b=>b.classList.remove("on"));
+  event.target.classList.add("on");
+  const an=analyze(lastRes),weakSet=new Set(an.weak.map(w=>w.t));
+  const list=lastRes.map((r,i)=>({r:r,i:i})).filter(x=>{
+    if(f==="all")return true;
+    if(f==="ok")return x.r.ok;
+    if(f==="bad")return !x.r.ok;
+    if(f==="weak")return !x.r.ok&&weakSet.has(x.r.q.t);
+    return true;
+  });
+  el("reviewList").innerHTML=list.length?list.map(x=>{
+    const r=x.r,q=r.q;
+    return `<div class="rev-item card ${r.ok?"":"bad"}">
+      <div class="rev-status">${r.ok?"✅ ✓ CORRECT":"❌ ✗ INCORRECT"}</div>
+      <div class="rev-q"><b>QUESTION ${x.i+1}:</b> ${q.q}</div>
+      <div class="rev-line you"><b>Your answer:</b> ${esc(ansText(q,r.given))} ${r.ok?"✓":"✗"}</div>
+      ${r.ok?"":`<div class="rev-line"><b>Correct answer:</b> ${esc(correctText(q))} ✓</div>`}
+      <div class="rev-exp"><b>Why this answer is correct:</b> ${q.e}</div>
+      <div class="rev-meta"><span class="badge b-ch">📚 Chapter ${q.ch}</span><span class="badge b-tp">📌 ${q.t}</span><span class="badge b-${q.d}">${q.d}</span>
+      ${r.ok?"":`<button class="btn btn-teal btn-sm" onclick="studyTopic(${x.i})">📚 STUDY THIS TOPIC AGAIN</button>`}</div>
+    </div>`;}).join(""):`<p style="color:var(--mut);padding:14px">Nothing to show in this filter. 🎉</p>`;
+}
+function reviewScroll(){const t=el("review");if(t)t.scrollIntoView({behavior:"smooth"});}
+function reviseWeak(){const an=analyze(lastRes);if(!an.weak.length){toast("No weak areas — amazing! 🏆");return;}const ch=an.weak[0].ch;const m=T2S[an.weak[0].t]||{ch:ch,sec:null};openChapter(m.ch,m.sec);toast("Taking you to your weakest area 📚");}
+
+/* ================= PROGRESS ================= */
+function renderProgress(){
+  const readPct=Math.round(S.read.length/CHAPTERS.length*100);
+  const qAvg=S.quizzes.length?Math.round(S.quizzes.reduce((a,b)=>a+b.pct,0)/S.quizzes.length):null;
+  const eAvg=S.exams.length?Math.round(S.exams.reduce((a,b)=>a+b.pct,0)/S.exams.length):null;
+  const comps=[readPct];if(qAvg!==null)comps.push(qAvg);if(eAvg!==null)comps.push(eAvg);
+  const overall=Math.round(comps.reduce((a,b)=>a+b,0)/comps.length);
+  const acc=S.ans?Math.round(S.cor/S.ans*100):0;
+  el("view-progress").innerHTML=`
+  <h1 class="big-title">📊 My Progress</h1><p class="sub">Your personal performance dashboard, ${esc(S.name)}.</p>
+  <div class="card" style="text-align:center;margin-bottom:20px">
+    <div class="pg-big">${overall}%</div><p style="color:var(--mut);margin-bottom:10px">OVERALL PROGRESS</p>
+    <div class="pbar"><div class="pfill" style="width:${overall}%"></div></div>
+    <div style="margin-top:16px">${barOf(overall)}</div>
+  </div>
+  <div class="grid3">
+    <div class="card" style="text-align:center"><div class="pg-big" style="font-size:1.6rem;color:var(--sc)">${readPct}%</div><b>Study Progress</b><p style="color:var(--mut);font-size:.85rem">Chapters Completed: ${S.read.length}/${CHAPTERS.length}</p><div class="pbar" style="margin-top:8px"><div class="pfill" style="width:${readPct}%"></div></div></div>
+    <div class="card" style="text-align:center"><div class="pg-big" style="font-size:1.6rem;color:var(--ok)">${bestPct(S.quizzes)}%</div><b>Best Quiz Score</b><p style="color:var(--mut);font-size:.85rem">${S.quizzes.length} quiz attempt(s)${qAvg!==null?" • avg "+qAvg+"%":""}</p></div>
+    <div class="card" style="text-align:center"><div class="pg-big" style="font-size:1.6rem;color:var(--gold)">${bestPct(S.exams)}%</div><b>Best Exam Score</b><p style="color:var(--mut);font-size:.85rem">${S.exams.length} exam attempt(s)${eAvg!==null?" • avg "+eAvg+"%":""}</p></div>
+  </div>
+  <div class="card" style="margin:20px 0"><h3>📈 Lifetime Statistics</h3>
+    <div class="mistake-sum">
+      <div class="stat2 pct"><b>${S.ans}</b>Total questions answered</div>
+      <div class="stat2 ok"><b>${S.cor}</b>Total correct</div>
+      <div class="stat2 bad"><b>${acc}%</b>Overall accuracy</div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>📝 Quiz History</h3>${S.quizzes.length?`<div class="hist"><table class="tbl"><tr><th>Chapter</th><th>Score</th><th>%</th><th>Date</th></tr>${S.quizzes.slice().reverse().map(q=>`<tr><td>Chapter ${q.ch}</td><td>${q.score}/${q.total}</td><td style="color:${colorOf(q.pct)};font-weight:700">${q.pct}%</td><td>${q.d}</td></tr>`).join("")}</table></div>`:`<p style="color:var(--mut)">No quizzes taken yet. <span onclick="go('quizsetup')" style="color:var(--p);cursor:pointer;font-weight:700">Take your first quiz →</span></p>`}</div>
+    <div class="card"><h3>🎯 Exam History</h3>${S.exams.length?`<div class="hist"><table class="tbl"><tr><th>Mode</th><th>Score</th><th>%</th><th>Date</th></tr>${S.exams.slice().reverse().map(q=>`<tr><td>${q.mode.toUpperCase()}</td><td>${q.score}/${q.total}</td><td style="color:${colorOf(q.pct)};font-weight:700">${q.pct}%</td><td>${q.d}</td></tr>`).join("")}</table></div>`:`<p style="color:var(--mut)">No exams taken yet. <span onclick="go('examsetup')" style="color:var(--p);cursor:pointer;font-weight:700">Take your first exam →</span></p>`}</div>
+  </div>
+  <div class="card"><h3>✅ Chapters Completed</h3>${CHAPTERS.map(c=>`<div class="bar-row"><span class="bar-label" style="min-width:260px">${S.read.includes(c.id)?"✅":"⬜"} Chapter ${c.id} — ${c.title}</span></div>`).join("")}
+  <div style="margin-top:14px"><button class="btn btn-ghost btn-sm" onclick="resetProgress()">🗑 Reset All Progress</button>
+  <button class="btn btn-ghost btn-sm" onclick="switchUser()">👤 Switch Student</button></div></div>`;
+}
+function resetProgress(){if(confirm("Reset ALL progress (scores, chapters, history)? This cannot be undone.")){S.read=[];S.quizzes=[];S.exams=[];S.ans=0;S.cor=0;save();renderProgress();toast("Progress reset. Fresh start! 🌱");}}
+
+/* ================= ABOUT ================= */
+function renderAbout(){
+  el("view-about").innerHTML=`
+  <h1 class="big-title">ℹ About the Course</h1>
+  <div class="card">
+    <table class="tbl">
+      <tr><th>Institution</th><td>${esc(COURSE.uni)}</td></tr>
+      <tr><th>Course</th><td>${esc(COURSE.name)} (GST 123)</td></tr>
+      <tr><th>Level</th><td>${esc(COURSE.level)}</td></tr>
+      <tr><th>Author</th><td>${esc(COURSE.author)}</td></tr>
+      <tr><th>Source</th><td>“Communication in French” — Federal University Dutse, Jigawa State</td></tr>
+    </table>
+    <h3>Course structure</h3>
+    ${CHAPTERS.map(c=>`<div class="bar-row"><span class="bar-label" style="min-width:280px"><b>Chapter ${c.id}:</b> ${c.title} (${c.en})</span></div>`).join("")}
+    <h3>How to use this portal</h3>
+    <ul style="padding-left:22px;display:flex;flex-direction:column;gap:7px;font-size:.93rem">
+      <li>📚 <b>Study</b> each chapter carefully — every note, table and rule comes directly from your course material.</li>
+      <li>📝 <b>Take the chapter quiz</b> right after studying; instant feedback explains every answer.</li>
+      <li>🎯 <b>Sit full practice exams</b> under timed conditions to simulate the real test.</li>
+      <li>📊 <b>Check My Progress</b> and use the Smart Performance Analysis to target your weak topics.</li>
+      <li>🔁 Repeat until your weak areas 🟡🔴 turn green 🟢!</li>
+    </ul>
+    <p style="margin-top:14px;color:var(--mut);font-size:.85rem">This portal contains <b>${QB.length} exam-style questions</b> covering every section of the course material — greetings, verbs (avoir/être/aller, ER, IR, RE, OIR), nouns, articles, numbers, nationalities, professions, alphabet, town &amp; directions, family, negation, transport, body parts, possessives, time &amp; dates, clothes, colours, money, adjectives, demonstratives, model compositions and idiomatic expressions.</p>
+  </div>`;
+}
+
+/* ================= INIT ================= */
+function init(){
+  applyTheme();
+  renderAbout();
+  if(S.name){enterApp();}else{el("nav").classList.add("hidden");go("welcome");}
+}
+init();
+</script>
+</body>
+</html>
